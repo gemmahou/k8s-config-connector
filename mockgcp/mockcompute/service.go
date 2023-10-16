@@ -53,6 +53,9 @@ func (s *MockService) Register(grpcServer *grpc.Server) {
 	pb.RegisterNetworksServer(grpcServer, &NetworksV1{MockService: s})
 	pb.RegisterSubnetworksServer(grpcServer, &SubnetsV1{MockService: s})
 
+	pb.RegisterTargetHttpProxiesServer(grpcServer, &GlobalTargetHTTPProxiesV1{MockService: s})
+	pb.RegisterRegionTargetHttpProxiesServer(grpcServer, &RegionalTargetHTTPProxiesV1{MockService: s})
+
 	pb.RegisterRegionHealthChecksServer(grpcServer, &RegionalHealthCheckV1{MockService: s})
 	pb.RegisterHealthChecksServer(grpcServer, &GlobalHealthCheckV1{MockService: s})
 
@@ -87,6 +90,13 @@ func (s *MockService) NewHTTPMux(ctx context.Context, conn *grpc.ClientConn) (ht
 	}
 
 	if err := pb.RegisterSubnetworksHandler(ctx, mux.ServeMux, conn); err != nil {
+		return nil, err
+	}
+
+	if err := pb.RegisterTargetHttpProxiesHandler(ctx, mux.ServeMux, conn); err != nil {
+		return nil, err
+	}
+	if err := pb.RegisterRegionTargetHttpProxiesHandler(ctx, mux.ServeMux, conn); err != nil {
 		return nil, err
 	}
 
