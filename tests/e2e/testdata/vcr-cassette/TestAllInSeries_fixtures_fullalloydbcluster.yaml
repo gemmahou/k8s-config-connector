@@ -1,0 +1,2044 @@
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: serviceusage.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://serviceusage.googleapis.com/v1beta1/projects/example-project/services/alloydb.googleapis.com:generateServiceIdentity?alt=json
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "operations/finished.DONE_OPERATION",
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity",
+                "email": "service-402887772785@gcp-sa-alloydb.iam.gserviceaccount.com",
+                "uniqueId": "112468406547631776081"
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 559.880819ms
+    - id: 1
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings?alt=json&keyRingId=kmskeyring-dj55ohq2ivb2
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2",
+              "createTime": "2024-03-28T19:45:25.327156536Z"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 221.846003ms
+    - id: 2
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 134
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"autoCreateSubnetworks":false,"name":"computenetwork-dj55ohq2ivb2","networkFirewallPolicyEnforcementOrder":"AFTER_CLASSIC_FIREWALL"}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks?alt=json
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "kind": "compute#operation",
+              "id": "5709260730720089658",
+              "name": "operation-1711655124988-614bdc3b3f329-1e342fca-fe60b32b",
+              "operationType": "insert",
+              "targetLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2",
+              "targetId": "8260364033440904762",
+              "status": "RUNNING",
+              "user": "user@google.com",
+              "progress": 0,
+              "insertTime": "2024-03-28T12:45:25.460-07:00",
+              "startTime": "2024-03-28T12:45:25.472-07:00",
+              "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/operations/operation-1711655124988-614bdc3b3f329-1e342fca-fe60b32b"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 708.865629ms
+    - id: 3
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2",
+              "createTime": "2024-03-28T19:45:25.327156536Z"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 157.707911ms
+    - id: 4
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2",
+              "createTime": "2024-03-28T19:45:25.327156536Z"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 84.123777ms
+    - id: 5
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.21.5 gdcl/0.160.0
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/operations/operation-1711655124988-614bdc3b3f329-1e342fca-fe60b32b?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"kind":"compute#operation","id":"5709260730720089658","name":"operation-1711655124988-614bdc3b3f329-1e342fca-fe60b32b","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2","targetId":"8260364033440904762","status":"RUNNING","user":"user@google.com","progress":0,"insertTime":"2024-03-28T12:45:25.460-07:00","startTime":"2024-03-28T12:45:25.472-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/example-project/global/operations/operation-1711655124988-614bdc3b3f329-1e342fca-fe60b32b"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 136.410997ms
+    - id: 6
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 107
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"labels":{"cnrm-test":"true","key-one":"value-one","managed-by-cnrm":"true"},"purpose":"ENCRYPT_DECRYPT"}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys?alt=json&cryptoKeyId=kmscryptokey-dj55ohq2ivb2&skipInitialVersionCreation=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2",
+              "primary": {
+                "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2/cryptoKeyVersions/1",
+                "state": "ENABLED",
+                "createTime": "2024-03-28T19:45:26.598108400Z",
+                "protectionLevel": "SOFTWARE",
+                "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION",
+                "generateTime": "2024-03-28T19:45:26.598108400Z"
+              },
+              "purpose": "ENCRYPT_DECRYPT",
+              "createTime": "2024-03-28T19:45:26.598108400Z",
+              "labels": {
+                "key-one": "value-one",
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true"
+              },
+              "versionTemplate": {
+                "protectionLevel": "SOFTWARE",
+                "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION"
+              },
+              "destroyScheduledDuration": "2592000s"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 110.803062ms
+    - id: 7
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2",
+              "primary": {
+                "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2/cryptoKeyVersions/1",
+                "state": "ENABLED",
+                "createTime": "2024-03-28T19:45:26.598108400Z",
+                "protectionLevel": "SOFTWARE",
+                "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION",
+                "generateTime": "2024-03-28T19:45:26.598108400Z"
+              },
+              "purpose": "ENCRYPT_DECRYPT",
+              "createTime": "2024-03-28T19:45:26.598108400Z",
+              "labels": {
+                "key-one": "value-one",
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true"
+              },
+              "versionTemplate": {
+                "protectionLevel": "SOFTWARE",
+                "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION"
+              },
+              "destroyScheduledDuration": "2592000s"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 84.479246ms
+    - id: 8
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2",
+              "primary": {
+                "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2/cryptoKeyVersions/1",
+                "state": "ENABLED",
+                "createTime": "2024-03-28T19:45:26.598108400Z",
+                "protectionLevel": "SOFTWARE",
+                "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION",
+                "generateTime": "2024-03-28T19:45:26.598108400Z"
+              },
+              "purpose": "ENCRYPT_DECRYPT",
+              "createTime": "2024-03-28T19:45:26.598108400Z",
+              "labels": {
+                "managed-by-cnrm": "true",
+                "key-one": "value-one",
+                "cnrm-test": "true"
+              },
+              "versionTemplate": {
+                "protectionLevel": "SOFTWARE",
+                "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION"
+              },
+              "destroyScheduledDuration": "2592000s"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 77.894726ms
+    - id: 9
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.21.5 gdcl/0.160.0
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2:getIamPolicy?alt=json&options.requestedPolicyVersion=3&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"etag":"ACAB"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 267.280992ms
+    - id: 10
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.21.5 gdcl/0.160.0
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2:getIamPolicy?alt=json&options.requestedPolicyVersion=3&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"etag":"ACAB"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 122.597323ms
+    - id: 11
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 195
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"policy":{"bindings":[{"members":["serviceAccount:service-402887772785@gcp-sa-alloydb.iam.gserviceaccount.com"],"role":"roles/cloudkms.cryptoKeyEncrypterDecrypter"}],"etag":"ACAB","version":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.21.5 gdcl/0.160.0
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2:setIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYUvcPiriI=","bindings":[{"role":"roles/cloudkms.cryptoKeyEncrypterDecrypter","members":["serviceAccount:service-402887772785@gcp-sa-alloydb.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 334.862515ms
+    - id: 12
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.21.5 gdcl/0.160.0
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2:getIamPolicy?alt=json&options.requestedPolicyVersion=3&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYUvcPiriI=","bindings":[{"role":"roles/cloudkms.cryptoKeyEncrypterDecrypter","members":["serviceAccount:service-402887772785@gcp-sa-alloydb.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 113.353941ms
+    - id: 13
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.21.5 gdcl/0.160.0
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/operations/operation-1711655124988-614bdc3b3f329-1e342fca-fe60b32b?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"kind":"compute#operation","id":"5709260730720089658","name":"operation-1711655124988-614bdc3b3f329-1e342fca-fe60b32b","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2","targetId":"8260364033440904762","status":"DONE","user":"user@google.com","progress":100,"insertTime":"2024-03-28T12:45:25.460-07:00","startTime":"2024-03-28T12:45:25.472-07:00","endTime":"2024-03-28T12:45:36.848-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/example-project/global/operations/operation-1711655124988-614bdc3b3f329-1e342fca-fe60b32b"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 170.748993ms
+    - id: 14
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "kind": "compute#network",
+              "id": "8260364033440904762",
+              "creationTimestamp": "2024-03-28T12:45:25.447-07:00",
+              "name": "computenetwork-dj55ohq2ivb2",
+              "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2",
+              "selfLinkWithId": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/8260364033440904762",
+              "autoCreateSubnetworks": false,
+              "routingConfig": {
+                "routingMode": "REGIONAL"
+              },
+              "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 199.730769ms
+    - id: 15
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "kind": "compute#network",
+              "id": "8260364033440904762",
+              "creationTimestamp": "2024-03-28T12:45:25.447-07:00",
+              "name": "computenetwork-dj55ohq2ivb2",
+              "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2",
+              "selfLinkWithId": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/8260364033440904762",
+              "autoCreateSubnetworks": false,
+              "routingConfig": {
+                "routingMode": "REGIONAL"
+              },
+              "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 171.790083ms
+    - id: 16
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 767
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"automatedBackupPolicy":{"backupWindow":"7200s","enabled":true,"encryptionConfig":{"kmsKeyName":"projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"},"labels":{"source":"kcc-test"},"location":"us-central1","timeBasedRetention":{"retentionPeriod":"86400s"},"weeklySchedule":{"daysOfWeek":["MONDAY"],"startTimes":[{"hours":4}]}},"clusterType":"PRIMARY","encryptionConfig":{"kmsKeyName":"projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"},"initialUser":{"password":"postgres","user":"postgres"},"labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"networkConfig":{"network":"projects/example-project/global/networks/computenetwork-dj55ohq2ivb2"}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters?alt=json&clusterId=alloydbcluster-dj55ohq2ivb2
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711655148570-614bdc51bc840-f390174d-3276aaee",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:45:48.691332794Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 370.075801ms
+    - id: 17
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711655148570-614bdc51bc840-f390174d-3276aaee?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711655148570-614bdc51bc840-f390174d-3276aaee",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:45:48.691332794Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 262.91952ms
+    - id: 18
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711655148570-614bdc51bc840-f390174d-3276aaee?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711655148570-614bdc51bc840-f390174d-3276aaee",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:45:48.691332794Z",
+                "endTime": "2024-03-28T19:45:54.203848741Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.Cluster",
+                "name": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "uid": "e08e75a6-0666-4ebb-8f92-f012f704c709",
+                "createTime": "2024-03-28T19:45:48.688012452Z",
+                "updateTime": "2024-03-28T19:45:48.688012452Z",
+                "state": "READY",
+                "databaseVersion": "POSTGRES_14",
+                "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2",
+                "reconciling": false,
+                "automatedBackupPolicy": {
+                  "enabled": true,
+                  "weeklySchedule": {
+                    "startTimes": [
+                      {
+                        "hours": 4
+                      }
+                    ],
+                    "daysOfWeek": [
+                      "MONDAY"
+                    ]
+                  },
+                  "backupWindow": "7200s",
+                  "timeBasedRetention": {
+                    "retentionPeriod": "86400s"
+                  },
+                  "location": "us-central1",
+                  "labels": {
+                    "source": "kcc-test"
+                  },
+                  "encryptionConfig": {
+                    "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+                  }
+                },
+                "encryptionConfig": {
+                  "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+                },
+                "encryptionInfo": {
+                  "encryptionType": "CUSTOMER_MANAGED_ENCRYPTION"
+                },
+                "clusterType": "PRIMARY",
+                "continuousBackupConfig": {
+                  "enabled": true,
+                  "recoveryWindowDays": 14
+                },
+                "continuousBackupInfo": {
+                  "encryptionInfo": {
+                    "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                  },
+                  "enabledTime": "2024-03-28T19:45:48.575693705Z",
+                  "schedule": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY",
+                    "SATURDAY",
+                    "SUNDAY"
+                  ]
+                },
+                "networkConfig": {
+                  "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2"
+                },
+                "geminiConfig": {}
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 213.1817ms
+    - id: 19
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+              "uid": "e08e75a6-0666-4ebb-8f92-f012f704c709",
+              "createTime": "2024-03-28T19:45:48.688012452Z",
+              "updateTime": "2024-03-28T19:45:54.228777719Z",
+              "labels": {
+                "cnrm-test": "true",
+                "managed-by-cnrm": "true"
+              },
+              "state": "READY",
+              "databaseVersion": "POSTGRES_14",
+              "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2",
+              "reconciling": false,
+              "automatedBackupPolicy": {
+                "enabled": true,
+                "weeklySchedule": {
+                  "startTimes": [
+                    {
+                      "hours": 4
+                    }
+                  ],
+                  "daysOfWeek": [
+                    "MONDAY"
+                  ]
+                },
+                "backupWindow": "7200s",
+                "timeBasedRetention": {
+                  "retentionPeriod": "86400s"
+                },
+                "location": "us-central1",
+                "labels": {
+                  "source": "kcc-test"
+                },
+                "encryptionConfig": {
+                  "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+                }
+              },
+              "encryptionConfig": {
+                "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+              },
+              "encryptionInfo": {
+                "encryptionType": "CUSTOMER_MANAGED_ENCRYPTION"
+              },
+              "clusterType": "PRIMARY",
+              "continuousBackupConfig": {
+                "enabled": true,
+                "recoveryWindowDays": 14
+              },
+              "continuousBackupInfo": {
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "enabledTime": "2024-03-28T19:45:48.575693705Z",
+                "schedule": [
+                  "MONDAY",
+                  "TUESDAY",
+                  "WEDNESDAY",
+                  "THURSDAY",
+                  "FRIDAY",
+                  "SATURDAY",
+                  "SUNDAY"
+                ]
+              },
+              "networkConfig": {
+                "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2"
+              },
+              "geminiConfig": {}
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 245.689586ms
+    - id: 20
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+              "uid": "e08e75a6-0666-4ebb-8f92-f012f704c709",
+              "createTime": "2024-03-28T19:45:48.688012452Z",
+              "updateTime": "2024-03-28T19:45:54.228777719Z",
+              "labels": {
+                "cnrm-test": "true",
+                "managed-by-cnrm": "true"
+              },
+              "state": "READY",
+              "databaseVersion": "POSTGRES_14",
+              "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2",
+              "reconciling": false,
+              "automatedBackupPolicy": {
+                "enabled": true,
+                "weeklySchedule": {
+                  "startTimes": [
+                    {
+                      "hours": 4
+                    }
+                  ],
+                  "daysOfWeek": [
+                    "MONDAY"
+                  ]
+                },
+                "backupWindow": "7200s",
+                "timeBasedRetention": {
+                  "retentionPeriod": "86400s"
+                },
+                "location": "us-central1",
+                "labels": {
+                  "source": "kcc-test"
+                },
+                "encryptionConfig": {
+                  "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+                }
+              },
+              "encryptionConfig": {
+                "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+              },
+              "encryptionInfo": {
+                "encryptionType": "CUSTOMER_MANAGED_ENCRYPTION"
+              },
+              "clusterType": "PRIMARY",
+              "continuousBackupConfig": {
+                "enabled": true,
+                "recoveryWindowDays": 14
+              },
+              "continuousBackupInfo": {
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "enabledTime": "2024-03-28T19:45:48.575693705Z",
+                "schedule": [
+                  "MONDAY",
+                  "TUESDAY",
+                  "WEDNESDAY",
+                  "THURSDAY",
+                  "FRIDAY",
+                  "SATURDAY",
+                  "SUNDAY"
+                ]
+              },
+              "networkConfig": {
+                "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2"
+              },
+              "geminiConfig": {}
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 217.733972ms
+    - id: 21
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+              "uid": "e08e75a6-0666-4ebb-8f92-f012f704c709",
+              "createTime": "2024-03-28T19:45:48.688012452Z",
+              "updateTime": "2024-03-28T19:45:54.228777719Z",
+              "labels": {
+                "cnrm-test": "true",
+                "managed-by-cnrm": "true"
+              },
+              "state": "READY",
+              "databaseVersion": "POSTGRES_14",
+              "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2",
+              "reconciling": false,
+              "automatedBackupPolicy": {
+                "enabled": true,
+                "weeklySchedule": {
+                  "startTimes": [
+                    {
+                      "hours": 4
+                    }
+                  ],
+                  "daysOfWeek": [
+                    "MONDAY"
+                  ]
+                },
+                "backupWindow": "7200s",
+                "timeBasedRetention": {
+                  "retentionPeriod": "86400s"
+                },
+                "location": "us-central1",
+                "labels": {
+                  "source": "kcc-test"
+                },
+                "encryptionConfig": {
+                  "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+                }
+              },
+              "encryptionConfig": {
+                "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+              },
+              "encryptionInfo": {
+                "encryptionType": "CUSTOMER_MANAGED_ENCRYPTION"
+              },
+              "clusterType": "PRIMARY",
+              "continuousBackupConfig": {
+                "enabled": true,
+                "recoveryWindowDays": 14
+              },
+              "continuousBackupInfo": {
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "enabledTime": "2024-03-28T19:45:48.575693705Z",
+                "schedule": [
+                  "MONDAY",
+                  "TUESDAY",
+                  "WEDNESDAY",
+                  "THURSDAY",
+                  "FRIDAY",
+                  "SATURDAY",
+                  "SUNDAY"
+                ]
+              },
+              "networkConfig": {
+                "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2"
+              },
+              "geminiConfig": {}
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 216.531551ms
+    - id: 22
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 957
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"automatedBackupPolicy":{"backupWindow":"3600s","enabled":true,"encryptionConfig":{"kmsKeyName":"projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"},"labels":{"source":"kcc-test"},"location":"us-central1","timeBasedRetention":{"retentionPeriod":"43200s"},"weeklySchedule":{"daysOfWeek":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"startTimes":[{"hours":10}]}},"clusterType":"PRIMARY","continuousBackupConfig":{"enabled":false,"recoveryWindowDays":14},"encryptionConfig":{"kmsKeyName":"projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"},"initialUser":{"password":"postgres","user":"postgres"},"labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"network":"projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2","networkConfig":{"network":"projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2"}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2?alt=json&updateMask=continuousBackupConfig%2CautomatedBackupPolicy
+        method: PATCH
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711655162174-614bdc5eb5d65-d30977a7-6210c85f",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:46:02.220608370Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "verb": "update",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 304.883157ms
+    - id: 23
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711655162174-614bdc5eb5d65-d30977a7-6210c85f?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711655162174-614bdc5eb5d65-d30977a7-6210c85f",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:46:02.220608370Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "verb": "update",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 235.955345ms
+    - id: 24
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711655162174-614bdc5eb5d65-d30977a7-6210c85f?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711655162174-614bdc5eb5d65-d30977a7-6210c85f",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:46:02.220608370Z",
+                "endTime": "2024-03-28T19:46:15.064459112Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "verb": "update",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.Cluster",
+                "name": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "uid": "e08e75a6-0666-4ebb-8f92-f012f704c709",
+                "createTime": "2024-03-28T19:45:48.688012452Z",
+                "updateTime": "2024-03-28T19:46:02.223297353Z",
+                "state": "READY",
+                "databaseVersion": "POSTGRES_14",
+                "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2",
+                "reconciling": false,
+                "automatedBackupPolicy": {
+                  "enabled": true,
+                  "weeklySchedule": {
+                    "startTimes": [
+                      {
+                        "hours": 10
+                      }
+                    ],
+                    "daysOfWeek": [
+                      "MONDAY",
+                      "TUESDAY",
+                      "WEDNESDAY",
+                      "THURSDAY",
+                      "FRIDAY"
+                    ]
+                  },
+                  "backupWindow": "3600s",
+                  "timeBasedRetention": {
+                    "retentionPeriod": "43200s"
+                  },
+                  "location": "us-central1",
+                  "labels": {
+                    "source": "kcc-test"
+                  },
+                  "encryptionConfig": {
+                    "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+                  }
+                },
+                "encryptionConfig": {
+                  "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+                },
+                "encryptionInfo": {
+                  "encryptionType": "CUSTOMER_MANAGED_ENCRYPTION"
+                },
+                "clusterType": "PRIMARY",
+                "continuousBackupConfig": {
+                  "enabled": false,
+                  "recoveryWindowDays": 14
+                },
+                "continuousBackupInfo": {
+                  "encryptionInfo": {
+                    "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                  },
+                  "schedule": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY",
+                    "SATURDAY",
+                    "SUNDAY"
+                  ]
+                },
+                "networkConfig": {
+                  "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2"
+                },
+                "geminiConfig": {}
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 255.325768ms
+    - id: 25
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+              "uid": "e08e75a6-0666-4ebb-8f92-f012f704c709",
+              "createTime": "2024-03-28T19:45:48.688012452Z",
+              "updateTime": "2024-03-28T19:46:15.079978311Z",
+              "labels": {
+                "cnrm-test": "true",
+                "managed-by-cnrm": "true"
+              },
+              "state": "READY",
+              "databaseVersion": "POSTGRES_14",
+              "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2",
+              "reconciling": false,
+              "automatedBackupPolicy": {
+                "enabled": true,
+                "weeklySchedule": {
+                  "startTimes": [
+                    {
+                      "hours": 10
+                    }
+                  ],
+                  "daysOfWeek": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY"
+                  ]
+                },
+                "backupWindow": "3600s",
+                "timeBasedRetention": {
+                  "retentionPeriod": "43200s"
+                },
+                "location": "us-central1",
+                "labels": {
+                  "source": "kcc-test"
+                },
+                "encryptionConfig": {
+                  "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+                }
+              },
+              "encryptionConfig": {
+                "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+              },
+              "encryptionInfo": {
+                "encryptionType": "CUSTOMER_MANAGED_ENCRYPTION"
+              },
+              "clusterType": "PRIMARY",
+              "continuousBackupConfig": {
+                "enabled": false,
+                "recoveryWindowDays": 14
+              },
+              "continuousBackupInfo": {
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "schedule": [
+                  "MONDAY",
+                  "TUESDAY",
+                  "WEDNESDAY",
+                  "THURSDAY",
+                  "FRIDAY",
+                  "SATURDAY",
+                  "SUNDAY"
+                ]
+              },
+              "networkConfig": {
+                "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2"
+              },
+              "geminiConfig": {}
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 277.709881ms
+    - id: 26
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2",
+              "createTime": "2024-03-28T19:45:25.327156536Z"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 82.184815ms
+    - id: 27
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "kind": "compute#network",
+              "id": "8260364033440904762",
+              "creationTimestamp": "2024-03-28T12:45:25.447-07:00",
+              "name": "computenetwork-dj55ohq2ivb2",
+              "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2",
+              "selfLinkWithId": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/8260364033440904762",
+              "autoCreateSubnetworks": false,
+              "routingConfig": {
+                "routingMode": "REGIONAL"
+              },
+              "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 153.282378ms
+    - id: 28
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2",
+              "primary": {
+                "name": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2/cryptoKeyVersions/1",
+                "state": "ENABLED",
+                "createTime": "2024-03-28T19:45:26.598108400Z",
+                "protectionLevel": "SOFTWARE",
+                "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION",
+                "generateTime": "2024-03-28T19:45:26.598108400Z"
+              },
+              "purpose": "ENCRYPT_DECRYPT",
+              "createTime": "2024-03-28T19:45:26.598108400Z",
+              "labels": {
+                "cnrm-test": "true",
+                "managed-by-cnrm": "true",
+                "key-one": "value-one"
+              },
+              "versionTemplate": {
+                "protectionLevel": "SOFTWARE",
+                "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION"
+              },
+              "destroyScheduledDuration": "2592000s"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 210.697619ms
+    - id: 29
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+              "uid": "e08e75a6-0666-4ebb-8f92-f012f704c709",
+              "createTime": "2024-03-28T19:45:48.688012452Z",
+              "updateTime": "2024-03-28T19:46:15.079978311Z",
+              "labels": {
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true"
+              },
+              "state": "READY",
+              "databaseVersion": "POSTGRES_14",
+              "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2",
+              "reconciling": false,
+              "automatedBackupPolicy": {
+                "enabled": true,
+                "weeklySchedule": {
+                  "startTimes": [
+                    {
+                      "hours": 10
+                    }
+                  ],
+                  "daysOfWeek": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY"
+                  ]
+                },
+                "backupWindow": "3600s",
+                "timeBasedRetention": {
+                  "retentionPeriod": "43200s"
+                },
+                "location": "us-central1",
+                "labels": {
+                  "source": "kcc-test"
+                },
+                "encryptionConfig": {
+                  "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+                }
+              },
+              "encryptionConfig": {
+                "kmsKeyName": "projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2"
+              },
+              "encryptionInfo": {
+                "encryptionType": "CUSTOMER_MANAGED_ENCRYPTION"
+              },
+              "clusterType": "PRIMARY",
+              "continuousBackupConfig": {
+                "enabled": false,
+                "recoveryWindowDays": 14
+              },
+              "continuousBackupInfo": {
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "schedule": [
+                  "MONDAY",
+                  "TUESDAY",
+                  "WEDNESDAY",
+                  "THURSDAY",
+                  "FRIDAY",
+                  "SATURDAY",
+                  "SUNDAY"
+                ]
+              },
+              "networkConfig": {
+                "network": "projects/402887772785/global/networks/computenetwork-dj55ohq2ivb2"
+              },
+              "geminiConfig": {}
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 258.233628ms
+    - id: 30
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.21.5 gdcl/0.160.0
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2/cryptoKeyVersions?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"cryptoKeyVersions":[{"name":"projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2/cryptoKeyVersions/1","state":"ENABLED","createTime":"2024-03-28T19:45:26.598108400Z","protectionLevel":"SOFTWARE","algorithm":"GOOGLE_SYMMETRIC_ENCRYPTION","generateTime":"2024-03-28T19:45:26.598108400Z"}],"totalSize":1}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 97.746158ms
+    - id: 31
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 3
+        transfer_encoding: []
+        trailer: {}
+        host: cloudkms.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.21.5 gdcl/0.160.0
+        url: https://cloudkms.googleapis.com/v1/projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2/cryptoKeyVersions/1:destroy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"name":"projects/example-project/locations/us-central1/keyRings/kmskeyring-dj55ohq2ivb2/cryptoKeys/kmscryptokey-dj55ohq2ivb2/cryptoKeyVersions/1","state":"DESTROY_SCHEDULED","createTime":"2024-03-28T19:45:26.598108400Z","destroyTime":"2024-04-27T19:46:26.248760Z","protectionLevel":"SOFTWARE","algorithm":"GOOGLE_SYMMETRIC_ENCRYPTION","generateTime":"2024-03-28T19:45:26.598108400Z"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 97.942068ms
+    - id: 32
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2?alt=json
+        method: DELETE
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711655186297-614bdc75b7339-8876c443-0945f52d",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:46:26.307854249Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 264.209329ms
+    - id: 33
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2?alt=json
+        method: DELETE
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "kind": "compute#operation",
+              "id": "4259923071792084989",
+              "name": "operation-1711655185830-614bdc7545309-ce9553b8-9160e555",
+              "operationType": "delete",
+              "targetLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2",
+              "targetId": "8260364033440904762",
+              "status": "RUNNING",
+              "user": "user@google.com",
+              "progress": 0,
+              "insertTime": "2024-03-28T12:46:26.248-07:00",
+              "startTime": "2024-03-28T12:46:26.263-07:00",
+              "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/operations/operation-1711655185830-614bdc7545309-ce9553b8-9160e555"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 669.234784ms
+    - id: 34
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711655186297-614bdc75b7339-8876c443-0945f52d?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711655186297-614bdc75b7339-8876c443-0945f52d",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:46:26.307854249Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 235.532764ms
+    - id: 35
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.21.5 gdcl/0.160.0
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/operations/operation-1711655185830-614bdc7545309-ce9553b8-9160e555?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"kind":"compute#operation","id":"4259923071792084989","name":"operation-1711655185830-614bdc7545309-ce9553b8-9160e555","operationType":"delete","targetLink":"https://www.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2","targetId":"8260364033440904762","status":"RUNNING","user":"user@google.com","progress":0,"insertTime":"2024-03-28T12:46:26.248-07:00","startTime":"2024-03-28T12:46:26.263-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/example-project/global/operations/operation-1711655185830-614bdc7545309-ce9553b8-9160e555"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 144.542307ms
+    - id: 36
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711655186297-614bdc75b7339-8876c443-0945f52d?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711655186297-614bdc75b7339-8876c443-0945f52d",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:46:26.307854249Z",
+                "endTime": "2024-03-28T19:46:39.542402415Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbcluster-dj55ohq2ivb2",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.protobuf.Empty"
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 230.732701ms
+    - id: 37
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.21.5 gdcl/0.160.0
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/operations/operation-1711655185830-614bdc7545309-ce9553b8-9160e555?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"kind":"compute#operation","id":"4259923071792084989","name":"operation-1711655185830-614bdc7545309-ce9553b8-9160e555","operationType":"delete","targetLink":"https://www.googleapis.com/compute/beta/projects/example-project/global/networks/computenetwork-dj55ohq2ivb2","targetId":"8260364033440904762","status":"DONE","user":"user@google.com","progress":100,"insertTime":"2024-03-28T12:46:26.248-07:00","startTime":"2024-03-28T12:46:26.263-07:00","endTime":"2024-03-28T12:46:45.240-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/example-project/global/operations/operation-1711655185830-614bdc7545309-ce9553b8-9160e555"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 134.467384ms

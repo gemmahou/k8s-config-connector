@@ -15,11 +15,13 @@
 package e2e
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
 	"hash/fnv"
 	"io"
+	"io/ioutil"
 	"net/http"
 	"net/url"
 	"os"
@@ -196,6 +198,8 @@ func testFixturesInSeries(ctx context.Context, t *testing.T, testPause bool, can
 					replaceWellKnownValues := func(s string) string {
 						// Replace project id
 						result := strings.Replace(s, project.ProjectID, "example-project", -1)
+						// Replace project number
+						result = strings.Replace(result, strconv.FormatInt(project.ProjectNumber, 10), "123456789", -1)
 
 						// Replace user info
 						obj := make(map[string]any)
@@ -276,6 +280,8 @@ func testFixturesInSeries(ctx context.Context, t *testing.T, testPause bool, can
 							if err != nil {
 								t.Fatal("[VCR] Failed to read request body")
 							}
+							r.Body.Close()
+							r.Body = ioutil.NopCloser(bytes.NewBuffer(reqBody))
 							if string(reqBody) == i.Body {
 								return true
 							}

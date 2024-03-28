@@ -16,6 +16,8 @@ package create
 
 import (
 	"context"
+	"github.com/GoogleCloudPlatform/k8s-config-connector/pkg/gcp"
+	"golang.org/x/oauth2/google"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -27,7 +29,6 @@ import (
 	"github.com/go-logr/logr"
 	transport_tpg "github.com/hashicorp/terraform-provider-google-beta/google-beta/transport"
 	"golang.org/x/oauth2"
-	"golang.org/x/oauth2/google"
 	cloudresourcemanagerv1 "google.golang.org/api/cloudresourcemanager/v1"
 	"google.golang.org/api/option"
 	"gopkg.in/dnaeon/go-vcr.v3/recorder"
@@ -52,7 +53,6 @@ import (
 	"github.com/GoogleCloudPlatform/k8s-config-connector/pkg/controller/kccmanager/nocache"
 	"github.com/GoogleCloudPlatform/k8s-config-connector/pkg/controller/registration"
 	"github.com/GoogleCloudPlatform/k8s-config-connector/pkg/crd/crdloader"
-	"github.com/GoogleCloudPlatform/k8s-config-connector/pkg/gcp"
 	"github.com/GoogleCloudPlatform/k8s-config-connector/pkg/k8s"
 	"github.com/GoogleCloudPlatform/k8s-config-connector/pkg/krmtotf"
 	"github.com/GoogleCloudPlatform/k8s-config-connector/pkg/logging"
@@ -303,6 +303,17 @@ func NewHarness(ctx context.Context, t *testing.T) *Harness {
 			ProjectID:     "example-project",
 			ProjectNumber: 12345678,
 		}
+		mockCloud := mockgcp.NewMockRoundTripper(t, h.client, storage.NewInMemoryStorage())
+
+		roundTripper := http.RoundTripper(mockCloud)
+
+		kccConfig.HTTPClient = &http.Client{Transport: roundTripper}
+
+		// Also hook the oauth2 library
+		ctx = context.WithValue(ctx, oauth2.HTTPClient, kccConfig.HTTPClient)
+		h.Ctx = ctx
+		h.gcpAccessToken = "dummytoken"
+		kccConfig.GCPAccessToken = h.gcpAccessToken
 	} else {
 		h.Project = testgcp.GetDefaultProject(t)
 	}
@@ -352,7 +363,7 @@ func NewHarness(ctx context.Context, t *testing.T) *Harness {
 			if t := ctx.Value(httpRoundTripperKey); t != nil {
 				ret = &http.Client{Transport: t.(http.RoundTripper)}
 			}
-			dir := "pkg/test/resourcefixture/testdata/vcr/cassette/"
+			dir := "./testdata/vcr-cassette/"
 			testName := strings.ReplaceAll(t.Name(), "/", "_")
 			opts := &recorder.Options{
 				CassetteName:  filepath.Join(dir, testName),
@@ -536,6 +547,28 @@ func MaybeSkip(t *testing.T, name string, resources []*unstructured.Unstructured
 			default:
 				t.Skipf("gk %v not suppported by mock gcp %v; skipping", gvk.GroupKind(), name)
 			}
+		}
+	}
+	if os.Getenv("E2E_GCP_TARGET") == "vcr" {
+		switch name {
+		case "basicalloydbbackup":
+		//case "fullalloydbbackup":
+		case "basicalloydbcluster":
+		case "basicalloydbsecondarycluster":
+		case "fullalloydbcluster":
+		case "restorebackupalloydbcluster":
+		case "basicalloydbinstance":
+		//case "basicalloydbsecondaryinstance":
+		case "fullalloydbinstance":
+		case "readalloydbinstance":
+		case "zonalalloydbinstance":
+		case "databasealloydbuser":
+		case "iamalloydbuser":
+
+		case "computenodegroup":
+		case "computenodetemplate":
+		default:
+			t.Skipf("test %v not suppported by vcr; skipping", name)
 		}
 	}
 }

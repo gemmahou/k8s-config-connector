@@ -1,0 +1,1223 @@
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks/default?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "kind": "compute#network",
+              "id": "908864840150306123",
+              "creationTimestamp": "2023-07-11T17:28:20.541-07:00",
+              "name": "default",
+              "description": "Default network for the project",
+              "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/default",
+              "selfLinkWithId": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/908864840150306123",
+              "autoCreateSubnetworks": true,
+              "subnetworks": [
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west8/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west4/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east4/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west3/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west9/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west3/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west8/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-west1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west12/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-north1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/africa-south1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-east1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-central2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east5/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-central1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-south1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west10/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west6/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-central1/subnetworks/aet-uscentral1-vpcacmo56tx4ydtkd3nifvrvq-sbnt",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east7/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-southwest1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast3/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west4/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-west1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast1/subnetworks/default"
+              ],
+              "routingConfig": {
+                "routingMode": "REGIONAL"
+              },
+              "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 279.146432ms
+    - id: 1
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: compute.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks/default?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "kind": "compute#network",
+              "id": "908864840150306123",
+              "creationTimestamp": "2023-07-11T17:28:20.541-07:00",
+              "name": "default",
+              "description": "Default network for the project",
+              "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/default",
+              "selfLinkWithId": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/908864840150306123",
+              "autoCreateSubnetworks": true,
+              "subnetworks": [
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west8/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west4/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east4/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west3/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west9/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west3/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west8/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-west1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west12/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-north1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/africa-south1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-east1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-central2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east5/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-central1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-south1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west10/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west6/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-central1/subnetworks/aet-uscentral1-vpcacmo56tx4ydtkd3nifvrvq-sbnt",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east7/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-southwest1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west2/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast3/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west4/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-west1/subnetworks/default",
+                "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast1/subnetworks/default"
+              ],
+              "routingConfig": {
+                "routingMode": "REGIONAL"
+              },
+              "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 148.770858ms
+    - id: 2
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 248
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"clusterType":"PRIMARY","displayName":"test alloydb cluster","initialUser":{"password":"postgres","user":"postgres"},"labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"networkConfig":{"network":"projects/example-project/global/networks/default"}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters?alt=json&clusterId=alloydbclusterlbk8ncs6abe1
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711654170257-614bd8acbe7d2-b6ecafa2-a5a1a79a",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:29:30.366634553Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 400.844629ms
+    - id: 3
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711654170257-614bd8acbe7d2-b6ecafa2-a5a1a79a?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711654170257-614bd8acbe7d2-b6ecafa2-a5a1a79a",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:29:30.366634553Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 251.675611ms
+    - id: 4
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711654170257-614bd8acbe7d2-b6ecafa2-a5a1a79a?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711654170257-614bd8acbe7d2-b6ecafa2-a5a1a79a",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:29:30.366634553Z",
+                "endTime": "2024-03-28T19:29:36.107539590Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.Cluster",
+                "name": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "uid": "40fc7410-c464-40a4-9b18-b92624b8f178",
+                "createTime": "2024-03-28T19:29:30.362379636Z",
+                "updateTime": "2024-03-28T19:29:30.362379636Z",
+                "state": "READY",
+                "databaseVersion": "POSTGRES_14",
+                "network": "projects/402887772785/global/networks/default",
+                "reconciling": false,
+                "automatedBackupPolicy": {
+                  "enabled": false,
+                  "weeklySchedule": {
+                    "startTimes": [
+                      {
+                        "hours": 23
+                      }
+                    ],
+                    "daysOfWeek": [
+                      "MONDAY",
+                      "TUESDAY",
+                      "WEDNESDAY",
+                      "THURSDAY",
+                      "FRIDAY",
+                      "SATURDAY",
+                      "SUNDAY"
+                    ]
+                  },
+                  "backupWindow": "3600s",
+                  "timeBasedRetention": {
+                    "retentionPeriod": "1209600s"
+                  },
+                  "location": "us-central1"
+                },
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "clusterType": "PRIMARY",
+                "continuousBackupConfig": {
+                  "enabled": true,
+                  "recoveryWindowDays": 14
+                },
+                "continuousBackupInfo": {
+                  "encryptionInfo": {
+                    "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                  },
+                  "enabledTime": "2024-03-28T19:29:30.262643101Z",
+                  "schedule": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY",
+                    "SATURDAY",
+                    "SUNDAY"
+                  ]
+                },
+                "networkConfig": {
+                  "network": "projects/402887772785/global/networks/default"
+                },
+                "geminiConfig": {}
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 205.351725ms
+    - id: 5
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+              "uid": "40fc7410-c464-40a4-9b18-b92624b8f178",
+              "createTime": "2024-03-28T19:29:30.362379636Z",
+              "updateTime": "2024-03-28T19:29:36.126345971Z",
+              "labels": {
+                "cnrm-test": "true",
+                "managed-by-cnrm": "true"
+              },
+              "state": "READY",
+              "databaseVersion": "POSTGRES_14",
+              "network": "projects/402887772785/global/networks/default",
+              "reconciling": false,
+              "automatedBackupPolicy": {
+                "enabled": false,
+                "weeklySchedule": {
+                  "startTimes": [
+                    {
+                      "hours": 23
+                    }
+                  ],
+                  "daysOfWeek": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY",
+                    "SATURDAY",
+                    "SUNDAY"
+                  ]
+                },
+                "backupWindow": "3600s",
+                "timeBasedRetention": {
+                  "retentionPeriod": "1209600s"
+                },
+                "location": "us-central1"
+              },
+              "encryptionInfo": {
+                "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+              },
+              "clusterType": "PRIMARY",
+              "continuousBackupConfig": {
+                "enabled": true,
+                "recoveryWindowDays": 14
+              },
+              "continuousBackupInfo": {
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "enabledTime": "2024-03-28T19:29:30.262643101Z",
+                "schedule": [
+                  "MONDAY",
+                  "TUESDAY",
+                  "WEDNESDAY",
+                  "THURSDAY",
+                  "FRIDAY",
+                  "SATURDAY",
+                  "SUNDAY"
+                ]
+              },
+              "networkConfig": {
+                "network": "projects/402887772785/global/networks/default"
+              },
+              "geminiConfig": {}
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 266.388868ms
+    - id: 6
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+              "uid": "40fc7410-c464-40a4-9b18-b92624b8f178",
+              "createTime": "2024-03-28T19:29:30.362379636Z",
+              "updateTime": "2024-03-28T19:29:36.126345971Z",
+              "labels": {
+                "cnrm-test": "true",
+                "managed-by-cnrm": "true"
+              },
+              "state": "READY",
+              "databaseVersion": "POSTGRES_14",
+              "network": "projects/402887772785/global/networks/default",
+              "reconciling": false,
+              "automatedBackupPolicy": {
+                "enabled": false,
+                "weeklySchedule": {
+                  "startTimes": [
+                    {
+                      "hours": 23
+                    }
+                  ],
+                  "daysOfWeek": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY",
+                    "SATURDAY",
+                    "SUNDAY"
+                  ]
+                },
+                "backupWindow": "3600s",
+                "timeBasedRetention": {
+                  "retentionPeriod": "1209600s"
+                },
+                "location": "us-central1"
+              },
+              "encryptionInfo": {
+                "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+              },
+              "clusterType": "PRIMARY",
+              "continuousBackupConfig": {
+                "enabled": true,
+                "recoveryWindowDays": 14
+              },
+              "continuousBackupInfo": {
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "enabledTime": "2024-03-28T19:29:30.262643101Z",
+                "schedule": [
+                  "MONDAY",
+                  "TUESDAY",
+                  "WEDNESDAY",
+                  "THURSDAY",
+                  "FRIDAY",
+                  "SATURDAY",
+                  "SUNDAY"
+                ]
+              },
+              "networkConfig": {
+                "network": "projects/402887772785/global/networks/default"
+              },
+              "geminiConfig": {}
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 218.823864ms
+    - id: 7
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+              "uid": "40fc7410-c464-40a4-9b18-b92624b8f178",
+              "createTime": "2024-03-28T19:29:30.362379636Z",
+              "updateTime": "2024-03-28T19:29:36.126345971Z",
+              "labels": {
+                "cnrm-test": "true",
+                "managed-by-cnrm": "true"
+              },
+              "state": "READY",
+              "databaseVersion": "POSTGRES_14",
+              "network": "projects/402887772785/global/networks/default",
+              "reconciling": false,
+              "automatedBackupPolicy": {
+                "enabled": false,
+                "weeklySchedule": {
+                  "startTimes": [
+                    {
+                      "hours": 23
+                    }
+                  ],
+                  "daysOfWeek": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY",
+                    "SATURDAY",
+                    "SUNDAY"
+                  ]
+                },
+                "backupWindow": "3600s",
+                "timeBasedRetention": {
+                  "retentionPeriod": "1209600s"
+                },
+                "location": "us-central1"
+              },
+              "encryptionInfo": {
+                "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+              },
+              "clusterType": "PRIMARY",
+              "continuousBackupConfig": {
+                "enabled": true,
+                "recoveryWindowDays": 14
+              },
+              "continuousBackupInfo": {
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "enabledTime": "2024-03-28T19:29:30.262643101Z",
+                "schedule": [
+                  "MONDAY",
+                  "TUESDAY",
+                  "WEDNESDAY",
+                  "THURSDAY",
+                  "FRIDAY",
+                  "SATURDAY",
+                  "SUNDAY"
+                ]
+              },
+              "networkConfig": {
+                "network": "projects/402887772785/global/networks/default"
+              },
+              "geminiConfig": {}
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 212.89227ms
+    - id: 8
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 666
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"automatedBackupPolicy":{"backupWindow":"3600s","labels":{"source":"kcc-test"},"location":"us-central1","timeBasedRetention":{"retentionPeriod":"1209600s"},"weeklySchedule":{"daysOfWeek":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY","SUNDAY"],"startTimes":[{"hours":23}]}},"clusterType":"PRIMARY","continuousBackupConfig":{"enabled":true,"recoveryWindowDays":14},"displayName":"test alloydb cluster 2","initialUser":{"password":"postgres","user":"postgres"},"labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"network":"projects/402887772785/global/networks/default","networkConfig":{"network":"projects/402887772785/global/networks/default"}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1?alt=json&updateMask=displayName%2CautomatedBackupPolicy
+        method: PATCH
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711654183674-614bd8b98a2f4-57f9b90d-386877fe",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:29:43.711232005Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "verb": "update",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 282.815689ms
+    - id: 9
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711654183674-614bd8b98a2f4-57f9b90d-386877fe?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711654183674-614bd8b98a2f4-57f9b90d-386877fe",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:29:43.711232005Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "verb": "update",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 246.387683ms
+    - id: 10
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711654183674-614bd8b98a2f4-57f9b90d-386877fe?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711654183674-614bd8b98a2f4-57f9b90d-386877fe",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:29:43.711232005Z",
+                "endTime": "2024-03-28T19:29:56.091634418Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "verb": "update",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.Cluster",
+                "name": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "uid": "40fc7410-c464-40a4-9b18-b92624b8f178",
+                "createTime": "2024-03-28T19:29:30.362379636Z",
+                "updateTime": "2024-03-28T19:29:43.713411464Z",
+                "state": "READY",
+                "databaseVersion": "POSTGRES_14",
+                "network": "projects/402887772785/global/networks/default",
+                "reconciling": false,
+                "automatedBackupPolicy": {
+                  "enabled": false,
+                  "weeklySchedule": {
+                    "startTimes": [
+                      {
+                        "hours": 23
+                      }
+                    ],
+                    "daysOfWeek": [
+                      "MONDAY",
+                      "TUESDAY",
+                      "WEDNESDAY",
+                      "THURSDAY",
+                      "FRIDAY",
+                      "SATURDAY",
+                      "SUNDAY"
+                    ]
+                  },
+                  "backupWindow": "3600s",
+                  "timeBasedRetention": {
+                    "retentionPeriod": "1209600s"
+                  },
+                  "location": "us-central1",
+                  "labels": {
+                    "source": "kcc-test"
+                  }
+                },
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "clusterType": "PRIMARY",
+                "continuousBackupConfig": {
+                  "enabled": true,
+                  "recoveryWindowDays": 14
+                },
+                "continuousBackupInfo": {
+                  "encryptionInfo": {
+                    "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                  },
+                  "enabledTime": "2024-03-28T19:29:30.262643101Z",
+                  "schedule": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY",
+                    "SATURDAY",
+                    "SUNDAY"
+                  ]
+                },
+                "networkConfig": {
+                  "network": "projects/402887772785/global/networks/default"
+                },
+                "geminiConfig": {}
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 307.71736ms
+    - id: 11
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+              "uid": "40fc7410-c464-40a4-9b18-b92624b8f178",
+              "createTime": "2024-03-28T19:29:30.362379636Z",
+              "updateTime": "2024-03-28T19:29:56.114861305Z",
+              "labels": {
+                "cnrm-test": "true",
+                "managed-by-cnrm": "true"
+              },
+              "state": "READY",
+              "databaseVersion": "POSTGRES_14",
+              "network": "projects/402887772785/global/networks/default",
+              "reconciling": false,
+              "automatedBackupPolicy": {
+                "enabled": false,
+                "weeklySchedule": {
+                  "startTimes": [
+                    {
+                      "hours": 23
+                    }
+                  ],
+                  "daysOfWeek": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY",
+                    "SATURDAY",
+                    "SUNDAY"
+                  ]
+                },
+                "backupWindow": "3600s",
+                "timeBasedRetention": {
+                  "retentionPeriod": "1209600s"
+                },
+                "location": "us-central1",
+                "labels": {
+                  "source": "kcc-test"
+                }
+              },
+              "encryptionInfo": {
+                "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+              },
+              "clusterType": "PRIMARY",
+              "continuousBackupConfig": {
+                "enabled": true,
+                "recoveryWindowDays": 14
+              },
+              "continuousBackupInfo": {
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "enabledTime": "2024-03-28T19:29:30.262643101Z",
+                "schedule": [
+                  "MONDAY",
+                  "TUESDAY",
+                  "WEDNESDAY",
+                  "THURSDAY",
+                  "FRIDAY",
+                  "SATURDAY",
+                  "SUNDAY"
+                ]
+              },
+              "networkConfig": {
+                "network": "projects/402887772785/global/networks/default"
+              },
+              "geminiConfig": {}
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 269.441813ms
+    - id: 12
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+              "uid": "40fc7410-c464-40a4-9b18-b92624b8f178",
+              "createTime": "2024-03-28T19:29:30.362379636Z",
+              "updateTime": "2024-03-28T19:29:56.114861305Z",
+              "labels": {
+                "cnrm-test": "true",
+                "managed-by-cnrm": "true"
+              },
+              "state": "READY",
+              "databaseVersion": "POSTGRES_14",
+              "network": "projects/402887772785/global/networks/default",
+              "reconciling": false,
+              "automatedBackupPolicy": {
+                "enabled": false,
+                "weeklySchedule": {
+                  "startTimes": [
+                    {
+                      "hours": 23
+                    }
+                  ],
+                  "daysOfWeek": [
+                    "MONDAY",
+                    "TUESDAY",
+                    "WEDNESDAY",
+                    "THURSDAY",
+                    "FRIDAY",
+                    "SATURDAY",
+                    "SUNDAY"
+                  ]
+                },
+                "backupWindow": "3600s",
+                "timeBasedRetention": {
+                  "retentionPeriod": "1209600s"
+                },
+                "location": "us-central1",
+                "labels": {
+                  "source": "kcc-test"
+                }
+              },
+              "encryptionInfo": {
+                "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+              },
+              "clusterType": "PRIMARY",
+              "continuousBackupConfig": {
+                "enabled": true,
+                "recoveryWindowDays": 14
+              },
+              "continuousBackupInfo": {
+                "encryptionInfo": {
+                  "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+                },
+                "enabledTime": "2024-03-28T19:29:30.262643101Z",
+                "schedule": [
+                  "MONDAY",
+                  "TUESDAY",
+                  "WEDNESDAY",
+                  "THURSDAY",
+                  "FRIDAY",
+                  "SATURDAY",
+                  "SUNDAY"
+                ]
+              },
+              "networkConfig": {
+                "network": "projects/402887772785/global/networks/default"
+              },
+              "geminiConfig": {}
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 275.458416ms
+    - id: 13
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1?alt=json
+        method: DELETE
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711654207848-614bd8d09816e-0788172c-8fbd0f70",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:30:07.860079393Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 286.514675ms
+    - id: 14
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711654207848-614bd8d09816e-0788172c-8fbd0f70?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711654207848-614bd8d09816e-0788172c-8fbd0f70",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:30:07.860079393Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 246.333696ms
+    - id: 15
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: alloydb.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://alloydb.googleapis.com/v1beta/projects/example-project/locations/us-central1/operations/operation-1711654207848-614bd8d09816e-0788172c-8fbd0f70?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1711654207848-614bd8d09816e-0788172c-8fbd0f70",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.alloydb.v1beta.OperationMetadata",
+                "createTime": "2024-03-28T19:30:07.860079393Z",
+                "endTime": "2024-03-28T19:30:20.888513727Z",
+                "target": "projects/example-project/locations/us-central1/clusters/alloydbclusterlbk8ncs6abe1",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.protobuf.Empty"
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 413.79847ms
