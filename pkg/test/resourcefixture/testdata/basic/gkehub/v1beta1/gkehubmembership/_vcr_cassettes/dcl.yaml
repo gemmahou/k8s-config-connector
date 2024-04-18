@@ -1,0 +1,1490 @@
+---
+version: 2
+interactions:
+  - id: 0
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 228.542458ms
+  - id: 1
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 82.828298ms
+  - id: 2
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 266.211899ms
+  - id: 3
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 534
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: '{"authority":{"issuer":"https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"},"description":"A sample GKE Hub membership","endpoint":{"gkeCluster":{"resourceLink":"//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"}},"labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"name":"projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me"}'
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships?alt=json&membershipId=gkehubmembership-3tmxdw2oic1me
+      method: POST
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/operations/operation-1715105141991-617e108bda865-c64775cd-da930c39",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.gkehub.v1beta1.OperationMetadata",
+            "createTime": "2024-05-03T18:05:44.213056861Z",
+            "target": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+            "verb": "create",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 2.704896428s
+  - id: 4
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/operations/operation-1715105141991-617e108bda865-c64775cd-da930c39?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/operations/operation-1715105141991-617e108bda865-c64775cd-da930c39",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.gkehub.v1beta1.OperationMetadata",
+            "createTime": "2024-05-03T18:05:44.213056861Z",
+            "endTime": "2024-05-03T18:06:04.399878376Z",
+            "target": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+            "verb": "create",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.gkehub.v1beta1.Membership",
+            "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+            "description": "A sample GKE Hub membership",
+            "endpoint": {
+              "gkeCluster": {
+                "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+              }
+            },
+            "state": {
+              "code": "READY"
+            },
+            "createTime": "2024-05-03T18:05:44.175617937Z",
+            "updateTime": "2024-05-03T18:05:44.175617937Z",
+            "authority": {
+              "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+              "workloadIdentityPool": "example-project.svc.id.goog",
+              "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            },
+            "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+            "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+            "infrastructureType": "MULTI_CLOUD",
+            "monitoringConfig": {
+              "projectId": "example-project",
+              "location": "us-central1-a",
+              "cluster": "containercluster-3tmxdw2oic1me",
+              "kubernetesMetricsPrefix": "kubernetes.io",
+              "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+            }
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 136.014508ms
+  - id: 5
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A sample GKE Hub membership",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:04.423238659Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 80.029567ms
+  - id: 6
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A sample GKE Hub membership",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:04.423238659Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 107.972262ms
+  - id: 7
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A sample GKE Hub membership",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:04.423238659Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 114.505114ms
+  - id: 8
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A sample GKE Hub membership",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:04.423238659Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 253.647195ms
+  - id: 9
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A sample GKE Hub membership",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:04.423238659Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 99.83091ms
+  - id: 10
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A sample GKE Hub membership",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:04.423238659Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 109.195479ms
+  - id: 11
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A sample GKE Hub membership",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:04.423238659Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 72.861124ms
+  - id: 12
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A sample GKE Hub membership",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:04.423238659Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 240.84443ms
+  - id: 13
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A sample GKE Hub membership",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:04.423238659Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 86.747186ms
+  - id: 14
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 472
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: '{"authority":{"issuer":"https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"},"description":"A simpler GKE Hub membership update","endpoint":{"gkeCluster":{"resourceLink":"//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"}},"infrastructureType":"MULTI_CLOUD","labels":{"cnrm-test":"true","managed-by-cnrm":"true"}}'
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json&updateMask=description
+      method: PATCH
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/operations/operation-1715105173779-617e10aa2b33d-ea0de903-e1a5d95a",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.gkehub.v1beta1.OperationMetadata",
+            "createTime": "2024-05-03T18:06:14.097397754Z",
+            "target": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+            "verb": "update",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 524.701961ms
+  - id: 15
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/operations/operation-1715105173779-617e10aa2b33d-ea0de903-e1a5d95a?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/operations/operation-1715105173779-617e10aa2b33d-ea0de903-e1a5d95a",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.gkehub.v1beta1.OperationMetadata",
+            "createTime": "2024-05-03T18:06:14.097397754Z",
+            "endTime": "2024-05-03T18:06:15.511849946Z",
+            "target": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+            "verb": "update",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.gkehub.v1beta1.Membership",
+            "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+            "description": "A simpler GKE Hub membership update",
+            "endpoint": {
+              "gkeCluster": {
+                "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+              }
+            },
+            "state": {
+              "code": "READY"
+            },
+            "createTime": "2024-05-03T18:05:44.175617937Z",
+            "updateTime": "2024-05-03T18:06:14.099551764Z",
+            "authority": {
+              "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+              "workloadIdentityPool": "example-project.svc.id.goog",
+              "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            },
+            "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+            "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+            "infrastructureType": "MULTI_CLOUD",
+            "monitoringConfig": {
+              "projectId": "example-project",
+              "location": "us-central1-a",
+              "cluster": "containercluster-3tmxdw2oic1me",
+              "kubernetesMetricsPrefix": "kubernetes.io",
+              "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+            }
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 299.474524ms
+  - id: 16
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A simpler GKE Hub membership update",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:15.637304494Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 96.653181ms
+  - id: 17
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A simpler GKE Hub membership update",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:15.637304494Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 70.38725ms
+  - id: 18
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A simpler GKE Hub membership update",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:15.637304494Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 236.196884ms
+  - id: 19
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: DELETE
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/operations/operation-1715105178419-617e10ae97f99-2c0d740a-0f3c2c6e",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.gkehub.v1beta1.OperationMetadata",
+            "createTime": "2024-05-03T18:06:18.477411408Z",
+            "target": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+            "verb": "delete",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 286.664045ms
+  - id: 20
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/operations/operation-1715105178419-617e10ae97f99-2c0d740a-0f3c2c6e?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/operations/operation-1715105178419-617e10ae97f99-2c0d740a-0f3c2c6e",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.gkehub.v1beta1.OperationMetadata",
+            "createTime": "2024-05-03T18:06:18.477411408Z",
+            "endTime": "2024-05-03T18:06:20.743189119Z",
+            "target": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+            "verb": "delete",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "error": {
+            "code": 9,
+            "message": "failed to uninstall Kubernetes resources for Membership: failed to delete Membership resources: failed to fetch resource memberships.hub.gke.io: an error on the server (\"Internal Server Error: \\\"/apis/apiextensions.k8s.io/v1/customresourcedefinitions/memberships.hub.gke.io\\\": the server could not find the requested resource\") has prevented the request from succeeding (get customresourcedefinitions.apiextensions.k8s.io memberships.hub.gke.io): failed precondition"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 91.866434ms
+  - id: 21
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A simpler GKE Hub membership update",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:20.767971137Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 85.025931ms
+  - id: 22
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "description": "A simpler GKE Hub membership update",
+          "endpoint": {
+            "gkeCluster": {
+              "resourceLink": "//container.googleapis.com/projects/example-project/zones/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+            }
+          },
+          "state": {
+            "code": "READY"
+          },
+          "createTime": "2024-05-03T18:05:44.175617937Z",
+          "updateTime": "2024-05-03T18:06:20.767971137Z",
+          "authority": {
+            "issuer": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me",
+            "workloadIdentityPool": "example-project.svc.id.goog",
+            "identityProvider": "https://container.googleapis.com/v1/projects/example-project/locations/us-central1-a/clusters/containercluster-3tmxdw2oic1me"
+          },
+          "externalId": "285c2b17-93f6-4295-8c8a-3c7bd24bdd0f",
+          "uniqueId": "f72c0843-8ab9-4893-9762-81fea88aa88b",
+          "infrastructureType": "MULTI_CLOUD",
+          "monitoringConfig": {
+            "projectId": "example-project",
+            "location": "us-central1-a",
+            "cluster": "containercluster-3tmxdw2oic1me",
+            "kubernetesMetricsPrefix": "kubernetes.io",
+            "clusterHash": "a398c2250efe49aeac76cf8c3586d5a1d3cd4c4287a248928cbcbe87bd56f55d"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 247.099081ms
+  - id: 23
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: DELETE
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/operations/operation-1715105182441-617e10b26de40-cdcc13ca-23b18edd",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.gkehub.v1beta1.OperationMetadata",
+            "createTime": "2024-05-03T18:06:22.489331514Z",
+            "target": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+            "verb": "delete",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 232.621002ms
+  - id: 24
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/operations/operation-1715105182441-617e10b26de40-cdcc13ca-23b18edd?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/global/operations/operation-1715105182441-617e10b26de40-cdcc13ca-23b18edd",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.gkehub.v1beta1.OperationMetadata",
+            "createTime": "2024-05-03T18:06:22.489331514Z",
+            "endTime": "2024-05-03T18:06:23.124331564Z",
+            "target": "projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me",
+            "verb": "delete",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.protobuf.Empty"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 251.204853ms
+  - id: 25
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: gkehub.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://gkehub.googleapis.com/v1beta1/projects/example-project/locations/global/memberships/gkehubmembership-3tmxdw2oic1me?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 245.332146ms

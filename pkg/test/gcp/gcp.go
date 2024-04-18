@@ -56,6 +56,7 @@ var (
 	TestFolder2ID                           = EnvVar{Key: "TEST_FOLDER_2_ID"}
 	TestOrgID                               = EnvVar{Key: "TEST_ORG_ID"}
 	TestDependentOrgProjectID               = EnvVar{Key: "TEST_DEPENDENT_ORG_PROJECT_ID"}
+	TestDependentFolderProjectID            = EnvVar{Key: "TEST_DEPENDENT_FOLDER_PROJECT_ID"}
 	TestBillingAccountID                    = EnvVar{Key: "TEST_BILLING_ACCOUNT_ID"}
 	IAMIntegrationTestsOrganizationID       = EnvVar{Key: "IAM_INTEGRATION_TESTS_ORGANIZATION_ID"}
 	IAMIntegrationTestsBillingAccountID     = EnvVar{Key: "IAM_INTEGRATION_TESTS_BILLING_ACCOUNT_ID"}
@@ -72,7 +73,6 @@ var (
 
 const (
 	TestDependentFolder2ProjectID = "TEST_DEPENDENT_FOLDER_2_PROJECT_ID"
-	TestDependentFolderProjectID  = "TEST_DEPENDENT_FOLDER_PROJECT_ID"
 	IsolatedTestOrgName           = "ISOLATED_TEST_ORG_NAME"
 	CloudFunctionsTestProject     = "CLOUD_FUNCTIONS_TEST_PROJECT"
 	InterconnectTestProject       = "INTERCONNECT_TEST_PROJECT"
@@ -82,7 +82,6 @@ const (
 
 var (
 	testDependentFolder2ProjectID = os.Getenv(TestDependentFolder2ProjectID)
-	testDependentFolderProjectID  = os.Getenv(TestDependentFolderProjectID)
 	isolatedTestOrgName           = os.Getenv(IsolatedTestOrgName)
 	cloudFunctionsTestProject     = os.Getenv(CloudFunctionsTestProject)
 	interconnectTestProject       = os.Getenv(InterconnectTestProject)
@@ -155,10 +154,6 @@ func FindDefaultServiceAccount() (string, error) {
 	}
 
 	return rawCreds["client_email"], nil
-}
-
-func GetDependentFolderProjectID(_ *testing.T) string {
-	return testDependentFolderProjectID
 }
 
 func GetDependentFolder2ProjectID(_ *testing.T) string {

@@ -1,0 +1,2050 @@
+---
+version: 2
+interactions:
+  - id: 0
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 85.438176ms
+  - id: 1
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 42.401893ms
+  - id: 2
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 46.26137ms
+  - id: 3
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 287
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: '{"description":"Test instance","fileShares":[{"capacityGb":2560,"name":"my_share","nfsExportOptions":[]}],"labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"networks":[{"modes":["MODE_IPV4"],"network":"projects/example-project/global/networks/default"}],"tier":"PREMIUM"}'
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances?alt=json&instanceId=filestoreinstance-2ryl82a7772kf
+      method: POST
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/operations/operation-1715103774019-617e0b734107e-4dd34739-6d6aa617",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:42:59.380275864Z",
+            "target": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+            "verb": "create",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 5.414441118s
+  - id: 4
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1/projects/example-project/locations/us-west1-c/operations/operation-1715103774019-617e0b734107e-4dd34739-6d6aa617?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/operations/operation-1715103774019-617e0b734107e-4dd34739-6d6aa617",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:42:59.380275864Z",
+            "endTime": "2024-05-03T17:46:34.080808796Z",
+            "target": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+            "verb": "create",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.filestore.v1beta1.Instance",
+            "name": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+            "description": "Test instance",
+            "state": "READY",
+            "createTime": "2024-05-03T17:42:59.377295725Z",
+            "tier": "PREMIUM",
+            "labels": {
+              "cnrm-test": "true",
+              "managed-by-cnrm": "true"
+            },
+            "fileShares": [
+              {
+                "name": "my_share",
+                "capacityGb": "2560"
+              }
+            ],
+            "networks": [
+              {
+                "network": "default",
+                "modes": [
+                  "MODE_IPV4"
+                ],
+                "reservedIpRange": "10.8.239.0/29",
+                "ipAddresses": [
+                  "10.8.239.2"
+                ]
+              }
+            ],
+            "maxCapacityGb": "65434",
+            "capacityStepSizeGb": "1",
+            "maxShareCount": "1",
+            "capacityGb": "2560",
+            "satisfiesPzi": true
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 29.621405ms
+  - id: 5
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:42:59.377295725Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.8.239.0/29",
+              "ipAddresses": [
+                "10.8.239.2"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 42.031025ms
+  - id: 6
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:42:59.377295725Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.8.239.0/29",
+              "ipAddresses": [
+                "10.8.239.2"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 38.685815ms
+  - id: 7
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 139
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: '{"description":"Test instance","fileShares":[{"capacityGb":2560,"name":"my_share"}],"labels":{"cnrm-test":"true","managed-by-cnrm":"true"}}'
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json&updateMask=fileShares
+      method: PATCH
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/operations/operation-1715104005104-617e0c4fa22e1-f9a32db3-11026167",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:46:45.141648079Z",
+            "target": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+            "verb": "update",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 83.858652ms
+  - id: 8
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1/projects/example-project/locations/us-west1-c/operations/operation-1715104005104-617e0c4fa22e1-f9a32db3-11026167?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/operations/operation-1715104005104-617e0c4fa22e1-f9a32db3-11026167",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:46:45.141648079Z",
+            "endTime": "2024-05-03T17:46:50.213961068Z",
+            "target": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+            "verb": "update",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.filestore.v1beta1.Instance",
+            "name": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+            "description": "Test instance",
+            "state": "READY",
+            "createTime": "2024-05-03T17:42:59.377295725Z",
+            "tier": "PREMIUM",
+            "labels": {
+              "cnrm-test": "true",
+              "managed-by-cnrm": "true"
+            },
+            "fileShares": [
+              {
+                "name": "my_share",
+                "capacityGb": "2560"
+              }
+            ],
+            "networks": [
+              {
+                "network": "default",
+                "modes": [
+                  "MODE_IPV4"
+                ],
+                "reservedIpRange": "10.8.239.0/29",
+                "ipAddresses": [
+                  "10.8.239.2"
+                ]
+              }
+            ],
+            "maxCapacityGb": "65434",
+            "capacityStepSizeGb": "1",
+            "maxShareCount": "1",
+            "capacityGb": "2560",
+            "satisfiesPzi": true
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 13.760004ms
+  - id: 9
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:42:59.377295725Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.8.239.0/29",
+              "ipAddresses": [
+                "10.8.239.2"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 23.997759ms
+  - id: 10
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:42:59.377295725Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.8.239.0/29",
+              "ipAddresses": [
+                "10.8.239.2"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 24.64688ms
+  - id: 11
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:42:59.377295725Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.8.239.0/29",
+              "ipAddresses": [
+                "10.8.239.2"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 30.693003ms
+  - id: 12
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:42:59.377295725Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.8.239.0/29",
+              "ipAddresses": [
+                "10.8.239.2"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 37.628684ms
+  - id: 13
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 232.293785ms
+  - id: 14
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 279.740777ms
+  - id: 15
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 288.868553ms
+  - id: 16
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 235
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: '{"description":"A sample backup","labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"sourceFileShare":"my_share","sourceInstance":"projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf"}'
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups?alt=json&backupId=filestorebackup-2ryl82a7772kf
+      method: POST
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/operations/operation-1715104013134-617e0c574abf3-e3eb871c-dfd0d3cf",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:46:53.920624618Z",
+            "target": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+            "verb": "create",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 1.037419562s
+  - id: 17
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/operations/operation-1715104013134-617e0c574abf3-e3eb871c-dfd0d3cf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/operations/operation-1715104013134-617e0c574abf3-e3eb871c-dfd0d3cf",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:46:53.920624618Z",
+            "endTime": "2024-05-03T17:47:39.108528645Z",
+            "target": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+            "verb": "create",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.filestore.v1beta1.Backup",
+            "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+            "description": "A sample backup",
+            "state": "READY",
+            "createTime": "2024-05-03T17:46:53.915781949Z",
+            "labels": {
+              "cnrm-test": "true",
+              "managed-by-cnrm": "true"
+            },
+            "capacityGb": "2560",
+            "storageBytes": "6549056",
+            "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+            "sourceFileShare": "my_share",
+            "sourceInstanceTier": "PREMIUM",
+            "downloadBytes": "6739828"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 210.001083ms
+  - id: 18
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "A sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 228.339628ms
+  - id: 19
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "A sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 220.17529ms
+  - id: 20
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "A sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 211.147696ms
+  - id: 21
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "A sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 214.395039ms
+  - id: 22
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "A sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 291.621419ms
+  - id: 23
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "A sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 227.451146ms
+  - id: 24
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "A sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 213.998619ms
+  - id: 25
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "A sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 231.645455ms
+  - id: 26
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "A sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 60.760781ms
+  - id: 27
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 121
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: '{"description":"An updated sample backup","labels":{"cnrm-test":"true","label-one":"value-one","managed-by-cnrm":"true"}}'
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json&updateMask=description%2Clabels
+      method: PATCH
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/operations/operation-1715104073699-617e0c910d222-ee4909dc-21ea24e6",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:47:53.713662392Z",
+            "target": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+            "verb": "update",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 263.803708ms
+  - id: 28
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/operations/operation-1715104073699-617e0c910d222-ee4909dc-21ea24e6?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/operations/operation-1715104073699-617e0c910d222-ee4909dc-21ea24e6",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:47:53.713662392Z",
+            "endTime": "2024-05-03T17:47:53.755155758Z",
+            "target": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+            "verb": "update",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.filestore.v1beta1.Backup",
+            "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+            "description": "An updated sample backup",
+            "state": "READY",
+            "createTime": "2024-05-03T17:46:53.915781949Z",
+            "labels": {
+              "cnrm-test": "true",
+              "managed-by-cnrm": "true"
+            },
+            "capacityGb": "2560",
+            "storageBytes": "6549056",
+            "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+            "sourceFileShare": "my_share",
+            "sourceInstanceTier": "PREMIUM",
+            "downloadBytes": "6739828"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 216.875243ms
+  - id: 29
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "An updated sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "cnrm-test": "true",
+            "label-one": "value-one",
+            "managed-by-cnrm": "true"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 208.842857ms
+  - id: 30
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:42:59.377295725Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.8.239.0/29",
+              "ipAddresses": [
+                "10.8.239.2"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 62.252233ms
+  - id: 31
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:42:59.377295725Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.8.239.0/29",
+              "ipAddresses": [
+                "10.8.239.2"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 34.780218ms
+  - id: 32
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "An updated sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true",
+            "label-one": "value-one"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 294.28459ms
+  - id: 33
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: DELETE
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/operations/operation-1715104075269-617e0c928c620-e1dc4e83-4518898b",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:47:55.309640987Z",
+            "target": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+            "verb": "delete",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 93.244884ms
+  - id: 34
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+          "description": "An updated sample backup",
+          "state": "READY",
+          "createTime": "2024-05-03T17:46:53.915781949Z",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true",
+            "label-one": "value-one"
+          },
+          "capacityGb": "2560",
+          "storageBytes": "6549056",
+          "sourceInstance": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+          "sourceFileShare": "my_share",
+          "sourceInstanceTier": "PREMIUM",
+          "downloadBytes": "6739828"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 66.205191ms
+  - id: 35
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: DELETE
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/operations/operation-1715104075800-617e0c930df3c-029ec6fc-2d1eb554",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:47:55.816175513Z",
+            "target": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+            "verb": "delete",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 94.070119ms
+  - id: 36
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/operations/operation-1715104075800-617e0c930df3c-029ec6fc-2d1eb554?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/operations/operation-1715104075800-617e0c930df3c-029ec6fc-2d1eb554",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:47:55.816175513Z",
+            "endTime": "2024-05-03T17:48:03.041620067Z",
+            "target": "projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf",
+            "verb": "delete",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.protobuf.Empty"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 57.98387ms
+  - id: 37
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1/backups/filestorebackup-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 210.463413ms
+  - id: 38
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/operations/operation-1715104075269-617e0c928c620-e1dc4e83-4518898b?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-west1-c/operations/operation-1715104075269-617e0c928c620-e1dc4e83-4518898b",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:47:55.309640987Z",
+            "endTime": "2024-05-03T17:50:24.369735361Z",
+            "target": "projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf",
+            "verb": "delete",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.protobuf.Empty"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 30.303304ms
+  - id: 39
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-west1-c/instances/filestoreinstance-2ryl82a7772kf?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 35.926939ms

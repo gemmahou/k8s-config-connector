@@ -321,6 +321,7 @@ func NewHarnessWithOptions(ctx context.Context, t *testing.T, opts *HarnessOptio
 			ProjectNumber: 12345678,
 		}
 		testgcp.TestDependentOrgProjectID.Set("example-project-01")
+		testgcp.TestDependentFolderProjectID.Set("example-project-02")
 		testgcp.FirestoreTestProject.Set("cnrm-test-firestore")
 		testgcp.IdentityPlatformTestProject.Set("kcc-identity-platform")
 		testgcp.RecaptchaEnterpriseTestProject.Set("kcc-recaptcha-enterprise")
@@ -671,6 +672,29 @@ func MaybeSkip(t *testing.T, name string, resources []*unstructured.Unstructured
 		case "privatecacapool":
 
 		case "projectinorg":
+
+		// Long running tests
+		case "basicalloydbbackup":
+		case "basicalloydbinstance":
+		case "basicalloydbsecondarycluster":
+		case "basicalloydbsecondaryinstance":
+		case "cidrconnector":
+		case "configcontrollerinstance":
+		case "containercluster":
+		case "databasealloydbuser":
+		case "datafusioninstance":
+		case "edgecontainercluster":
+		case "filestorebackup":
+		case "filestoreinstance":
+		case "fullalloydbbackup": // recreate
+		case "gkehubmembership":
+		case "iamalloydbuser":
+		case "readalloydbinstance":
+		case "restorebackupalloydbcluster":
+		case "zonalalloydbinstance":
+		case "removedefaultnodepool":
+		case "subnetconnector": //recreate
+
 		default:
 			t.Skipf("test %v not suppported by vcr; skipping", name)
 		}

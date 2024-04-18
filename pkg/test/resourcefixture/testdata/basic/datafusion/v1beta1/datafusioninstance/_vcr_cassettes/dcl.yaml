@@ -1,0 +1,1015 @@
+# Copyright 2024 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 0
+        uncompressed: true
+        body: fake error message
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 404 Not Found
+        code: 404
+        duration: 335.734334ms
+    - id: 1
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 0
+        uncompressed: true
+        body: fake error message
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 404 Not Found
+        code: 404
+        duration: 287.854551ms
+    - id: 2
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 0
+        uncompressed: true
+        body: fake error message
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 404 Not Found
+        code: 404
+        duration: 261.335369ms
+    - id: 3
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 457
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: '{"dataprocServiceAccount":"gsa-1njdnbdljki5l@example-project.iam.gserviceaccount.com","description":"A test Data Fusion instance.","displayName":"Test Data Fusion Instance","enableStackdriverLogging":true,"enableStackdriverMonitoring":true,"labels":{"cnrm-test":"true","label-one":"value-one","managed-by-cnrm":"true"},"networkConfig":{"ipAllocation":"10.89.48.0/22","network":"projects/example-project/global/networks/default"},"privateInstance":true,"type":"BASIC"}'
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances?alt=json&instanceId=dfi-1njdnbdljki5l
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1712957780101-615ed0fff89dc-6098344f-27b83000",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.datafusion.v1beta1.OperationMetadata",
+                "createTime": "2024-04-12T21:36:21.193692520Z",
+                "target": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta1"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 1.38899594s
+    - id: 4
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/operations/operation-1712957780101-615ed0fff89dc-6098344f-27b83000?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1712957780101-615ed0fff89dc-6098344f-27b83000",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.datafusion.v1beta1.OperationMetadata",
+                "createTime": "2024-04-12T21:36:21.193692520Z",
+                "target": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta1"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 284.081961ms
+    - id: 5
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/operations/operation-1712957780101-615ed0fff89dc-6098344f-27b83000?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1712957780101-615ed0fff89dc-6098344f-27b83000",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.datafusion.v1beta1.OperationMetadata",
+                "createTime": "2024-04-12T21:36:21.193692520Z",
+                "endTime": "2024-04-12T21:55:56.930183522Z",
+                "target": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta1"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.cloud.datafusion.v1beta1.Instance",
+                "name": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+                "description": "A test Data Fusion instance.",
+                "type": "BASIC",
+                "enableStackdriverLogging": true,
+                "enableStackdriverMonitoring": true,
+                "privateInstance": true,
+                "networkConfig": {
+                  "network": "default",
+                  "ipAllocation": "10.89.48.0/22"
+                },
+                "labels": {
+                  "goog-datafusion-edition": "basic",
+                  "cnrm-test": "true",
+                  "label-one": "value-one",
+                  "managed-by-cnrm": "true",
+                  "goog-datafusion-version": "6_9"
+                },
+                "createTime": "2024-04-12T21:36:21.188618470Z",
+                "updateTime": "2024-04-12T21:38:41.930512014Z",
+                "state": "RUNNING",
+                "serviceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com",
+                "version": "6.9.2",
+                "serviceAccount": "cloud-datafusion-management-sa@nc45fb2cc6e69496d-tp.iam.gserviceaccount.com",
+                "displayName": "Test Data Fusion Instance",
+                "availableVersion": [
+                  {
+                    "versionNumber": "6.10.0"
+                  }
+                ],
+                "apiEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com/api",
+                "gcsBucket": "gs://df-9241029078151326084-p4ezkmhzcyi65iw7aizbbqaaaa",
+                "p4ServiceAccount": "service-123456789@gcp-sa-datafusion.iam.gserviceaccount.com",
+                "tenantProjectId": "nc45fb2cc6e69496d-tp",
+                "dataprocServiceAccount": "gsa-1njdnbdljki5l@example-project.iam.gserviceaccount.com",
+                "workforceIdentityServiceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.byoid.googleusercontent.com.",
+                "patchRevision": "6.9.2.3"
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 102.77973ms
+    - id: 6
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+              "description": "A test Data Fusion instance.",
+              "type": "BASIC",
+              "enableStackdriverLogging": true,
+              "enableStackdriverMonitoring": true,
+              "privateInstance": true,
+              "networkConfig": {
+                "network": "default",
+                "ipAllocation": "10.89.48.0/22"
+              },
+              "labels": {
+                "cnrm-test": "true",
+                "label-one": "value-one",
+                "managed-by-cnrm": "true"
+              },
+              "createTime": "2024-04-12T21:36:21.188618470Z",
+              "updateTime": "2024-04-12T21:55:56.955787782Z",
+              "state": "RUNNING",
+              "serviceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com",
+              "version": "6.9.2",
+              "serviceAccount": "cloud-datafusion-management-sa@nc45fb2cc6e69496d-tp.iam.gserviceaccount.com",
+              "displayName": "Test Data Fusion Instance",
+              "availableVersion": [
+                {
+                  "versionNumber": "6.10.0"
+                }
+              ],
+              "apiEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com/api",
+              "gcsBucket": "gs://df-9241029078151326084-p4ezkmhzcyi65iw7aizbbqaaaa",
+              "p4ServiceAccount": "service-123456789@gcp-sa-datafusion.iam.gserviceaccount.com",
+              "tenantProjectId": "nc45fb2cc6e69496d-tp",
+              "dataprocServiceAccount": "gsa-1njdnbdljki5l@example-project.iam.gserviceaccount.com",
+              "workforceIdentityServiceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.byoid.googleusercontent.com.",
+              "patchRevision": "6.9.2.3"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 97.346833ms
+    - id: 7
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+              "description": "A test Data Fusion instance.",
+              "type": "BASIC",
+              "enableStackdriverLogging": true,
+              "enableStackdriverMonitoring": true,
+              "privateInstance": true,
+              "networkConfig": {
+                "network": "default",
+                "ipAllocation": "10.89.48.0/22"
+              },
+              "labels": {
+                "cnrm-test": "true",
+                "label-one": "value-one",
+                "managed-by-cnrm": "true"
+              },
+              "createTime": "2024-04-12T21:36:21.188618470Z",
+              "updateTime": "2024-04-12T21:55:56.955787782Z",
+              "state": "RUNNING",
+              "serviceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com",
+              "version": "6.9.2",
+              "serviceAccount": "cloud-datafusion-management-sa@nc45fb2cc6e69496d-tp.iam.gserviceaccount.com",
+              "displayName": "Test Data Fusion Instance",
+              "availableVersion": [
+                {
+                  "versionNumber": "6.10.0"
+                }
+              ],
+              "apiEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com/api",
+              "gcsBucket": "gs://df-9241029078151326084-p4ezkmhzcyi65iw7aizbbqaaaa",
+              "p4ServiceAccount": "service-123456789@gcp-sa-datafusion.iam.gserviceaccount.com",
+              "tenantProjectId": "nc45fb2cc6e69496d-tp",
+              "dataprocServiceAccount": "gsa-1njdnbdljki5l@example-project.iam.gserviceaccount.com",
+              "workforceIdentityServiceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.byoid.googleusercontent.com.",
+              "patchRevision": "6.9.2.3"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 92.910485ms
+    - id: 8
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+              "description": "A test Data Fusion instance.",
+              "type": "BASIC",
+              "enableStackdriverLogging": true,
+              "enableStackdriverMonitoring": true,
+              "privateInstance": true,
+              "networkConfig": {
+                "network": "default",
+                "ipAllocation": "10.89.48.0/22"
+              },
+              "labels": {
+                "cnrm-test": "true",
+                "label-one": "value-one",
+                "managed-by-cnrm": "true"
+              },
+              "createTime": "2024-04-12T21:36:21.188618470Z",
+              "updateTime": "2024-04-12T21:55:56.955787782Z",
+              "state": "RUNNING",
+              "serviceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com",
+              "version": "6.9.2",
+              "serviceAccount": "cloud-datafusion-management-sa@nc45fb2cc6e69496d-tp.iam.gserviceaccount.com",
+              "displayName": "Test Data Fusion Instance",
+              "availableVersion": [
+                {
+                  "versionNumber": "6.10.0"
+                }
+              ],
+              "apiEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com/api",
+              "gcsBucket": "gs://df-9241029078151326084-p4ezkmhzcyi65iw7aizbbqaaaa",
+              "p4ServiceAccount": "service-123456789@gcp-sa-datafusion.iam.gserviceaccount.com",
+              "tenantProjectId": "nc45fb2cc6e69496d-tp",
+              "dataprocServiceAccount": "gsa-1njdnbdljki5l@example-project.iam.gserviceaccount.com",
+              "workforceIdentityServiceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.byoid.googleusercontent.com.",
+              "patchRevision": "6.9.2.3"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 79.122334ms
+    - id: 9
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+              "description": "A test Data Fusion instance.",
+              "type": "BASIC",
+              "enableStackdriverLogging": true,
+              "enableStackdriverMonitoring": true,
+              "privateInstance": true,
+              "networkConfig": {
+                "network": "default",
+                "ipAllocation": "10.89.48.0/22"
+              },
+              "labels": {
+                "cnrm-test": "true",
+                "label-one": "value-one",
+                "managed-by-cnrm": "true"
+              },
+              "createTime": "2024-04-12T21:36:21.188618470Z",
+              "updateTime": "2024-04-12T21:55:56.955787782Z",
+              "state": "RUNNING",
+              "serviceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com",
+              "version": "6.9.2",
+              "serviceAccount": "cloud-datafusion-management-sa@nc45fb2cc6e69496d-tp.iam.gserviceaccount.com",
+              "displayName": "Test Data Fusion Instance",
+              "availableVersion": [
+                {
+                  "versionNumber": "6.10.0"
+                }
+              ],
+              "apiEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com/api",
+              "gcsBucket": "gs://df-9241029078151326084-p4ezkmhzcyi65iw7aizbbqaaaa",
+              "p4ServiceAccount": "service-123456789@gcp-sa-datafusion.iam.gserviceaccount.com",
+              "tenantProjectId": "nc45fb2cc6e69496d-tp",
+              "dataprocServiceAccount": "gsa-1njdnbdljki5l@example-project.iam.gserviceaccount.com",
+              "workforceIdentityServiceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.byoid.googleusercontent.com.",
+              "patchRevision": "6.9.2.3"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 82.483742ms
+    - id: 10
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+              "description": "A test Data Fusion instance.",
+              "type": "BASIC",
+              "enableStackdriverLogging": true,
+              "enableStackdriverMonitoring": true,
+              "privateInstance": true,
+              "networkConfig": {
+                "network": "default",
+                "ipAllocation": "10.89.48.0/22"
+              },
+              "labels": {
+                "cnrm-test": "true",
+                "label-one": "value-one",
+                "managed-by-cnrm": "true"
+              },
+              "createTime": "2024-04-12T21:36:21.188618470Z",
+              "updateTime": "2024-04-12T21:55:56.955787782Z",
+              "state": "RUNNING",
+              "serviceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com",
+              "version": "6.9.2",
+              "serviceAccount": "cloud-datafusion-management-sa@nc45fb2cc6e69496d-tp.iam.gserviceaccount.com",
+              "displayName": "Test Data Fusion Instance",
+              "availableVersion": [
+                {
+                  "versionNumber": "6.10.0"
+                }
+              ],
+              "apiEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com/api",
+              "gcsBucket": "gs://df-9241029078151326084-p4ezkmhzcyi65iw7aizbbqaaaa",
+              "p4ServiceAccount": "service-123456789@gcp-sa-datafusion.iam.gserviceaccount.com",
+              "tenantProjectId": "nc45fb2cc6e69496d-tp",
+              "dataprocServiceAccount": "gsa-1njdnbdljki5l@example-project.iam.gserviceaccount.com",
+              "workforceIdentityServiceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.byoid.googleusercontent.com.",
+              "patchRevision": "6.9.2.3"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 51.26715ms
+    - id: 11
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+              "description": "A test Data Fusion instance.",
+              "type": "BASIC",
+              "enableStackdriverLogging": true,
+              "enableStackdriverMonitoring": true,
+              "privateInstance": true,
+              "networkConfig": {
+                "network": "default",
+                "ipAllocation": "10.89.48.0/22"
+              },
+              "labels": {
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true",
+                "label-one": "value-one"
+              },
+              "createTime": "2024-04-12T21:36:21.188618470Z",
+              "updateTime": "2024-04-12T21:55:56.955787782Z",
+              "state": "RUNNING",
+              "serviceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com",
+              "version": "6.9.2",
+              "serviceAccount": "cloud-datafusion-management-sa@nc45fb2cc6e69496d-tp.iam.gserviceaccount.com",
+              "displayName": "Test Data Fusion Instance",
+              "availableVersion": [
+                {
+                  "versionNumber": "6.10.0"
+                }
+              ],
+              "apiEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com/api",
+              "gcsBucket": "gs://df-9241029078151326084-p4ezkmhzcyi65iw7aizbbqaaaa",
+              "p4ServiceAccount": "service-123456789@gcp-sa-datafusion.iam.gserviceaccount.com",
+              "tenantProjectId": "nc45fb2cc6e69496d-tp",
+              "dataprocServiceAccount": "gsa-1njdnbdljki5l@example-project.iam.gserviceaccount.com",
+              "workforceIdentityServiceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.byoid.googleusercontent.com.",
+              "patchRevision": "6.9.2.3"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 57.187736ms
+    - id: 12
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+              "description": "A test Data Fusion instance.",
+              "type": "BASIC",
+              "enableStackdriverLogging": true,
+              "enableStackdriverMonitoring": true,
+              "privateInstance": true,
+              "networkConfig": {
+                "network": "default",
+                "ipAllocation": "10.89.48.0/22"
+              },
+              "labels": {
+                "cnrm-test": "true",
+                "label-one": "value-one",
+                "managed-by-cnrm": "true"
+              },
+              "createTime": "2024-04-12T21:36:21.188618470Z",
+              "updateTime": "2024-04-12T21:55:56.955787782Z",
+              "state": "RUNNING",
+              "serviceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com",
+              "version": "6.9.2",
+              "serviceAccount": "cloud-datafusion-management-sa@nc45fb2cc6e69496d-tp.iam.gserviceaccount.com",
+              "displayName": "Test Data Fusion Instance",
+              "availableVersion": [
+                {
+                  "versionNumber": "6.10.0"
+                }
+              ],
+              "apiEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com/api",
+              "gcsBucket": "gs://df-9241029078151326084-p4ezkmhzcyi65iw7aizbbqaaaa",
+              "p4ServiceAccount": "service-123456789@gcp-sa-datafusion.iam.gserviceaccount.com",
+              "tenantProjectId": "nc45fb2cc6e69496d-tp",
+              "dataprocServiceAccount": "gsa-1njdnbdljki5l@example-project.iam.gserviceaccount.com",
+              "workforceIdentityServiceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.byoid.googleusercontent.com.",
+              "patchRevision": "6.9.2.3"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 87.379659ms
+    - id: 13
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+              "description": "A test Data Fusion instance.",
+              "type": "BASIC",
+              "enableStackdriverLogging": true,
+              "enableStackdriverMonitoring": true,
+              "privateInstance": true,
+              "networkConfig": {
+                "network": "default",
+                "ipAllocation": "10.89.48.0/22"
+              },
+              "labels": {
+                "cnrm-test": "true",
+                "label-one": "value-one",
+                "managed-by-cnrm": "true"
+              },
+              "createTime": "2024-04-12T21:36:21.188618470Z",
+              "updateTime": "2024-04-12T21:55:56.955787782Z",
+              "state": "RUNNING",
+              "serviceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com",
+              "version": "6.9.2",
+              "serviceAccount": "cloud-datafusion-management-sa@nc45fb2cc6e69496d-tp.iam.gserviceaccount.com",
+              "displayName": "Test Data Fusion Instance",
+              "availableVersion": [
+                {
+                  "versionNumber": "6.10.0"
+                }
+              ],
+              "apiEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.googleusercontent.com/api",
+              "gcsBucket": "gs://df-9241029078151326084-p4ezkmhzcyi65iw7aizbbqaaaa",
+              "p4ServiceAccount": "service-123456789@gcp-sa-datafusion.iam.gserviceaccount.com",
+              "tenantProjectId": "nc45fb2cc6e69496d-tp",
+              "dataprocServiceAccount": "gsa-1njdnbdljki5l@example-project.iam.gserviceaccount.com",
+              "workforceIdentityServiceEndpoint": "https://dfi-1njdnbdljki5l-example-project-dot-usc1.datafusion.byoid.googleusercontent.com.",
+              "patchRevision": "6.9.2.3"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 54.035969ms
+    - id: 14
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: DELETE
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1712958959881-615ed56518c84-0bfce922-87129578",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.datafusion.v1beta1.OperationMetadata",
+                "createTime": "2024-04-12T21:55:59.976333375Z",
+                "target": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta1"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 214.477935ms
+    - id: 15
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/operations/operation-1712958959881-615ed56518c84-0bfce922-87129578?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1712958959881-615ed56518c84-0bfce922-87129578",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.datafusion.v1beta1.OperationMetadata",
+                "createTime": "2024-04-12T21:55:59.976333375Z",
+                "target": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta1"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 84.549521ms
+    - id: 16
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/operations/operation-1712958959881-615ed56518c84-0bfce922-87129578?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1712958959881-615ed56518c84-0bfce922-87129578",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.datafusion.v1beta1.OperationMetadata",
+                "createTime": "2024-04-12T21:55:59.976333375Z",
+                "endTime": "2024-04-12T22:03:54.574148590Z",
+                "target": "projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1beta1"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.protobuf.Empty"
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 239.742318ms
+    - id: 17
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: datafusion.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://datafusion.googleapis.com/v1beta1/projects/example-project/locations/us-central1/instances/dfi-1njdnbdljki5l?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 0
+        uncompressed: true
+        body: fake error message
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 404 Not Found
+        code: 404
+        duration: 62.612786ms

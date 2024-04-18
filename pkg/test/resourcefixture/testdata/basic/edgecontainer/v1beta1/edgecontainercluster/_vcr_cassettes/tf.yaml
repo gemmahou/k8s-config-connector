@@ -1,0 +1,1316 @@
+# Copyright 2024 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: iam.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://iam.googleapis.com/v1/projects/example-project/serviceAccounts/gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"name":"projects/example-project/serviceAccounts/gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com","projectId":"example-project","uniqueId":"117954054984567774908","email":"gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com","etag":"MDEwMjE5MjA=","oauth2ClientId":"117954054984567774908"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 117.074785ms
+    - id: 1
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"projectNumber":"123456789","projectId":"example-project","lifecycleState":"ACTIVE","name":"example-project","labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"createTime":"2024-04-22T22:05:48.090278Z","parent":{"type":"organization","id":"123450001"}}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=129
+        status: 200 OK
+        code: 200
+        duration: 200.957681ms
+    - id: 2
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 41
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"options":{"requestedPolicyVersion":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:getIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVI260Mw=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com","serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=241
+        status: 200 OK
+        code: 200
+        duration: 266.574688ms
+    - id: 3
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: iam.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://iam.googleapis.com/v1/projects/example-project/serviceAccounts/gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"name":"projects/example-project/serviceAccounts/gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com","projectId":"example-project","uniqueId":"117954054984567774908","email":"gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com","etag":"MDEwMjE5MjA=","oauth2ClientId":"117954054984567774908"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 62.020027ms
+    - id: 4
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudbilling.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudbilling.googleapis.com/v1/projects/example-project/billingInfo?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"name":"projects/example-project/billingInfo","projectId":"example-project","billingAccountName":"billingAccounts/123456-777777-000001","billingEnabled":true}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 273.356148ms
+    - id: 5
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 41
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"options":{"requestedPolicyVersion":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:getIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVI260Mw=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com","serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=214
+        status: 200 OK
+        code: 200
+        duration: 216.70633ms
+    - id: 6
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"projectNumber":"123456789","projectId":"example-project","lifecycleState":"ACTIVE","name":"example-project","labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"createTime":"2024-04-22T22:05:48.090278Z","parent":{"type":"organization","id":"123450001"}}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=103
+        status: 200 OK
+        code: 200
+        duration: 104.836455ms
+    - id: 7
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: edgecontainer.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://edgecontainer.googleapis.com/v1/projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 0
+        uncompressed: true
+        body: fake error message
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 404 Not Found
+        code: 404
+        duration: 279.501907ms
+    - id: 8
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudbilling.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudbilling.googleapis.com/v1/projects/example-project/billingInfo?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"name":"projects/example-project/billingInfo","projectId":"example-project","billingAccountName":"billingAccounts/123456-777777-000001","billingEnabled":true}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 254.153598ms
+    - id: 9
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 325
+        transfer_encoding: []
+        trailer: {}
+        host: edgecontainer.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"authorization":{"adminUsers":{"username":"gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"}},"fleet":{"project":"projects/123456789"},"labels":{"cnrm-test":"true","label-one":"value-one","managed-by-cnrm":"true"},"networking":{"clusterIpv4CidrBlocks":["10.0.0.0/16"],"servicesIpv4CidrBlocks":["10.1.0.0/16"]}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://edgecontainer.googleapis.com/v1/projects/example-project/locations/us-central1/clusters?alt=json&cluster_id=edgecontainercluster-1aup5dgbfrmww
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1714501893361-6175494520f6c-bef51f77-c037308b",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.edgecontainer.v1.OperationMetadata",
+                "createTime": "2024-04-30T18:31:44.110065570Z",
+                "target": "projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 11.034838977s
+    - id: 10
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: iam.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://iam.googleapis.com/v1/projects/example-project/serviceAccounts/gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"name":"projects/example-project/serviceAccounts/gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com","projectId":"example-project","uniqueId":"117954054984567774908","email":"gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com","etag":"MDEwMjE5MjA=","oauth2ClientId":"117954054984567774908"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 74.681129ms
+    - id: 11
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"projectNumber":"123456789","projectId":"example-project","lifecycleState":"ACTIVE","name":"example-project","labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"createTime":"2024-04-22T22:05:48.090278Z","parent":{"type":"organization","id":"123450001"}}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=151
+        status: 200 OK
+        code: 200
+        duration: 161.146069ms
+    - id: 12
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: cloudbilling.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudbilling.googleapis.com/v1/projects/example-project/billingInfo?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"name":"projects/example-project/billingInfo","projectId":"example-project","billingAccountName":"billingAccounts/123456-777777-000001","billingEnabled":true}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 154.677392ms
+    - id: 13
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 41
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"options":{"requestedPolicyVersion":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:getIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVLfXaFQ=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.clusterServiceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainercluster.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainer.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com","serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"]},{"role":"roles/gkehub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-gkehub.iam.gserviceaccount.com"]},{"role":"roles/multiclustermetering.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-mcmetering.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=156
+        status: 200 OK
+        code: 200
+        duration: 160.24535ms
+    - id: 14
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 41
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"options":{"requestedPolicyVersion":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:getIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVLfXaFQ=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.clusterServiceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainercluster.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainer.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com","serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"]},{"role":"roles/gkehub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-gkehub.iam.gserviceaccount.com"]},{"role":"roles/multiclustermetering.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-mcmetering.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=133
+        status: 200 OK
+        code: 200
+        duration: 135.195918ms
+    - id: 15
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: edgecontainer.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://edgecontainer.googleapis.com/v1/projects/example-project/locations/us-central1/operations/operation-1714501893361-6175494520f6c-bef51f77-c037308b?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1714501893361-6175494520f6c-bef51f77-c037308b",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.edgecontainer.v1.OperationMetadata",
+                "createTime": "2024-04-30T18:31:44.110065570Z",
+                "endTime": "2024-04-30T18:42:06.963957025Z",
+                "target": "projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww",
+                "verb": "create",
+                "requestedCancellation": false,
+                "apiVersion": "v1"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.cloud.edgecontainer.v1.Cluster",
+                "name": "projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww",
+                "createTime": "2024-04-30T18:31:44.105210453Z",
+                "updateTime": "2024-04-30T18:33:37.824561357Z",
+                "endpoint": "34.121.175.228",
+                "networking": {
+                  "clusterIpv4CidrBlocks": [
+                    "10.0.0.0/16"
+                  ],
+                  "servicesIpv4CidrBlocks": [
+                    "10.1.0.0/16"
+                  ]
+                },
+                "defaultMaxPodsPerNode": 110,
+                "authorization": {
+                  "adminUsers": {
+                    "username": "gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"
+                  }
+                },
+                "clusterCaCertificate": "-----BEGIN CERTIFICATE-----\nMIIDKzCCAhOgAwIBAgIRAMFRGg8V++ZhvO7DVvUxIkYwDQYJKoZIhvcNAQELBQAw\nLzEtMCsGA1UEAxMkOWFiNmNjZmEtNGQwOS00NjIxLWFkNDYtNTY4YTBjNDc1ZTk4\nMB4XDTI0MDQzMDE3MzMzOVoXDTI5MDQyOTE4MzMzOVowLzEtMCsGA1UEAxMkOWFi\nNmNjZmEtNGQwOS00NjIxLWFkNDYtNTY4YTBjNDc1ZTk4MIIBIjANBgkqhkiG9w0B\nAQEFAAOCAQ8AMIIBCgKCAQEAlg5CuRL/o/V7YcWZ2xpGsv6yQGUuj1QBhu9uhuku\njAMQLix7Rn49pmp/zELE6NiXiHrFGGBn4O61mniJLgmaKc8WNEdVglsESF6/ZO3f\ncn8elfKIeqW/hwe6JiKlPm9ycDTnLG71V02yp8UMvMn6ZrzVa7N0NbvaZM75p5JG\nPpIAGycVAJBPgS7JaQwY0AQ676oqMBA+YRmRwOorUbzrSYyrQMXizSpIn4M5c6OK\nfl/hqAfKB059pLJCnagenNZa6SLZnEst/sJ7Rpo9RVzM4OxVSrD1huRIXaWURtOW\nXVGRXwytyql9GH8zozpse51J8h3UzRUwN2OJE82ch14P3wIDAQABo0IwQDAOBgNV\nHQ8BAf8EBAMCAgQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU6dPq7LhoQANV\n2XqaMjzmk1H1FckwDQYJKoZIhvcNAQELBQADggEBABEAYSC02YyF4qM0MGCWHR4Y\nWkhizMBg85MD1ItZutJqt/tIkeW1/ixkv/GAH/mmO7jmpXVOwVyPuoP3NAfHbgYV\nvxldR+9Y8FnBFKLQpbfADKDGyM6Xds1h5czIFE/hslLZNmjdfkUP7Nn5R/dELopd\nbnEeQWgQCwCPaDB4hyX5IUWEhBGtXY6id/yge5T4+qvz/fA4WhmHVuKQ45SDtO5Y\nWuEwb60l8Ly4PamNgjjLu1Bug4GwQVClOWWkFZnIWJHJvPLCpYN2fCOysDDVR0gG\nCsJtos/qysvVCWyMLsE32IVj/zlr5tdkH8YsSI1gqPd7L7MHxXaJm5Cwulljnuk=\n-----END CERTIFICATE-----\n",
+                "fleet": {
+                  "project": "projects/123456789",
+                  "membership": "projects/123456789/locations/global/memberships/edgecontainercluster-1aup5dgbfrmww"
+                },
+                "controlPlaneVersion": "1.6.0",
+                "port": 6443,
+                "status": "PROVISIONING"
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 141.500958ms
+    - id: 16
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: edgecontainer.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://edgecontainer.googleapis.com/v1/projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww",
+              "createTime": "2024-04-30T18:31:44.105210453Z",
+              "updateTime": "2024-04-30T18:42:07.034511522Z",
+              "labels": {
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true",
+                "label-one": "value-one"
+              },
+              "endpoint": "34.121.175.228",
+              "networking": {
+                "clusterIpv4CidrBlocks": [
+                  "10.0.0.0/16"
+                ],
+                "servicesIpv4CidrBlocks": [
+                  "10.1.0.0/16"
+                ]
+              },
+              "defaultMaxPodsPerNode": 110,
+              "authorization": {
+                "adminUsers": {
+                  "username": "gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"
+                }
+              },
+              "clusterCaCertificate": "-----BEGIN CERTIFICATE-----\nMIIDKzCCAhOgAwIBAgIRAMFRGg8V++ZhvO7DVvUxIkYwDQYJKoZIhvcNAQELBQAw\nLzEtMCsGA1UEAxMkOWFiNmNjZmEtNGQwOS00NjIxLWFkNDYtNTY4YTBjNDc1ZTk4\nMB4XDTI0MDQzMDE3MzMzOVoXDTI5MDQyOTE4MzMzOVowLzEtMCsGA1UEAxMkOWFi\nNmNjZmEtNGQwOS00NjIxLWFkNDYtNTY4YTBjNDc1ZTk4MIIBIjANBgkqhkiG9w0B\nAQEFAAOCAQ8AMIIBCgKCAQEAlg5CuRL/o/V7YcWZ2xpGsv6yQGUuj1QBhu9uhuku\njAMQLix7Rn49pmp/zELE6NiXiHrFGGBn4O61mniJLgmaKc8WNEdVglsESF6/ZO3f\ncn8elfKIeqW/hwe6JiKlPm9ycDTnLG71V02yp8UMvMn6ZrzVa7N0NbvaZM75p5JG\nPpIAGycVAJBPgS7JaQwY0AQ676oqMBA+YRmRwOorUbzrSYyrQMXizSpIn4M5c6OK\nfl/hqAfKB059pLJCnagenNZa6SLZnEst/sJ7Rpo9RVzM4OxVSrD1huRIXaWURtOW\nXVGRXwytyql9GH8zozpse51J8h3UzRUwN2OJE82ch14P3wIDAQABo0IwQDAOBgNV\nHQ8BAf8EBAMCAgQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU6dPq7LhoQANV\n2XqaMjzmk1H1FckwDQYJKoZIhvcNAQELBQADggEBABEAYSC02YyF4qM0MGCWHR4Y\nWkhizMBg85MD1ItZutJqt/tIkeW1/ixkv/GAH/mmO7jmpXVOwVyPuoP3NAfHbgYV\nvxldR+9Y8FnBFKLQpbfADKDGyM6Xds1h5czIFE/hslLZNmjdfkUP7Nn5R/dELopd\nbnEeQWgQCwCPaDB4hyX5IUWEhBGtXY6id/yge5T4+qvz/fA4WhmHVuKQ45SDtO5Y\nWuEwb60l8Ly4PamNgjjLu1Bug4GwQVClOWWkFZnIWJHJvPLCpYN2fCOysDDVR0gG\nCsJtos/qysvVCWyMLsE32IVj/zlr5tdkH8YsSI1gqPd7L7MHxXaJm5Cwulljnuk=\n-----END CERTIFICATE-----\n",
+              "fleet": {
+                "project": "projects/123456789",
+                "membership": "projects/123456789/locations/global/memberships/edgecontainercluster-1aup5dgbfrmww"
+              },
+              "controlPlaneVersion": "1.6.0",
+              "port": 6443,
+              "status": "RUNNING"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 148.443336ms
+    - id: 17
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: edgecontainer.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://edgecontainer.googleapis.com/v1/projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww",
+              "createTime": "2024-04-30T18:31:44.105210453Z",
+              "updateTime": "2024-04-30T18:42:07.034511522Z",
+              "labels": {
+                "label-one": "value-one",
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true"
+              },
+              "endpoint": "34.121.175.228",
+              "networking": {
+                "clusterIpv4CidrBlocks": [
+                  "10.0.0.0/16"
+                ],
+                "servicesIpv4CidrBlocks": [
+                  "10.1.0.0/16"
+                ]
+              },
+              "defaultMaxPodsPerNode": 110,
+              "authorization": {
+                "adminUsers": {
+                  "username": "gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"
+                }
+              },
+              "clusterCaCertificate": "-----BEGIN CERTIFICATE-----\nMIIDKzCCAhOgAwIBAgIRAMFRGg8V++ZhvO7DVvUxIkYwDQYJKoZIhvcNAQELBQAw\nLzEtMCsGA1UEAxMkOWFiNmNjZmEtNGQwOS00NjIxLWFkNDYtNTY4YTBjNDc1ZTk4\nMB4XDTI0MDQzMDE3MzMzOVoXDTI5MDQyOTE4MzMzOVowLzEtMCsGA1UEAxMkOWFi\nNmNjZmEtNGQwOS00NjIxLWFkNDYtNTY4YTBjNDc1ZTk4MIIBIjANBgkqhkiG9w0B\nAQEFAAOCAQ8AMIIBCgKCAQEAlg5CuRL/o/V7YcWZ2xpGsv6yQGUuj1QBhu9uhuku\njAMQLix7Rn49pmp/zELE6NiXiHrFGGBn4O61mniJLgmaKc8WNEdVglsESF6/ZO3f\ncn8elfKIeqW/hwe6JiKlPm9ycDTnLG71V02yp8UMvMn6ZrzVa7N0NbvaZM75p5JG\nPpIAGycVAJBPgS7JaQwY0AQ676oqMBA+YRmRwOorUbzrSYyrQMXizSpIn4M5c6OK\nfl/hqAfKB059pLJCnagenNZa6SLZnEst/sJ7Rpo9RVzM4OxVSrD1huRIXaWURtOW\nXVGRXwytyql9GH8zozpse51J8h3UzRUwN2OJE82ch14P3wIDAQABo0IwQDAOBgNV\nHQ8BAf8EBAMCAgQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU6dPq7LhoQANV\n2XqaMjzmk1H1FckwDQYJKoZIhvcNAQELBQADggEBABEAYSC02YyF4qM0MGCWHR4Y\nWkhizMBg85MD1ItZutJqt/tIkeW1/ixkv/GAH/mmO7jmpXVOwVyPuoP3NAfHbgYV\nvxldR+9Y8FnBFKLQpbfADKDGyM6Xds1h5czIFE/hslLZNmjdfkUP7Nn5R/dELopd\nbnEeQWgQCwCPaDB4hyX5IUWEhBGtXY6id/yge5T4+qvz/fA4WhmHVuKQ45SDtO5Y\nWuEwb60l8Ly4PamNgjjLu1Bug4GwQVClOWWkFZnIWJHJvPLCpYN2fCOysDDVR0gG\nCsJtos/qysvVCWyMLsE32IVj/zlr5tdkH8YsSI1gqPd7L7MHxXaJm5Cwulljnuk=\n-----END CERTIFICATE-----\n",
+              "fleet": {
+                "project": "projects/123456789",
+                "membership": "projects/123456789/locations/global/memberships/edgecontainercluster-1aup5dgbfrmww"
+              },
+              "controlPlaneVersion": "1.6.0",
+              "port": 6443,
+              "status": "RUNNING"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 320.809364ms
+    - id: 18
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: iam.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://iam.googleapis.com/v1/projects/example-project/serviceAccounts/gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?alt=json&prettyPrint=false
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"name":"projects/example-project/serviceAccounts/gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com","projectId":"example-project","uniqueId":"117954054984567774908","email":"gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com","etag":"MDEwMjE5MjA=","oauth2ClientId":"117954054984567774908"}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 78.703617ms
+    - id: 19
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 41
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"options":{"requestedPolicyVersion":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:getIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVLfXaFQ=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.clusterServiceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainercluster.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainer.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com","serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"]},{"role":"roles/gkehub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-gkehub.iam.gserviceaccount.com"]},{"role":"roles/multiclustermetering.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-mcmetering.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=175
+        status: 200 OK
+        code: 200
+        duration: 177.613716ms
+    - id: 20
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: edgecontainer.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://edgecontainer.googleapis.com/v1/projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww",
+              "createTime": "2024-04-30T18:31:44.105210453Z",
+              "updateTime": "2024-04-30T18:42:07.034511522Z",
+              "labels": {
+                "cnrm-test": "true",
+                "label-one": "value-one",
+                "managed-by-cnrm": "true"
+              },
+              "endpoint": "34.121.175.228",
+              "networking": {
+                "clusterIpv4CidrBlocks": [
+                  "10.0.0.0/16"
+                ],
+                "servicesIpv4CidrBlocks": [
+                  "10.1.0.0/16"
+                ]
+              },
+              "defaultMaxPodsPerNode": 110,
+              "authorization": {
+                "adminUsers": {
+                  "username": "gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"
+                }
+              },
+              "clusterCaCertificate": "-----BEGIN CERTIFICATE-----\nMIIDKzCCAhOgAwIBAgIRAMFRGg8V++ZhvO7DVvUxIkYwDQYJKoZIhvcNAQELBQAw\nLzEtMCsGA1UEAxMkOWFiNmNjZmEtNGQwOS00NjIxLWFkNDYtNTY4YTBjNDc1ZTk4\nMB4XDTI0MDQzMDE3MzMzOVoXDTI5MDQyOTE4MzMzOVowLzEtMCsGA1UEAxMkOWFi\nNmNjZmEtNGQwOS00NjIxLWFkNDYtNTY4YTBjNDc1ZTk4MIIBIjANBgkqhkiG9w0B\nAQEFAAOCAQ8AMIIBCgKCAQEAlg5CuRL/o/V7YcWZ2xpGsv6yQGUuj1QBhu9uhuku\njAMQLix7Rn49pmp/zELE6NiXiHrFGGBn4O61mniJLgmaKc8WNEdVglsESF6/ZO3f\ncn8elfKIeqW/hwe6JiKlPm9ycDTnLG71V02yp8UMvMn6ZrzVa7N0NbvaZM75p5JG\nPpIAGycVAJBPgS7JaQwY0AQ676oqMBA+YRmRwOorUbzrSYyrQMXizSpIn4M5c6OK\nfl/hqAfKB059pLJCnagenNZa6SLZnEst/sJ7Rpo9RVzM4OxVSrD1huRIXaWURtOW\nXVGRXwytyql9GH8zozpse51J8h3UzRUwN2OJE82ch14P3wIDAQABo0IwQDAOBgNV\nHQ8BAf8EBAMCAgQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU6dPq7LhoQANV\n2XqaMjzmk1H1FckwDQYJKoZIhvcNAQELBQADggEBABEAYSC02YyF4qM0MGCWHR4Y\nWkhizMBg85MD1ItZutJqt/tIkeW1/ixkv/GAH/mmO7jmpXVOwVyPuoP3NAfHbgYV\nvxldR+9Y8FnBFKLQpbfADKDGyM6Xds1h5czIFE/hslLZNmjdfkUP7Nn5R/dELopd\nbnEeQWgQCwCPaDB4hyX5IUWEhBGtXY6id/yge5T4+qvz/fA4WhmHVuKQ45SDtO5Y\nWuEwb60l8Ly4PamNgjjLu1Bug4GwQVClOWWkFZnIWJHJvPLCpYN2fCOysDDVR0gG\nCsJtos/qysvVCWyMLsE32IVj/zlr5tdkH8YsSI1gqPd7L7MHxXaJm5Cwulljnuk=\n-----END CERTIFICATE-----\n",
+              "fleet": {
+                "project": "projects/123456789",
+                "membership": "projects/123456789/locations/global/memberships/edgecontainercluster-1aup5dgbfrmww"
+              },
+              "controlPlaneVersion": "1.6.0",
+              "port": 6443,
+              "status": "RUNNING"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 338.327438ms
+    - id: 21
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: iam.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://iam.googleapis.com/v1/projects/example-project/serviceAccounts/gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?alt=json&prettyPrint=false
+        method: DELETE
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 195.884722ms
+    - id: 22
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: edgecontainer.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://edgecontainer.googleapis.com/v1/projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww",
+              "createTime": "2024-04-30T18:31:44.105210453Z",
+              "updateTime": "2024-04-30T18:42:07.034511522Z",
+              "labels": {
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true",
+                "label-one": "value-one"
+              },
+              "endpoint": "34.121.175.228",
+              "networking": {
+                "clusterIpv4CidrBlocks": [
+                  "10.0.0.0/16"
+                ],
+                "servicesIpv4CidrBlocks": [
+                  "10.1.0.0/16"
+                ]
+              },
+              "defaultMaxPodsPerNode": 110,
+              "authorization": {
+                "adminUsers": {
+                  "username": "gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com"
+                }
+              },
+              "clusterCaCertificate": "-----BEGIN CERTIFICATE-----\nMIIDKzCCAhOgAwIBAgIRAMFRGg8V++ZhvO7DVvUxIkYwDQYJKoZIhvcNAQELBQAw\nLzEtMCsGA1UEAxMkOWFiNmNjZmEtNGQwOS00NjIxLWFkNDYtNTY4YTBjNDc1ZTk4\nMB4XDTI0MDQzMDE3MzMzOVoXDTI5MDQyOTE4MzMzOVowLzEtMCsGA1UEAxMkOWFi\nNmNjZmEtNGQwOS00NjIxLWFkNDYtNTY4YTBjNDc1ZTk4MIIBIjANBgkqhkiG9w0B\nAQEFAAOCAQ8AMIIBCgKCAQEAlg5CuRL/o/V7YcWZ2xpGsv6yQGUuj1QBhu9uhuku\njAMQLix7Rn49pmp/zELE6NiXiHrFGGBn4O61mniJLgmaKc8WNEdVglsESF6/ZO3f\ncn8elfKIeqW/hwe6JiKlPm9ycDTnLG71V02yp8UMvMn6ZrzVa7N0NbvaZM75p5JG\nPpIAGycVAJBPgS7JaQwY0AQ676oqMBA+YRmRwOorUbzrSYyrQMXizSpIn4M5c6OK\nfl/hqAfKB059pLJCnagenNZa6SLZnEst/sJ7Rpo9RVzM4OxVSrD1huRIXaWURtOW\nXVGRXwytyql9GH8zozpse51J8h3UzRUwN2OJE82ch14P3wIDAQABo0IwQDAOBgNV\nHQ8BAf8EBAMCAgQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU6dPq7LhoQANV\n2XqaMjzmk1H1FckwDQYJKoZIhvcNAQELBQADggEBABEAYSC02YyF4qM0MGCWHR4Y\nWkhizMBg85MD1ItZutJqt/tIkeW1/ixkv/GAH/mmO7jmpXVOwVyPuoP3NAfHbgYV\nvxldR+9Y8FnBFKLQpbfADKDGyM6Xds1h5czIFE/hslLZNmjdfkUP7Nn5R/dELopd\nbnEeQWgQCwCPaDB4hyX5IUWEhBGtXY6id/yge5T4+qvz/fA4WhmHVuKQ45SDtO5Y\nWuEwb60l8Ly4PamNgjjLu1Bug4GwQVClOWWkFZnIWJHJvPLCpYN2fCOysDDVR0gG\nCsJtos/qysvVCWyMLsE32IVj/zlr5tdkH8YsSI1gqPd7L7MHxXaJm5Cwulljnuk=\n-----END CERTIFICATE-----\n",
+              "fleet": {
+                "project": "projects/123456789",
+                "membership": "projects/123456789/locations/global/memberships/edgecontainercluster-1aup5dgbfrmww"
+              },
+              "controlPlaneVersion": "1.6.0",
+              "port": 6443,
+              "status": "RUNNING"
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 286.903233ms
+    - id: 23
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: edgecontainer.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://edgecontainer.googleapis.com/v1/projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww?alt=json
+        method: DELETE
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1714502532879-61754ba7054e4-3356760a-bb1709c9",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.edgecontainer.v1.OperationMetadata",
+                "createTime": "2024-04-30T18:42:12.893835376Z",
+                "target": "projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 95.247171ms
+    - id: 24
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 41
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"options":{"requestedPolicyVersion":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:getIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVLfXaFQ=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.clusterServiceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainercluster.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainer.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com","deleted:serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?uid=117954054984567774908"]},{"role":"roles/gkehub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-gkehub.iam.gserviceaccount.com"]},{"role":"roles/multiclustermetering.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-mcmetering.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=127
+        status: 200 OK
+        code: 200
+        duration: 129.115261ms
+    - id: 25
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 1527
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"policy":{"bindings":[{"members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"],"role":"roles/compute.serviceAgent"},{"members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"],"role":"roles/container.serviceAgent"},{"members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"],"role":"roles/containerregistry.ServiceAgent"},{"members":["serviceAccount:service-123456789@gcp-sa-edgecontainercluster.iam.gserviceaccount.com"],"role":"roles/edgecontainer.clusterServiceAgent"},{"members":["serviceAccount:service-123456789@gcp-sa-edgecontainer.iam.gserviceaccount.com"],"role":"roles/edgecontainer.serviceAgent"},{"members":["deleted:serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?uid=117954054984567774908","serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com"],"role":"roles/editor"},{"members":["serviceAccount:service-123456789@gcp-sa-gkehub.iam.gserviceaccount.com"],"role":"roles/gkehub.serviceAgent"},{"members":["serviceAccount:service-123456789@gcp-sa-mcmetering.iam.gserviceaccount.com"],"role":"roles/multiclustermetering.serviceAgent"},{"members":["user:user@google.com"],"role":"roles/owner"},{"members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"],"role":"roles/pubsub.serviceAgent"}],"etag":"BwYXVLfXaFQ=","version":1},"updateMask":"bindings,etag,auditConfigs"}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:setIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVLqdgrs=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.clusterServiceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainercluster.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainer.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["deleted:serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?uid=117954054984567774908","serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com"]},{"role":"roles/gkehub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-gkehub.iam.gserviceaccount.com"]},{"role":"roles/multiclustermetering.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-mcmetering.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=691
+        status: 200 OK
+        code: 200
+        duration: 693.159453ms
+    - id: 26
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 41
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"options":{"requestedPolicyVersion":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:getIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVLqdgrs=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.clusterServiceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainercluster.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainer.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["deleted:serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?uid=117954054984567774908","serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com"]},{"role":"roles/gkehub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-gkehub.iam.gserviceaccount.com"]},{"role":"roles/multiclustermetering.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-mcmetering.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=181
+        status: 200 OK
+        code: 200
+        duration: 182.230145ms
+    - id: 27
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 41
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"options":{"requestedPolicyVersion":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:getIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVLqdgrs=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.clusterServiceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainercluster.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainer.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["deleted:serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?uid=117954054984567774908","serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com"]},{"role":"roles/gkehub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-gkehub.iam.gserviceaccount.com"]},{"role":"roles/multiclustermetering.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-mcmetering.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=190
+        status: 200 OK
+        code: 200
+        duration: 192.619392ms
+    - id: 28
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 41
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"options":{"requestedPolicyVersion":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:getIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVLqdgrs=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.clusterServiceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainercluster.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainer.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["deleted:serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?uid=117954054984567774908","serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com"]},{"role":"roles/gkehub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-gkehub.iam.gserviceaccount.com"]},{"role":"roles/multiclustermetering.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-mcmetering.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=121
+        status: 200 OK
+        code: 200
+        duration: 123.219413ms
+    - id: 29
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 41
+        transfer_encoding: []
+        trailer: {}
+        host: cloudresourcemanager.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: |
+            {"options":{"requestedPolicyVersion":3}}
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+            X-Goog-Api-Client:
+                - gl-go/1.22.1 gdcl/0.160.0
+        url: https://cloudresourcemanager.googleapis.com/v1/projects/example-project:getIamPolicy?alt=json&prettyPrint=false
+        method: POST
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: '{"version":1,"etag":"BwYXVLqdgrs=","bindings":[{"role":"roles/compute.serviceAgent","members":["serviceAccount:service-123456789@compute-system.iam.gserviceaccount.com"]},{"role":"roles/container.serviceAgent","members":["serviceAccount:service-123456789@container-engine-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-123456789@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.clusterServiceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainercluster.iam.gserviceaccount.com"]},{"role":"roles/edgecontainer.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-edgecontainer.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["deleted:serviceAccount:gsa-1aup5dgbfrmww@example-project.iam.gserviceaccount.com?uid=117954054984567774908","serviceAccount:123456789-compute@developer.gserviceaccount.com","serviceAccount:123456789@cloudservices.gserviceaccount.com"]},{"role":"roles/gkehub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-gkehub.iam.gserviceaccount.com"]},{"role":"roles/multiclustermetering.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-mcmetering.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:user@google.com"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-123456789@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}'
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+            Server-Timing:
+                - gfet4t7; dur=166
+        status: 200 OK
+        code: 200
+        duration: 168.24557ms
+    - id: 30
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: edgecontainer.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://edgecontainer.googleapis.com/v1/projects/example-project/locations/us-central1/operations/operation-1714502532879-61754ba7054e4-3356760a-bb1709c9?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1714502532879-61754ba7054e4-3356760a-bb1709c9",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.edgecontainer.v1.OperationMetadata",
+                "createTime": "2024-04-30T18:42:12.893835376Z",
+                "endTime": "2024-04-30T18:47:11.847024528Z",
+                "target": "projects/example-project/locations/us-central1/clusters/edgecontainercluster-1aup5dgbfrmww",
+                "verb": "delete",
+                "requestedCancellation": false,
+                "apiVersion": "v1"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.protobuf.Empty"
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 75.379354ms

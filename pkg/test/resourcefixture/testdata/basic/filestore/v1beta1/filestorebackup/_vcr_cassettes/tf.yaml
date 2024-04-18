@@ -1,0 +1,181 @@
+---
+version: 2
+interactions:
+  - id: 0
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: compute.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks/default?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "kind": "compute#network",
+          "id": "7211413379147622350",
+          "creationTimestamp": "2024-05-03T09:38:57.034-07:00",
+          "name": "default",
+          "description": "Default network for the project",
+          "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/default",
+          "selfLinkWithId": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/7211413379147622350",
+          "autoCreateSubnetworks": true,
+          "subnetworks": [
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west8/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-central2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-southwest1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west9/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west10/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east5/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-north1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/africa-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-central1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west12/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west6/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central1/subnetworks/default"
+          ],
+          "routingConfig": {
+            "routingMode": "REGIONAL"
+          },
+          "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 234.641434ms
+  - id: 1
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: compute.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks/default?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "kind": "compute#network",
+          "id": "7211413379147622350",
+          "creationTimestamp": "2024-05-03T09:38:57.034-07:00",
+          "name": "default",
+          "description": "Default network for the project",
+          "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/default",
+          "selfLinkWithId": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/7211413379147622350",
+          "autoCreateSubnetworks": true,
+          "subnetworks": [
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west8/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-central2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-southwest1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west9/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west10/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east5/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-north1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/africa-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-central1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west12/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west6/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central1/subnetworks/default"
+          ],
+          "routingConfig": {
+            "routingMode": "REGIONAL"
+          },
+          "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 259.775989ms

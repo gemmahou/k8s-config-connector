@@ -1,0 +1,1851 @@
+---
+version: 2
+interactions:
+  - id: 0
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 268.47669ms
+  - id: 1
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 230.145812ms
+  - id: 2
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 231.129077ms
+  - id: 3
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 287
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: '{"description":"Test instance","fileShares":[{"capacityGb":2560,"name":"my_share","nfsExportOptions":[]}],"labels":{"cnrm-test":"true","managed-by-cnrm":"true"},"networks":[{"modes":["MODE_IPV4"],"network":"projects/example-project/global/networks/default"}],"tier":"PREMIUM"}'
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances?alt=json&instanceId=filestoreinstance-2c4iavozbt8lu
+      method: POST
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/operations/operation-1715104261262-617e0d43ecc3e-32232c15-b7cee97a",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:51:02.495350909Z",
+            "target": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "verb": "create",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 1.506185974s
+  - id: 4
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1/projects/example-project/locations/us-central1-c/operations/operation-1715104261262-617e0d43ecc3e-32232c15-b7cee97a?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/operations/operation-1715104261262-617e0d43ecc3e-32232c15-b7cee97a",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:51:02.495350909Z",
+            "endTime": "2024-05-03T17:53:52.862977459Z",
+            "target": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "verb": "create",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.filestore.v1beta1.Instance",
+            "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "description": "Test instance",
+            "state": "READY",
+            "createTime": "2024-05-03T17:51:02.491540329Z",
+            "tier": "PREMIUM",
+            "labels": {
+              "cnrm-test": "true",
+              "managed-by-cnrm": "true"
+            },
+            "fileShares": [
+              {
+                "name": "my_share",
+                "capacityGb": "2560"
+              }
+            ],
+            "networks": [
+              {
+                "network": "default",
+                "modes": [
+                  "MODE_IPV4"
+                ],
+                "reservedIpRange": "10.194.202.40/29",
+                "ipAddresses": [
+                  "10.194.202.42"
+                ]
+              }
+            ],
+            "maxCapacityGb": "65434",
+            "capacityStepSizeGb": "1",
+            "maxShareCount": "1",
+            "capacityGb": "2560",
+            "satisfiesPzi": true
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 266.248504ms
+  - id: 5
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 251.894888ms
+  - id: 6
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 95.537639ms
+  - id: 7
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 139
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: '{"description":"Test instance","fileShares":[{"capacityGb":2560,"name":"my_share"}],"labels":{"cnrm-test":"true","managed-by-cnrm":"true"}}'
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json&updateMask=fileShares
+      method: PATCH
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/operations/operation-1715104436856-617e0deb62797-f74c1e34-d8f681a5",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:53:56.886673348Z",
+            "target": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "verb": "update",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 293.361107ms
+  - id: 8
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1/projects/example-project/locations/us-central1-c/operations/operation-1715104436856-617e0deb62797-f74c1e34-d8f681a5?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/operations/operation-1715104436856-617e0deb62797-f74c1e34-d8f681a5",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:53:56.886673348Z",
+            "endTime": "2024-05-03T17:54:02.076367565Z",
+            "target": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "verb": "update",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.filestore.v1beta1.Instance",
+            "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "description": "Test instance",
+            "state": "READY",
+            "createTime": "2024-05-03T17:51:02.491540329Z",
+            "tier": "PREMIUM",
+            "labels": {
+              "cnrm-test": "true",
+              "managed-by-cnrm": "true"
+            },
+            "fileShares": [
+              {
+                "name": "my_share",
+                "capacityGb": "2560"
+              }
+            ],
+            "networks": [
+              {
+                "network": "default",
+                "modes": [
+                  "MODE_IPV4"
+                ],
+                "reservedIpRange": "10.194.202.40/29",
+                "ipAddresses": [
+                  "10.194.202.42"
+                ]
+              }
+            ],
+            "maxCapacityGb": "65434",
+            "capacityStepSizeGb": "1",
+            "maxShareCount": "1",
+            "capacityGb": "2560",
+            "satisfiesPzi": true
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 66.707344ms
+  - id: 9
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 99.851173ms
+  - id: 10
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 66.170811ms
+  - id: 11
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 276.460083ms
+  - id: 12
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 67.68039ms
+  - id: 13
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 55.436556ms
+  - id: 14
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 278.755393ms
+  - id: 15
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 232.455412ms
+  - id: 16
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 72.655967ms
+  - id: 17
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "cnrm-test": "true",
+            "managed-by-cnrm": "true"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "2560"
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "2560",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 245.926672ms
+  - id: 18
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 308
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: '{"description":"Updated test instance","fileShares":[{"capacityGb":4800,"name":"my_share","nfsExportOptions":[{"accessMode":"READ_ONLY","anonGid":65534,"anonUid":65534,"ipRanges":["172.217.14.238"],"squashMode":"ROOT_SQUASH"}]}],"labels":{"cnrm-test":"true","label-one":"value-one","managed-by-cnrm":"true"}}'
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json&updateMask=description%2CfileShares%2Clabels
+      method: PATCH
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/operations/operation-1715104446074-617e0df42ccf8-0132b69a-4f0afaf8",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:54:06.130723248Z",
+            "target": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "verb": "update",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 324.037566ms
+  - id: 19
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/operations/operation-1715104446074-617e0df42ccf8-0132b69a-4f0afaf8?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/operations/operation-1715104446074-617e0df42ccf8-0132b69a-4f0afaf8",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:54:06.130723248Z",
+            "endTime": "2024-05-03T17:54:27.094318814Z",
+            "target": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "verb": "update",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.filestore.v1beta1.Instance",
+            "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "description": "Updated test instance",
+            "state": "READY",
+            "createTime": "2024-05-03T17:51:02.491540329Z",
+            "tier": "PREMIUM",
+            "labels": {
+              "managed-by-cnrm": "true",
+              "cnrm-test": "true",
+              "label-one": "value-one"
+            },
+            "fileShares": [
+              {
+                "name": "my_share",
+                "capacityGb": "4800",
+                "nfsExportOptions": [
+                  {
+                    "ipRanges": [
+                      "172.217.14.238"
+                    ],
+                    "accessMode": "READ_ONLY",
+                    "squashMode": "ROOT_SQUASH",
+                    "anonUid": "65534",
+                    "anonGid": "65534",
+                    "securityFlavors": [
+                      "AUTH_SYS"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "networks": [
+              {
+                "network": "default",
+                "modes": [
+                  "MODE_IPV4"
+                ],
+                "reservedIpRange": "10.194.202.40/29",
+                "ipAddresses": [
+                  "10.194.202.42"
+                ]
+              }
+            ],
+            "maxCapacityGb": "65434",
+            "capacityStepSizeGb": "1",
+            "maxShareCount": "1",
+            "capacityGb": "4800",
+            "satisfiesPzi": true
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 67.317508ms
+  - id: 20
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Updated test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true",
+            "label-one": "value-one"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "4800",
+              "nfsExportOptions": [
+                {
+                  "ipRanges": [
+                    "172.217.14.238"
+                  ],
+                  "accessMode": "READ_ONLY",
+                  "squashMode": "ROOT_SQUASH",
+                  "anonUid": "65534",
+                  "anonGid": "65534",
+                  "securityFlavors": [
+                    "AUTH_SYS"
+                  ]
+                }
+              ]
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "4800",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 72.139915ms
+  - id: 21
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Updated test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true",
+            "label-one": "value-one"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "4800",
+              "nfsExportOptions": [
+                {
+                  "ipRanges": [
+                    "172.217.14.238"
+                  ],
+                  "accessMode": "READ_ONLY",
+                  "squashMode": "ROOT_SQUASH",
+                  "anonUid": "65534",
+                  "anonGid": "65534",
+                  "securityFlavors": [
+                    "AUTH_SYS"
+                  ]
+                }
+              ]
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "4800",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 63.400898ms
+  - id: 22
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Updated test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true",
+            "label-one": "value-one"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "4800",
+              "nfsExportOptions": [
+                {
+                  "ipRanges": [
+                    "172.217.14.238"
+                  ],
+                  "accessMode": "READ_ONLY",
+                  "squashMode": "ROOT_SQUASH",
+                  "anonUid": "65534",
+                  "anonGid": "65534",
+                  "securityFlavors": [
+                    "AUTH_SYS"
+                  ]
+                }
+              ]
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "4800",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 71.621688ms
+  - id: 23
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Updated test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true",
+            "label-one": "value-one"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "4800",
+              "nfsExportOptions": [
+                {
+                  "ipRanges": [
+                    "172.217.14.238"
+                  ],
+                  "accessMode": "READ_ONLY",
+                  "squashMode": "ROOT_SQUASH",
+                  "anonUid": "65534",
+                  "anonGid": "65534",
+                  "securityFlavors": [
+                    "AUTH_SYS"
+                  ]
+                }
+              ]
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "4800",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 234.496609ms
+  - id: 24
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Updated test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true",
+            "label-one": "value-one"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "4800",
+              "nfsExportOptions": [
+                {
+                  "ipRanges": [
+                    "172.217.14.238"
+                  ],
+                  "accessMode": "READ_ONLY",
+                  "squashMode": "ROOT_SQUASH",
+                  "anonUid": "65534",
+                  "anonGid": "65534",
+                  "securityFlavors": [
+                    "AUTH_SYS"
+                  ]
+                }
+              ]
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "4800",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 82.663919ms
+  - id: 25
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+          "description": "Updated test instance",
+          "state": "READY",
+          "createTime": "2024-05-03T17:51:02.491540329Z",
+          "tier": "PREMIUM",
+          "labels": {
+            "managed-by-cnrm": "true",
+            "cnrm-test": "true",
+            "label-one": "value-one"
+          },
+          "fileShares": [
+            {
+              "name": "my_share",
+              "capacityGb": "4800",
+              "nfsExportOptions": [
+                {
+                  "ipRanges": [
+                    "172.217.14.238"
+                  ],
+                  "accessMode": "READ_ONLY",
+                  "squashMode": "ROOT_SQUASH",
+                  "anonUid": "65534",
+                  "anonGid": "65534",
+                  "securityFlavors": [
+                    "AUTH_SYS"
+                  ]
+                }
+              ]
+            }
+          ],
+          "networks": [
+            {
+              "network": "default",
+              "modes": [
+                "MODE_IPV4"
+              ],
+              "reservedIpRange": "10.194.202.40/29",
+              "ipAddresses": [
+                "10.194.202.42"
+              ]
+            }
+          ],
+          "maxCapacityGb": "65434",
+          "capacityStepSizeGb": "1",
+          "maxShareCount": "1",
+          "capacityGb": "4800",
+          "satisfiesPzi": true
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 58.369069ms
+  - id: 26
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: DELETE
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/operations/operation-1715104470643-617e0e0b9b458-5aa28db4-7af80f42",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:54:30.692074215Z",
+            "target": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "verb": "delete",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": false
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 348.224ms
+  - id: 27
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/operations/operation-1715104470643-617e0e0b9b458-5aa28db4-7af80f42?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1-c/operations/operation-1715104470643-617e0e0b9b458-5aa28db4-7af80f42",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.common.OperationMetadata",
+            "createTime": "2024-05-03T17:54:30.692074215Z",
+            "endTime": "2024-05-03T17:57:05.214943110Z",
+            "target": "projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu",
+            "verb": "delete",
+            "cancelRequested": false,
+            "apiVersion": "v1beta1"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.protobuf.Empty"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 267.690991ms
+  - id: 28
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: file.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://file.googleapis.com/v1beta1/projects/example-project/locations/us-central1-c/instances/filestoreinstance-2c4iavozbt8lu?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 63.264593ms

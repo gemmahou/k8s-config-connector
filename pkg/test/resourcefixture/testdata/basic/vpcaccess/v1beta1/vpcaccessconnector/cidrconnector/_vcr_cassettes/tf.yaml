@@ -1,0 +1,572 @@
+---
+version: 2
+interactions:
+  - id: 0
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: compute.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks/default?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "kind": "compute#network",
+          "id": "7211413379147622350",
+          "creationTimestamp": "2024-05-03T09:38:57.034-07:00",
+          "name": "default",
+          "description": "Default network for the project",
+          "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/default",
+          "selfLinkWithId": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/7211413379147622350",
+          "autoCreateSubnetworks": true,
+          "subnetworks": [
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west8/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-central2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-southwest1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west9/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west10/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east5/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-north1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/africa-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-central1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west12/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west6/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central1/subnetworks/default"
+          ],
+          "peerings": [
+            {
+              "name": "filestore-peer-630472627801",
+              "network": "https://www.googleapis.com/compute/beta/projects/s29cbcc936017416bp-tp/global/networks/default-2309458234058",
+              "state": "ACTIVE",
+              "stateDetails": "[2024-05-03T10:56:44.683-07:00]: Connected.",
+              "autoCreateRoutes": true,
+              "exportCustomRoutes": true,
+              "importCustomRoutes": true,
+              "exchangeSubnetRoutes": true,
+              "exportSubnetRoutesWithPublicIp": true,
+              "importSubnetRoutesWithPublicIp": true,
+              "stackType": "IPV4_ONLY"
+            }
+          ],
+          "routingConfig": {
+            "routingMode": "REGIONAL"
+          },
+          "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 207.57347ms
+  - id: 1
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: compute.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://compute.googleapis.com/compute/beta/projects/example-project/global/networks/default?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "kind": "compute#network",
+          "id": "7211413379147622350",
+          "creationTimestamp": "2024-05-03T09:38:57.034-07:00",
+          "name": "default",
+          "description": "Default network for the project",
+          "selfLink": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/default",
+          "selfLinkWithId": "https://www.googleapis.com/compute/beta/projects/example-project/global/networks/7211413379147622350",
+          "autoCreateSubnetworks": true,
+          "subnetworks": [
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west8/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-central2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-southwest1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west9/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-south2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/australia-southeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west10/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east4/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east5/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-north1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/southamerica-west1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/africa-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-west3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-central1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-east1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west12/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-southeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/northamerica-northeast1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast2/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/asia-northeast3/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/us-south1/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/europe-west6/subnetworks/default",
+            "https://www.googleapis.com/compute/beta/projects/example-project/regions/me-central1/subnetworks/default"
+          ],
+          "peerings": [
+            {
+              "name": "filestore-peer-630472627801",
+              "network": "https://www.googleapis.com/compute/beta/projects/s29cbcc936017416bp-tp/global/networks/default-2309458234058",
+              "state": "ACTIVE",
+              "stateDetails": "[2024-05-03T10:56:44.683-07:00]: Connected.",
+              "autoCreateRoutes": true,
+              "exportCustomRoutes": true,
+              "importCustomRoutes": true,
+              "exchangeSubnetRoutes": true,
+              "exportSubnetRoutesWithPublicIp": true,
+              "importSubnetRoutesWithPublicIp": true,
+              "stackType": "IPV4_ONLY"
+            }
+          ],
+          "routingConfig": {
+            "routingMode": "REGIONAL"
+          },
+          "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 169.461128ms
+  - id: 2
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: vpcaccess.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://vpcaccess.googleapis.com/v1beta1/projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: 0
+      uncompressed: true
+      body: fake error message
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 404 Not Found
+      code: 404
+      duration: 352.081672ms
+  - id: 3
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 115
+      transfer_encoding: []
+      trailer: {}
+      host: vpcaccess.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: |
+        {"ipCidrRange":"10.2.0.0/28","machineType":"e2-micro","maxThroughput":400,"minThroughput":300,"network":"default"}
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://vpcaccess.googleapis.com/v1beta1/projects/example-project/locations/us-central1/connectors?alt=json&connectorId=vpcac3c4i3uq2sp7g7
+      method: POST
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/operations/9ab30fa6-e595-4afd-a571-e6e98d4f68dc",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.vpcaccess.v1beta1.OperationMetadataV1Beta1",
+            "method": "google.cloud.vpcaccess.v1beta1.VpcAccessService.CreateConnector",
+            "createTime": "2024-05-03T18:10:45.403128Z",
+            "target": "projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 1.026330279s
+  - id: 4
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: vpcaccess.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://vpcaccess.googleapis.com/v1beta1/projects/example-project/locations/us-central1/operations/9ab30fa6-e595-4afd-a571-e6e98d4f68dc?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/operations/9ab30fa6-e595-4afd-a571-e6e98d4f68dc",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.vpcaccess.v1beta1.OperationMetadataV1Beta1",
+            "method": "google.cloud.vpcaccess.v1beta1.VpcAccessService.CreateConnector",
+            "createTime": "2024-05-03T18:10:45.403128Z",
+            "endTime": "2024-05-03T18:12:34.852170Z",
+            "target": "projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.cloud.vpcaccess.v1beta1.Connector",
+            "name": "projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7",
+            "network": "default",
+            "ipCidrRange": "10.2.0.0/28",
+            "state": "READY",
+            "minThroughput": 300,
+            "maxThroughput": 400,
+            "machineType": "e2-micro",
+            "minInstances": 3,
+            "maxInstances": 4,
+            "createTime": "2024-05-03T18:10:45.383200Z",
+            "lastRestartTime": "2024-05-03T18:10:44.670276Z"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 295.627494ms
+  - id: 5
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: vpcaccess.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://vpcaccess.googleapis.com/v1beta1/projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7",
+          "network": "default",
+          "ipCidrRange": "10.2.0.0/28",
+          "state": "READY",
+          "minThroughput": 300,
+          "maxThroughput": 400,
+          "machineType": "e2-micro",
+          "minInstances": 3,
+          "maxInstances": 4,
+          "createTime": "2024-05-03T18:10:45.383200Z",
+          "lastRestartTime": "2024-05-03T18:10:44.670276Z"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 83.430735ms
+  - id: 6
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: vpcaccess.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://vpcaccess.googleapis.com/v1beta1/projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7",
+          "network": "default",
+          "ipCidrRange": "10.2.0.0/28",
+          "state": "READY",
+          "minThroughput": 300,
+          "maxThroughput": 400,
+          "machineType": "e2-micro",
+          "minInstances": 3,
+          "maxInstances": 4,
+          "createTime": "2024-05-03T18:10:45.383200Z",
+          "lastRestartTime": "2024-05-03T18:10:44.670276Z"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 128.479816ms
+  - id: 7
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: vpcaccess.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://vpcaccess.googleapis.com/v1beta1/projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7",
+          "network": "default",
+          "ipCidrRange": "10.2.0.0/28",
+          "state": "READY",
+          "minThroughput": 300,
+          "maxThroughput": 400,
+          "machineType": "e2-micro",
+          "minInstances": 3,
+          "maxInstances": 4,
+          "createTime": "2024-05-03T18:10:45.383200Z",
+          "lastRestartTime": "2024-05-03T18:10:44.670276Z"
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 266.742749ms
+  - id: 8
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: vpcaccess.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://vpcaccess.googleapis.com/v1beta1/projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7?alt=json
+      method: DELETE
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/operations/fe8525c5-dbfc-42db-a8c0-32a7cc6f0b54",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.vpcaccess.v1beta1.OperationMetadataV1Beta1",
+            "method": "google.cloud.vpcaccess.v1beta1.VpcAccessService.DeleteConnector",
+            "createTime": "2024-05-03T18:12:49.980267Z",
+            "target": "projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 299.977578ms
+  - id: 9
+    request:
+      proto: HTTP/1.1
+      proto_major: 1
+      proto_minor: 1
+      content_length: 0
+      transfer_encoding: []
+      trailer: {}
+      host: vpcaccess.googleapis.com
+      remote_addr: ""
+      request_uri: ""
+      body: ""
+      form: {}
+      headers:
+        Content-Type:
+          - application/json
+      url: https://vpcaccess.googleapis.com/v1beta1/projects/example-project/locations/us-central1/operations/fe8525c5-dbfc-42db-a8c0-32a7cc6f0b54?alt=json
+      method: GET
+    response:
+      proto: HTTP/2.0
+      proto_major: 2
+      proto_minor: 0
+      transfer_encoding: []
+      trailer: {}
+      content_length: -1
+      uncompressed: true
+      body: |
+        {
+          "name": "projects/example-project/locations/us-central1/operations/fe8525c5-dbfc-42db-a8c0-32a7cc6f0b54",
+          "metadata": {
+            "@type": "type.googleapis.com/google.cloud.vpcaccess.v1beta1.OperationMetadataV1Beta1",
+            "method": "google.cloud.vpcaccess.v1beta1.VpcAccessService.DeleteConnector",
+            "createTime": "2024-05-03T18:12:49.980267Z",
+            "endTime": "2024-05-03T18:16:05.391708Z",
+            "target": "projects/example-project/locations/us-central1/connectors/vpcac3c4i3uq2sp7g7"
+          },
+          "done": true,
+          "response": {
+            "@type": "type.googleapis.com/google.protobuf.Empty"
+          }
+        }
+      headers:
+        Content-Type:
+          - application/json; charset=UTF-8
+      status: 200 OK
+      code: 200
+      duration: 71.265425ms

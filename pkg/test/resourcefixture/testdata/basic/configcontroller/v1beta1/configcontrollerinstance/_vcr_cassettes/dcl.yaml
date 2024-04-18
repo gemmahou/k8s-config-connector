@@ -1,0 +1,671 @@
+# Copyright 2024 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+              "labels": {
+                "cnrm-test": "true",
+                "label-one": "value-one",
+                "managed-by-cnrm": "true"
+              },
+              "bundlesConfig": {
+                "configControllerConfig": {
+                  "enabled": true
+                }
+              },
+              "manBlock": "0.0.0.0/0",
+              "network": "projects/example-project/global/networks/default",
+              "masterIpv4CidrBlock": "172.16.123.64/28",
+              "clusterCidrBlock": "/20",
+              "servicesCidrBlock": "/24",
+              "state": "CREATING",
+              "managementConfig": {
+                "standardManagementConfig": {
+                  "network": "projects/example-project/global/networks/default",
+                  "masterIpv4CidrBlock": "172.16.123.64/28",
+                  "manBlock": "0.0.0.0/0",
+                  "clusterCidrBlock": "/20",
+                  "servicesCidrBlock": "/24"
+                }
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 299.401384ms
+    - id: 1
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+              "labels": {
+                "label-one": "value-one",
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true"
+              },
+              "bundlesConfig": {
+                "configControllerConfig": {
+                  "enabled": true
+                }
+              },
+              "manBlock": "0.0.0.0/0",
+              "network": "projects/example-project/global/networks/default",
+              "masterIpv4CidrBlock": "172.16.123.64/28",
+              "clusterCidrBlock": "/20",
+              "servicesCidrBlock": "/24",
+              "state": "CREATING",
+              "managementConfig": {
+                "standardManagementConfig": {
+                  "network": "projects/example-project/global/networks/default",
+                  "masterIpv4CidrBlock": "172.16.123.64/28",
+                  "manBlock": "0.0.0.0/0",
+                  "clusterCidrBlock": "/20",
+                  "servicesCidrBlock": "/24"
+                }
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 258.54976ms
+    - id: 2
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+              "labels": {
+                "label-one": "value-one",
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true"
+              },
+              "bundlesConfig": {
+                "configControllerConfig": {
+                  "enabled": true
+                }
+              },
+              "manBlock": "0.0.0.0/0",
+              "network": "projects/example-project/global/networks/default",
+              "masterIpv4CidrBlock": "172.16.123.64/28",
+              "clusterCidrBlock": "/20",
+              "servicesCidrBlock": "/24",
+              "state": "CREATING",
+              "managementConfig": {
+                "standardManagementConfig": {
+                  "network": "projects/example-project/global/networks/default",
+                  "masterIpv4CidrBlock": "172.16.123.64/28",
+                  "manBlock": "0.0.0.0/0",
+                  "clusterCidrBlock": "/20",
+                  "servicesCidrBlock": "/24"
+                }
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 234.318199ms
+    - id: 3
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+              "labels": {
+                "cnrm-test": "true",
+                "label-one": "value-one",
+                "managed-by-cnrm": "true"
+              },
+              "bundlesConfig": {
+                "configControllerConfig": {
+                  "enabled": true
+                }
+              },
+              "manBlock": "0.0.0.0/0",
+              "network": "projects/example-project/global/networks/default",
+              "masterIpv4CidrBlock": "172.16.123.64/28",
+              "clusterCidrBlock": "/20",
+              "servicesCidrBlock": "/24",
+              "state": "CREATING",
+              "managementConfig": {
+                "standardManagementConfig": {
+                  "network": "projects/example-project/global/networks/default",
+                  "masterIpv4CidrBlock": "172.16.123.64/28",
+                  "manBlock": "0.0.0.0/0",
+                  "clusterCidrBlock": "/20",
+                  "servicesCidrBlock": "/24"
+                }
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 218.373297ms
+    - id: 4
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+              "labels": {
+                "label-one": "value-one",
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true"
+              },
+              "bundlesConfig": {
+                "configControllerConfig": {
+                  "enabled": true
+                }
+              },
+              "manBlock": "0.0.0.0/0",
+              "network": "projects/example-project/global/networks/default",
+              "masterIpv4CidrBlock": "172.16.123.64/28",
+              "clusterCidrBlock": "/20",
+              "servicesCidrBlock": "/24",
+              "state": "CREATING",
+              "managementConfig": {
+                "standardManagementConfig": {
+                  "network": "projects/example-project/global/networks/default",
+                  "masterIpv4CidrBlock": "172.16.123.64/28",
+                  "manBlock": "0.0.0.0/0",
+                  "clusterCidrBlock": "/20",
+                  "servicesCidrBlock": "/24"
+                }
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 220.990807ms
+    - id: 5
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+              "labels": {
+                "label-one": "value-one",
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true"
+              },
+              "bundlesConfig": {
+                "configControllerConfig": {
+                  "enabled": true
+                }
+              },
+              "manBlock": "0.0.0.0/0",
+              "network": "projects/example-project/global/networks/default",
+              "masterIpv4CidrBlock": "172.16.123.64/28",
+              "clusterCidrBlock": "/20",
+              "servicesCidrBlock": "/24",
+              "state": "CREATING",
+              "managementConfig": {
+                "standardManagementConfig": {
+                  "network": "projects/example-project/global/networks/default",
+                  "masterIpv4CidrBlock": "172.16.123.64/28",
+                  "manBlock": "0.0.0.0/0",
+                  "clusterCidrBlock": "/20",
+                  "servicesCidrBlock": "/24"
+                }
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 235.483929ms
+    - id: 6
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+              "labels": {
+                "label-one": "value-one",
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true"
+              },
+              "bundlesConfig": {
+                "configControllerConfig": {
+                  "enabled": true
+                }
+              },
+              "manBlock": "0.0.0.0/0",
+              "network": "projects/example-project/global/networks/default",
+              "masterIpv4CidrBlock": "172.16.123.64/28",
+              "clusterCidrBlock": "/20",
+              "servicesCidrBlock": "/24",
+              "state": "CREATING",
+              "managementConfig": {
+                "standardManagementConfig": {
+                  "network": "projects/example-project/global/networks/default",
+                  "masterIpv4CidrBlock": "172.16.123.64/28",
+                  "manBlock": "0.0.0.0/0",
+                  "clusterCidrBlock": "/20",
+                  "servicesCidrBlock": "/24"
+                }
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 212.591136ms
+    - id: 7
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+              "labels": {
+                "label-one": "value-one",
+                "managed-by-cnrm": "true",
+                "cnrm-test": "true"
+              },
+              "bundlesConfig": {
+                "configControllerConfig": {
+                  "enabled": true
+                }
+              },
+              "manBlock": "0.0.0.0/0",
+              "network": "projects/example-project/global/networks/default",
+              "masterIpv4CidrBlock": "172.16.123.64/28",
+              "clusterCidrBlock": "/20",
+              "servicesCidrBlock": "/24",
+              "state": "CREATING",
+              "managementConfig": {
+                "standardManagementConfig": {
+                  "network": "projects/example-project/global/networks/default",
+                  "masterIpv4CidrBlock": "172.16.123.64/28",
+                  "manBlock": "0.0.0.0/0",
+                  "clusterCidrBlock": "/20",
+                  "servicesCidrBlock": "/24"
+                }
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 53.285425ms
+    - id: 8
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3?alt=json
+        method: DELETE
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1712961013287-615edd0b60a66-9b6f0cd2-c7a2fff0",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.krmapihosting.v1alpha1.OperationMetadata",
+                "createTime": "2024-04-12T22:30:13.299063491Z",
+                "target": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+                "apiVersion": "v1alpha1"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 271.177841ms
+    - id: 9
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/operations/operation-1712961013287-615edd0b60a66-9b6f0cd2-c7a2fff0?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1712961013287-615edd0b60a66-9b6f0cd2-c7a2fff0",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.krmapihosting.v1alpha1.OperationMetadata",
+                "createTime": "2024-04-12T22:30:13.299063491Z",
+                "target": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+                "apiVersion": "v1alpha1"
+              },
+              "done": false
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 235.351228ms
+    - id: 10
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/operations/operation-1712961013287-615edd0b60a66-9b6f0cd2-c7a2fff0?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: |
+            {
+              "name": "projects/example-project/locations/us-central1/operations/operation-1712961013287-615edd0b60a66-9b6f0cd2-c7a2fff0",
+              "metadata": {
+                "@type": "type.googleapis.com/google.cloud.krmapihosting.v1alpha1.OperationMetadata",
+                "createTime": "2024-04-12T22:30:13.299063491Z",
+                "endTime": "2024-04-12T22:56:41.442439567Z",
+                "target": "projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3",
+                "apiVersion": "v1alpha1"
+              },
+              "done": true,
+              "response": {
+                "@type": "type.googleapis.com/google.protobuf.Empty"
+              }
+            }
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 200 OK
+        code: 200
+        duration: 235.235418ms
+    - id: 11
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: krmapihosting.googleapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers:
+            Content-Type:
+                - application/json
+        url: https://krmapihosting.googleapis.com/v1alpha1/projects/example-project/locations/us-central1/krmApiHosts/cci-3ak7675z8n8l3?alt=json
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 0
+        uncompressed: true
+        body: fake error message
+        headers:
+            Content-Type:
+                - application/json; charset=UTF-8
+        status: 404 Not Found
+        code: 404
+        duration: 99.549863ms
