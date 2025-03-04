@@ -1,0 +1,29 @@
+GET https://bigtableadmin.googleapis.com/v2/projects/${projectId}/instances/my-instance-id/clusters/my-cluster-id/hotTablets?alt=json
+Accept: application/json
+Authorization: (removed)
+Connection: keep-alive
+X-Goog-User-Project: ${projectNumber}
+
+404 Not Found
+Content-Type: application/json; charset=UTF-8
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+  "error": {
+    "code": 404,
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.DebugInfo",
+        "detail": "[ORIGINAL ERROR] generic::not_found: Failed to read: projects/{${projectNumber}}/instances/my-instance-id : GlobalInstances(${projectNumber},my-instance-id) [google.rpc.error_details_ext] { message: \"Failed to read: projects/{${projectNumber}}/instances/my-instance-id\" }"
+      }
+    ],
+    "message": "Failed to read: projects/{${projectNumber}}/instances/my-instance-id",
+    "status": "NOT_FOUND"
+  }
+}
