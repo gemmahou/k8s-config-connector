@@ -1,0 +1,1 @@
+- exec: gcloud bigtable hot-tablets list my-cluster-id --instance=my-instance-id
