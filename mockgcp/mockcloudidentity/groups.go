@@ -85,9 +85,7 @@ func (s *groupsServer) CreateGroup(ctx context.Context, req *pb.CreateGroupReque
 	retObj := proto.Clone(obj).(*pb.Group)
 	retObj.AdditionalGroupKeys = nil
 	go func() {
-		// realGCP adds the additional key very quickly(under 1s)
-		// Set a short wait time to match realGCP log
-		time.Sleep(10 * time.Millisecond)
+		time.Sleep(1 * time.Second)
 		if err := s.addAdditionalGroupKeys(context.Background(), name); err != nil {
 			klog.Fatalf("error adding additionalGroupKeys: %v", err)
 		}
