@@ -1,0 +1,12 @@
+apiVersion: essentialcontacts.cnrm.cloud.google.com/v1beta1
+kind: EssentialContactsContact
+metadata:
+  name: test-contact
+spec:
+  projectRef:
+    external: cnrm-yuhou-2
+  languageTag: en
+  notificationCategorySubscriptions:
+    - BILLING
+  # email needs to be unique within the project
+  email: "test-email@test.com"

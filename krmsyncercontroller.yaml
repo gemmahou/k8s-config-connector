@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: krmsyncer-controller-manager
+  namespace: cnrm-system
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        control-plane: controller-manager-krmsyncer
+    spec:
+      containers:
+        - command:
+            - /manager
+          image: gcr.io/cnrm-yuhou-2/krmsyncer/controller:latest
+          name: manager
+      serviceAccountName: cnrm-controller-manager
+  selector:
+    matchLabels:
+      control-plane: controller-manager-krmsyncer
