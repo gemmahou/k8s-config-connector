@@ -113,12 +113,17 @@ func resolveContainerClusterNodeVersion(r *Resource, config map[string]interface
 	if err != nil {
 		return fmt.Errorf("error determining if release channel is set: %w", err)
 	}
-	if !found || releaseChannel == nil {
-		// Release channel is not specified, so no special behavior required.
-		return nil
-	}
-	if err := removeFromConfigIfNotApplied(r, config, "nodeVersion"); err != nil {
-		return fmt.Errorf("error resolving node version in config: %w", err)
+
+	// If the user opts to remove the default node pool, specifying a node version
+	// is also restricted by Terraform.
+	removeDefaultNodePoolDirective := "remove-default-node-pool"
+	removeDefaultNodePoolKey := k8s.FormatAnnotation(removeDefaultNodePoolDirective)
+	removeDefaultNodePool, _ := k8s.GetAnnotation(removeDefaultNodePoolKey, r)
+
+	if removeDefaultNodePool == "true" || (found && releaseChannel != nil) {
+		if err := removeFromConfigIfNotApplied(r, config, "nodeVersion"); err != nil {
+			return fmt.Errorf("error resolving node version in config: %w", err)
+		}
 	}
 	return nil
 }
@@ -145,11 +150,20 @@ func resolveContainerNodePoolVersion(r *Resource, config map[string]interface{})
 // When `remove-default-node-pool` directive is set to `true`, the default node
 // pool will be removed, and `spec.nodeConfig` field should be managed by the API.
 // However, because the service-generated value of `spec.nodeConfig` contains
-// lists, which are preserved by KCC even if the live state of the GCP resource
-// no longer has `nodeConfig` field, it triggers unexpected recreation of the
-// resource. So in this case, we need to manually clean up `nodeConfig` field.
+// lists, which are preserved by legacy KCC(when "state-into-spec" was defaulted to "merge")
+// even if the live state of the GCP resource no longer has `nodeConfig` field. It triggers
+// unexpected recreation of the resource. So in this case, we need to manually clean up `nodeConfig` field.
+
+// If `spec.nodeConfig` is explicitly defined in the desired config but should be removed
+// following the deletion of the default node pool, the `remove-default-node-pool-allow-node-config`
+// annotation must be set to true. This prevents the unexpected recreation of the resource.
+
+// Note: When the default node pool is deleted, `node_config` is absent from the live state.
+// However, if it remains in the desired state (either preserved by legacy KCC or
+// explicitly set by the user), Terraform will attempt to recreate the resource as this field is marked `ForceNew`.
 func resolveContainerClusterNodeConfig(r *Resource, liveState *terraform.InstanceState, config map[string]interface{}) error {
 	removeDefaultNodePoolDirective := "remove-default-node-pool"
+	allowNodeConfigOverrideDirective := "remove-default-node-pool-allow-node-config"
 	nodeConfigFieldInTFState := "node_config"
 	nodeConfigFieldInKRMConfig := text.SnakeCaseToLowerCamelCase(nodeConfigFieldInTFState)
 
@@ -165,6 +179,22 @@ func resolveContainerClusterNodeConfig(r *Resource, liveState *terraform.Instanc
 		return fmt.Errorf("error resolving field '%v' in 'ContainerCluster': %w", nodeConfigFieldInKRMConfig, err)
 	}
 	if exists {
+		return nil
+	}
+
+	// If the resource is being created, we MUST NOT strip node_config, because the user may have specified
+	// important settings like network tags that are required for the temporary default pool to connect
+	// to the master during provisioning.
+	if liveState.ID == "" {
+		return nil
+	}
+
+	// Opt-in logic to allow specifying nodeConfig for the temporary default pool
+	// (unblocking OrgPolicies/custom requirements) without causing a permanent
+	// reconciliation loop once GKE deletes the pool.
+	allowNodeConfigOverrideKey := k8s.FormatAnnotation(allowNodeConfigOverrideDirective)
+	if override, ok := k8s.GetAnnotation(allowNodeConfigOverrideKey, r); ok && override == "true" {
+		unstructured.RemoveNestedField(config, nodeConfigFieldInKRMConfig)
 		return nil
 	}
 

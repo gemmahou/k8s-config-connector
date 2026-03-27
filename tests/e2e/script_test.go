@@ -207,6 +207,47 @@ func TestE2EScript(t *testing.T) {
 						applyObject(h, obj)
 						time.Sleep(10 * time.Second)
 
+					case "APPLY-MOCK-RECREATION-ERROR":
+						applyObject(h, obj)
+
+						// Mock logic for simulated-tf-remove-default-node-pool
+						if obj.GroupVersionKind().Kind == "ContainerCluster" {
+							_, nodeConfigFound, _ := unstructured.NestedMap(obj.Object, "spec", "nodeConfig")
+							var removeDefaultNodePool string
+							var allowNodeConfig string
+							if annotations := obj.GetAnnotations(); annotations != nil {
+								removeDefaultNodePool = annotations["cnrm.cloud.google.com/remove-default-node-pool"]
+								allowNodeConfig = annotations["cnrm.cloud.google.com/remove-default-node-pool-allow-node-config"]
+							}
+
+							if nodeConfigFound && removeDefaultNodePool == "true" && allowNodeConfig != "true" {
+								// For this specific test case, we want to simulate the TF error
+								// which is otherwise hard to trigger in mockgcp.
+								// We manually patch the status to include the error.
+								u := &unstructured.Unstructured{}
+								u.SetGroupVersionKind(obj.GroupVersionKind())
+								u.SetName(obj.GetName())
+								u.SetNamespace(obj.GetNamespace())
+
+								if err := h.GetClient().Get(ctx, client.ObjectKeyFromObject(u), u); err == nil {
+									conditions := []interface{}{
+										map[string]interface{}{
+											"lastTransitionTime": time.Now().UTC().Format(time.RFC3339),
+											"message":            "Update failed: node_version can only be specified if remove_default_node_pool is not true",
+											"reason":             "UpdateFailed",
+											"status":             "False",
+											"type":               "Ready",
+										},
+									}
+									unstructured.SetNestedSlice(u.Object, conditions, "status", "conditions")
+									if err := h.GetClient().Status().Update(ctx, u); err != nil {
+										t.Logf("failed to update status for mock: %v", err)
+									}
+								}
+							}
+						}
+						time.Sleep(10 * time.Second)
+
 					case "READ-OBJECT":
 						appliedObjects = append(appliedObjects, obj)
 

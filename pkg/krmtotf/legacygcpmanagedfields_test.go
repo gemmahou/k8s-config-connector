@@ -32,11 +32,55 @@ func TestResolveGCPManagedFields(t *testing.T) {
 	tests := []struct {
 		name              string
 		kind              string
+		annotations       map[string]string
 		lastAppliedConfig map[string]interface{}
 		resourceExists    bool
+		liveStateAttr     map[string]string
 		inputConfig       map[string]interface{}
 		expectedConfig    map[string]interface{}
 	}{
+		{
+			name: "ContainerCluster removes node version when remove-default-node-pool set",
+			kind: "ContainerCluster",
+			annotations: map[string]string{
+				"cnrm.cloud.google.com/remove-default-node-pool": "true",
+			},
+			lastAppliedConfig: map[string]interface{}{
+				"spec": map[string]interface{}{
+					"location": "us-central1-a",
+				},
+			},
+			resourceExists: true,
+			inputConfig: map[string]interface{}{
+				"location":    "us-central1-a",
+				"nodeVersion": "1.27",
+			},
+			expectedConfig: map[string]interface{}{
+				"location": "us-central1-a",
+			},
+		},
+		{
+			name: "ContainerCluster respects node version when explicitly applied even if remove-default-node-pool set",
+			kind: "ContainerCluster",
+			annotations: map[string]string{
+				"cnrm.cloud.google.com/remove-default-node-pool": "true",
+			},
+			lastAppliedConfig: map[string]interface{}{
+				"spec": map[string]interface{}{
+					"location":    "us-central1-a",
+					"nodeVersion": "1.27",
+				},
+			},
+			resourceExists: true,
+			inputConfig: map[string]interface{}{
+				"location":    "us-central1-a",
+				"nodeVersion": "1.27",
+			},
+			expectedConfig: map[string]interface{}{
+				"location":    "us-central1-a",
+				"nodeVersion": "1.27",
+			},
+		},
 		{
 			name: "ContainerCluster treats node version as GCP-managed when release channel set",
 			kind: "ContainerCluster",
@@ -496,7 +540,7 @@ func TestResolveGCPManagedFields(t *testing.T) {
 			},
 		},
 		{
-			name: "BigtableInstance removes an existing numNodes, if the value is removed",
+			name: "ContainerCluster removes an existing numNodes, if the value is removed",
 			kind: "BigtableInstance",
 			lastAppliedConfig: map[string]interface{}{
 				"spec": map[string]interface{}{
@@ -530,6 +574,76 @@ func TestResolveGCPManagedFields(t *testing.T) {
 				},
 			},
 		},
+		{
+			name: "ContainerCluster removes nodeConfig when remove-default-node-pool set and node_config not in live state",
+			kind: "ContainerCluster",
+			annotations: map[string]string{
+				"cnrm.cloud.google.com/remove-default-node-pool": "true",
+			},
+			lastAppliedConfig: map[string]interface{}{
+				"spec": map[string]interface{}{
+					"location": "us-central1-a",
+				},
+			},
+			resourceExists: true,
+			inputConfig: map[string]interface{}{
+				"location": "us-central1-a",
+				"nodeConfig": []map[string]interface{}{
+					{"machineType": "n1-standard-1"},
+				},
+			},
+			expectedConfig: map[string]interface{}{
+				"location": "us-central1-a",
+			},
+		},
+		{
+			name: "ContainerCluster keeps nodeConfig when remove-default-node-pool set and node_config not in live state but it is a new creation",
+			kind: "ContainerCluster",
+			annotations: map[string]string{
+				"cnrm.cloud.google.com/remove-default-node-pool": "true",
+			},
+			lastAppliedConfig: map[string]interface{}{
+				"spec": map[string]interface{}{
+					"location": "us-central1-a",
+				},
+			},
+			resourceExists: false,
+			inputConfig: map[string]interface{}{
+				"location": "us-central1-a",
+				"nodeConfig": []map[string]interface{}{
+					{"machineType": "n1-standard-1"},
+				},
+			},
+			expectedConfig: map[string]interface{}{
+				"location": "us-central1-a",
+				"nodeConfig": []map[string]interface{}{
+					{"machineType": "n1-standard-1"},
+				},
+			},
+		},
+		{
+			name: "ContainerCluster removes nodeConfig when remove-default-node-pool-allow-node-config is true even if node_config not in live state",
+			kind: "ContainerCluster",
+			annotations: map[string]string{
+				"cnrm.cloud.google.com/remove-default-node-pool":                   "true",
+				"cnrm.cloud.google.com/remove-default-node-pool-allow-node-config": "true",
+			},
+			lastAppliedConfig: map[string]interface{}{
+				"spec": map[string]interface{}{
+					"location": "us-central1-a",
+				},
+			},
+			resourceExists: true,
+			inputConfig: map[string]interface{}{
+				"location": "us-central1-a",
+				"nodeConfig": []map[string]interface{}{
+					{"machineType": "n1-standard-1"},
+				},
+			},
+			expectedConfig: map[string]interface{}{
+				"location": "us-central1-a",
+			},
+		},
 	}
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
@@ -539,17 +653,25 @@ func TestResolveGCPManagedFields(t *testing.T) {
 			if err != nil {
 				t.Fatalf("error marshaling last applied config: %v", err)
 			}
-			r.SetAnnotations(map[string]string{
-				k8s.LastAppliedConfigurationAnnotation: string(lastAppliedConfigJSON),
-			})
+			annotations := make(map[string]string)
+			for k, v := range tc.annotations {
+				annotations[k] = v
+			}
+			annotations[k8s.LastAppliedConfigurationAnnotation] = string(lastAppliedConfigJSON)
+			r.SetAnnotations(annotations)
 			var liveState *terraform.InstanceState
 			if tc.resourceExists {
 				// The content of the instance state does not matter here,
 				// as the diff function later handles the merge. We just
 				// need to supply *something* to mark this resource
 				// as already existing.
+				attr := tc.liveStateAttr
+				if attr == nil {
+					attr = make(map[string]string)
+				}
 				liveState = &terraform.InstanceState{
-					ID: "foo",
+					ID:         "foo",
+					Attributes: attr,
 				}
 			}
 			config := tc.inputConfig
