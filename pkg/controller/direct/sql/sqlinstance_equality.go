@@ -192,8 +192,8 @@ func slicesMatch[T any](desired []T, actual []T) bool {
 	return reflect.DeepEqual(desired, actual)
 }
 
-// mapsMatch checks if two maps are equal, matching with reflect.DeepEqual.
-// As a special-case, the empty map is treated the same as the nil map
+// mapsMatch checks if two maps are equal, reporting differences to the provided Diff object.
+// It returns true if the maps match.
 func mapsMatch[K comparable, V comparable](diff *structuredreporting.Diff, path string, desired map[K]V, actual map[K]V) bool {
 	matches := true
 	for k, vDesired := range desired {
@@ -201,7 +201,7 @@ func mapsMatch[K comparable, V comparable](diff *structuredreporting.Diff, path 
 		if !ok {
 			diff.AddField(path+"[\""+fmt.Sprint(k)+"\"]", nil, vDesired)
 			matches = false
-		} else if vDesired != vActual {
+		} else if !reflect.DeepEqual(vDesired, vActual) {
 			diff.AddField(path+"[\""+fmt.Sprint(k)+"\"]", vActual, vDesired)
 			matches = false
 		}
