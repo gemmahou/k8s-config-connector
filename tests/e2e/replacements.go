@@ -138,6 +138,8 @@ func (r *Replacements) placeholderForGCPResource(resource string, name string) s
 		return "${transferConfigID}"
 	case "firewallPolicies":
 		return "${firewallPolicyID}"
+	case "futureReservations":
+		return "${futureReservationID}"
 	case "folders":
 		return "${folderID}"
 	case "memberships":

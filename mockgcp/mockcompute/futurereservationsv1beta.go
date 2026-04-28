@@ -17,6 +17,7 @@ package mockcompute
 import (
 	"context"
 	"fmt"
+	"strconv"
 	"strings"
 
 	"google.golang.org/grpc/codes"
@@ -80,7 +81,17 @@ func (s *FutureReservationsV1Beta) Insert(ctx context.Context, req *pbv1beta.Ins
 	if obj.GetAutoDeleteAutoCreatedReservations() == false {
 		obj.AutoDeleteAutoCreatedReservations = nil
 	}
-	obj.Zone = PtrTo(fmt.Sprintf("https://www.googleapis.com/compute/v1/projects/%s/zones/%s", name.Project.ID, name.Zone))
+	obj.Zone = PtrTo(fmt.Sprintf("https://www.googleapis.com/compute/beta/projects/%s/zones/%s", name.Project.ID, name.Zone))
+
+	if obj.GetShareSettings() != nil && obj.GetShareSettings().GetShareType() == "SPECIFIC_PROJECTS" {
+		if len(obj.GetShareSettings().GetProjectMap()) == 0 {
+			return nil, status.Errorf(codes.InvalidArgument, "project_map is required when share_type is SPECIFIC_PROJECTS")
+		}
+		obj, err = s.convertProjectNumber(ctx, obj)
+		if err != nil {
+			return nil, err
+		}
+	}
 
 	if err := s.storage.Create(ctx, fqn, obj); err != nil {
 		return nil, err
@@ -262,4 +273,30 @@ func (s *MockService) parseFutureReservationName(name string) (*futureReservatio
 	} else {
 		return nil, status.Errorf(codes.InvalidArgument, "name %q is not valid", name)
 	}
+}
+
+func (s *FutureReservationsV1Beta) convertProjectNumber(ctx context.Context, obj *pbv1beta.FutureReservation) (*pbv1beta.FutureReservation, error) {
+	projectMap := obj.ShareSettings.ProjectMap
+	if projectMap == nil {
+		return nil, nil
+	}
+	projects := obj.ShareSettings.Projects
+	if projects == nil {
+		projects = []string{}
+	}
+	newMap := make(map[string]*pbv1beta.ShareSettingsProjectConfig)
+	for idOrNumber, config := range projectMap {
+		project, err := s.Projects.GetProjectByIDOrNumber(idOrNumber)
+		if err != nil {
+			return nil, err
+		}
+		projectNumber := strconv.FormatInt(project.Number, 10)
+		newConfig := proto.Clone(config).(*pbv1beta.ShareSettingsProjectConfig)
+		newConfig.ProjectId = &projectNumber
+		newMap[projectNumber] = newConfig
+		projects = append(projects, projectNumber)
+	}
+	obj.ShareSettings.ProjectMap = newMap
+	obj.ShareSettings.Projects = projects
+	return obj, nil
 }

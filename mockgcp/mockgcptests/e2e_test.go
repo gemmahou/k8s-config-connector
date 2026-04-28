@@ -35,12 +35,13 @@ import (
 )
 
 type Placeholders struct {
-	ProjectID        string
-	ProjectNumber    int64
-	OrganizationID   string
-	UniqueID         string
-	BillingAccountID string
-	FolderID         string
+	ProjectID                   string
+	ProjectNumber               int64
+	OrganizationID              string
+	UniqueID                    string
+	BillingAccountID            string
+	FolderID                    string
+	SharedReservationsProjectID string
 }
 
 func TestScripts(t *testing.T) {
@@ -77,12 +78,13 @@ func TestScripts(t *testing.T) {
 
 			testDir := filepath.Join(baseDir, scriptPath)
 			placeholders := Placeholders{
-				ProjectID:        project.ProjectID,
-				ProjectNumber:    project.ProjectNumber,
-				OrganizationID:   project.OrganizationID,
-				UniqueID:         uniqueID,
-				BillingAccountID: testgcp.TestBillingAccountID.Get(),
-				FolderID:         folderID,
+				ProjectID:                   project.ProjectID,
+				ProjectNumber:               project.ProjectNumber,
+				OrganizationID:              project.OrganizationID,
+				UniqueID:                    uniqueID,
+				BillingAccountID:            testgcp.TestBillingAccountID.Get(),
+				FolderID:                    folderID,
+				SharedReservationsProjectID: testgcp.TestSharedReservationsProject.Get(),
 			}
 			script := loadScript(t, testDir, placeholders)
 
@@ -295,5 +297,6 @@ func ReplaceTestVars(t *testing.T, b []byte, placeholders Placeholders) []byte {
 	s = strings.Replace(s, "${organizationId}", placeholders.OrganizationID, -1)
 	s = strings.Replace(s, "${BILLING_ACCOUNT_ID}", placeholders.BillingAccountID, -1)
 	s = strings.Replace(s, "${folderId}", placeholders.FolderID, -1)
+	s = strings.Replace(s, "${TEST_SHARED_RESERVATIONS_PROJECT}", placeholders.SharedReservationsProjectID, -1)
 	return []byte(s)
 }
