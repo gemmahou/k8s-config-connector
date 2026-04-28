@@ -1300,8 +1300,11 @@ func normalizeHTTPResponses(t *testing.T, normalizer mockgcpregistry.Normalizer,
 	}
 }
 
-// Compute URLs: Replace any compute beta URLs with v1 URLs
+// Compute URLs: Replace any compute beta URLs with v1 URLs except for ComputeFutureReservation
 func rewriteComputeURL(u string) string {
+	if strings.Contains(u, "/futureReservations") {
+		return u
+	}
 	for _, basePath := range []string{"https://compute.googleapis.com/compute", "https://www.googleapis.com/compute"} {
 		if strings.HasPrefix(u, basePath+"/beta/") {
 			u = basePath + "/v1/" + strings.TrimPrefix(u, basePath+"/beta/")

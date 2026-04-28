@@ -38,6 +38,12 @@ func newComputeOperationsService(storage storage.Storage) *computeOperations {
 	}
 }
 
+func newComputeOperationsV1BetaService(storage storage.Storage) *computeOperationsV1Beta {
+	return &computeOperationsV1Beta{
+		storage: storage,
+	}
+}
+
 func (s *computeOperations) globalOperationFQN(projectID string, name string) string {
 	return "projects/" + projectID + "/global/operations/" + name
 }

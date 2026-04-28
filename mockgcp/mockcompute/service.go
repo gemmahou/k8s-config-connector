@@ -28,6 +28,7 @@ import (
 	"google.golang.org/protobuf/proto"
 
 	pb "github.com/GoogleCloudPlatform/k8s-config-connector/mockgcp/generated/mockgcp/cloud/compute/v1"
+	pbv1beta "github.com/GoogleCloudPlatform/k8s-config-connector/mockgcp/generated/mockgcp/cloud/compute/v1beta"
 )
 
 func init() {
@@ -40,14 +41,16 @@ type MockService struct {
 	storage storage.Storage
 
 	*computeOperations
+	*computeOperationsV1Beta
 }
 
 // New creates a MockService.
 func New(env *common.MockEnvironment, storage storage.Storage) mockgcpregistry.MockService {
 	s := &MockService{
-		MockEnvironment:   env,
-		storage:           storage,
-		computeOperations: newComputeOperationsService(storage),
+		MockEnvironment:         env,
+		storage:                 storage,
+		computeOperations:       newComputeOperationsService(storage),
+		computeOperationsV1Beta: newComputeOperationsV1BetaService(storage),
 	}
 	return s
 }
@@ -58,7 +61,7 @@ func (s *MockService) ExpectedHosts() []string {
 }
 
 func (s *MockService) Register(grpcServer *grpc.Server) {
-	pb.RegisterFutureReservationsServer(grpcServer, &FutureReservationsV1{MockService: s})
+	pbv1beta.RegisterFutureReservationsServer(grpcServer, &FutureReservationsV1Beta{MockService: s})
 
 	pb.RegisterBackendBucketsServer(grpcServer, &backendBuckets{MockService: s})
 
@@ -137,7 +140,7 @@ func (s *MockService) NewHTTPMux(ctx context.Context, conn *grpc.ClientConn) (ht
 		return nil, err
 	}
 
-	if err := pb.RegisterFutureReservationsHandler(ctx, mux.ServeMux, conn); err != nil {
+	if err := pbv1beta.RegisterFutureReservationsHandler(ctx, mux.ServeMux, conn); err != nil {
 		return nil, err
 	}
 
@@ -326,8 +329,11 @@ func (s *MockService) NewHTTPMux(ctx context.Context, conn *grpc.ClientConn) (ht
 		u2 := *u
 		changed := false
 		if strings.HasPrefix(u.Path, "/compute/beta/") {
-			u2.Path = "/compute/v1/" + strings.TrimPrefix(u.Path, "/compute/beta/")
-			changed = true
+			// Exempt futureReservations as it uses beta
+			if !strings.Contains(u.Path, "/futureReservations") {
+				u2.Path = "/compute/v1/" + strings.TrimPrefix(u.Path, "/compute/beta/")
+				changed = true
+			}
 		}
 		if changed {
 			r = httpmux.RewriteRequest(r, &u2)

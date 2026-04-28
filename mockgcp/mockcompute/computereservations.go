@@ -113,7 +113,7 @@ func (s *ReservationsV1) Insert(ctx context.Context, req *pb.InsertReservationRe
 		OperationType: PtrTo("insert"),
 		User:          PtrTo("user@example.com"),
 	}
-	return s.startZonalLRO(ctx, name.Project.ID, name.Zone, op, func() (proto.Message, error) {
+	return s.computeOperations.startZonalLRO(ctx, name.Project.ID, name.Zone, op, func() (proto.Message, error) {
 		return obj, nil
 	})
 }
@@ -192,7 +192,7 @@ func (s *ReservationsV1) Update(ctx context.Context, req *pb.UpdateReservationRe
 		OperationType: PtrTo("compute.allocations.update"),
 		User:          PtrTo("user@example.com"),
 	}
-	return s.startZonalLRO(ctx, name.Project.ID, name.Zone, op, func() (proto.Message, error) {
+	return s.computeOperations.startZonalLRO(ctx, name.Project.ID, name.Zone, op, func() (proto.Message, error) {
 		return obj, nil
 	})
 }
@@ -217,7 +217,7 @@ func (s *ReservationsV1) Delete(ctx context.Context, req *pb.DeleteReservationRe
 		OperationType: PtrTo("delete"),
 		User:          PtrTo("user@example.com"),
 	}
-	return s.startZonalLRO(ctx, name.Project.ID, name.Zone, op, func() (proto.Message, error) {
+	return s.computeOperations.startZonalLRO(ctx, name.Project.ID, name.Zone, op, func() (proto.Message, error) {
 		return deleted, nil
 	})
 }
