@@ -190,9 +190,9 @@ func TestDiffInstances_UserLabelsDiff(t *testing.T) {
 		Old any
 		New any
 	}{
-		".settings.userLabels[\"key2\"]": {Old: "val2", New: "val2-changed"},
-		".settings.userLabels[\"key3\"]": {Old: nil, New: "val3-new"},
-		".settings.userLabels[\"key4\"]": {Old: "val4-removed", New: nil},
+		".settings.userLabels[*\"key2\"]": {Old: "val2", New: "val2-changed"},
+		".settings.userLabels[+\"key3\"]": {Old: nil, New: "val3-new"},
+		".settings.userLabels[-\"key4\"]": {Old: "val4-removed", New: nil},
 	}
 
 	if len(diff.Fields) != len(expectedDiffs) {

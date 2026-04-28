@@ -193,26 +193,21 @@ func slicesMatch[T any](desired []T, actual []T) bool {
 }
 
 // mapsMatch checks if two maps are equal, reporting differences to the provided Diff object.
-// It returns true if the maps match.
-func mapsMatch[K comparable, V comparable](diff *structuredreporting.Diff, path string, desired map[K]V, actual map[K]V) bool {
-	matches := true
+func mapsMatch[K comparable, V any](diff *structuredreporting.Diff, path string, desired map[K]V, actual map[K]V) {
 	for k, vDesired := range desired {
 		vActual, ok := actual[k]
+		kStr := fmt.Sprint(k)
 		if !ok {
-			diff.AddField(path+"[\""+fmt.Sprint(k)+"\"]", nil, vDesired)
-			matches = false
+			diff.AddField(path+"[+\""+kStr+"\"]", nil, vDesired)
 		} else if !reflect.DeepEqual(vDesired, vActual) {
-			diff.AddField(path+"[\""+fmt.Sprint(k)+"\"]", vActual, vDesired)
-			matches = false
+			diff.AddField(path+"[*\""+kStr+"\"]", vActual, vDesired)
 		}
 	}
 	for k, vActual := range actual {
 		if _, ok := desired[k]; !ok {
-			diff.AddField(path+"[\""+fmt.Sprint(k)+"\"]", vActual, nil)
-			matches = false
+			diff.AddField(path+"[-\""+fmt.Sprint(k)+"\"]", vActual, nil)
 		}
 	}
-	return matches
 }
 
 func DiffMysqlReplicaConfiguration(desired *api.MySqlReplicaConfiguration, actual *api.MySqlReplicaConfiguration) *structuredreporting.Diff {
