@@ -56,6 +56,6 @@ status:
     status:
       existingMatchingUsageInfo:
         count: 0
-        timestamp: "2026-05-02T01:03:01.544Z"
+        timestamp: "1970-01-01T00:00:00Z"
       procurementStatus: DRAFTING
     zone: https://www.googleapis.com/compute/v1/projects/${projectId}/zones/us-central1-a

@@ -39,7 +39,7 @@ status:
     selfLinkWithID: https://www.googleapis.com/compute/v1/projects/${projectId}/zones/us-central1-a/futureReservations/${futureReservationID}
     status:
       existingMatchingUsageInfo:
-        count: 1
-        timestamp: "2026-05-02T00:27:46.637Z"
+        count: 0
+        timestamp: "1970-01-01T00:00:00Z"
       procurementStatus: DRAFTING
     zone: https://www.googleapis.com/compute/v1/projects/${projectId}/zones/us-central1-a

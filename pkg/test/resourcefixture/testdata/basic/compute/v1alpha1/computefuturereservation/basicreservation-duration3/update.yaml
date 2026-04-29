@@ -21,7 +21,7 @@ spec:
     external: ${projectId}
   location: us-central1-a
   # Required field
-  # Cannot enable autoDeleteAutoCreatedReservations and updating the default auto delete time by updating timeWindow.duration in one request.
+  # Cannot enable autoDeleteAutoCreatedReservations and update the default auto delete time by updating timeWindow.duration in one request.
   # If enable autoDeleteAutoCreatedReservations without specifying autoCreatedReservationsDuration or autoCreatedReservationsDeleteTime,
   # it will use the previous timeWindow.duration as the default auto delete time.
   autoDeleteAutoCreatedReservations: true
