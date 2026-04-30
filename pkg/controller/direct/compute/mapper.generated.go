@@ -1319,33 +1319,15 @@ func SecurityPolicyUserDefinedField_v1beta1_ToProto(mapCtx *direct.MapContext, i
 	out.Size = in.Size
 	return out
 }
-func ShareSettings_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.ShareSettings) *krmcomputev1alpha1.ShareSettings {
+func ShareSettingsProjectConfigObservedState_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.ShareSettingsProjectConfig) *krmcomputev1alpha1.ShareSettingsProjectConfigObservedState {
 	if in == nil {
 		return nil
 	}
-	out := &krmcomputev1alpha1.ShareSettings{}
-	// MISSING: ProjectMap
-	out.ShareType = in.ShareType
-	return out
-}
-func ShareSettings_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmcomputev1alpha1.ShareSettings) *pb.ShareSettings {
-	if in == nil {
-		return nil
-	}
-	out := &pb.ShareSettings{}
-	// MISSING: ProjectMap
-	out.ShareType = in.ShareType
-	return out
-}
-func ShareSettingsProjectConfig_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.ShareSettingsProjectConfig) *krmcomputev1alpha1.ShareSettingsProjectConfig {
-	if in == nil {
-		return nil
-	}
-	out := &krmcomputev1alpha1.ShareSettingsProjectConfig{}
+	out := &krmcomputev1alpha1.ShareSettingsProjectConfigObservedState{}
 	out.ProjectID = in.ProjectId
 	return out
 }
-func ShareSettingsProjectConfig_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmcomputev1alpha1.ShareSettingsProjectConfig) *pb.ShareSettingsProjectConfig {
+func ShareSettingsProjectConfigObservedState_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmcomputev1alpha1.ShareSettingsProjectConfigObservedState) *pb.ShareSettingsProjectConfig {
 	if in == nil {
 		return nil
 	}
