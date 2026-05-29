@@ -351,7 +351,7 @@ type DataCatalogEntryObservedState struct {
 	// Specification that applies to a table resource. Valid only
 	//  for entries with the `TABLE` or `EXPLORE` type.
 	// +kcc:proto:field=google.cloud.datacatalog.v1.Entry.database_table_spec
-	DatabaseTableSpec *DatabaseTableSpecObservedState `json:"databaseTableSpec,omitempty"`
+	DatabaseTableSpec *DatabaseTableSpec `json:"databaseTableSpec,omitempty"`
 
 	// FeatureonlineStore spec for Vertex AI Feature Store.
 	// +kcc:proto:field=google.cloud.datacatalog.v1.Entry.feature_online_store_spec

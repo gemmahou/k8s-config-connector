@@ -295,6 +295,7 @@ type DatabaseTableSpec_DatabaseViewSpec struct {
 	SQLQuery *string `json:"sqlQuery,omitempty"`
 }
 
+/* unreachable type DataplexExternalTable
 // +kcc:proto=google.cloud.datacatalog.v1.DataplexExternalTable
 type DataplexExternalTable struct {
 	// Service in which the external table is registered.
@@ -313,6 +314,7 @@ type DataplexExternalTable struct {
 	// +kcc:proto:field=google.cloud.datacatalog.v1.DataplexExternalTable.data_catalog_entry
 	DataCatalogEntry *string `json:"dataCatalogEntry,omitempty"`
 }
+*/
 
 // +kcc:proto=google.cloud.datacatalog.v1.DataplexFilesetSpec
 type DataplexFilesetSpec struct {
@@ -344,6 +346,7 @@ type DataplexSpec struct {
 	ProjectID *string `json:"projectID,omitempty"`
 }
 
+/* unreachable type DataplexTableSpec
 // +kcc:proto=google.cloud.datacatalog.v1.DataplexTableSpec
 type DataplexTableSpec struct {
 	// List of external tables registered by Dataplex in other systems based on
@@ -361,6 +364,7 @@ type DataplexTableSpec struct {
 	// +kcc:proto:field=google.cloud.datacatalog.v1.DataplexTableSpec.user_managed
 	UserManaged *bool `json:"userManaged,omitempty"`
 }
+*/
 
 // +kcc:proto=google.cloud.datacatalog.v1.DatasetSpec
 type DatasetSpec struct {
@@ -637,12 +641,14 @@ type FilesetSpec struct {
 	DataplexFileset *DataplexFilesetSpec `json:"dataplexFileset,omitempty"`
 }
 
+/* unreachable type GCSFileSpec
 // +kcc:proto=google.cloud.datacatalog.v1.GcsFileSpec
 type GCSFileSpec struct {
 	// Required. Full file path. Example: `gs://bucket_name/a/b.txt`.
 	// +kcc:proto:field=google.cloud.datacatalog.v1.GcsFileSpec.file_path
 	FilePath *string `json:"filePath,omitempty"`
 }
+*/
 
 // +kcc:proto=google.cloud.datacatalog.v1.GcsFilesetSpec
 type GCSFilesetSpec struct {
@@ -1237,6 +1243,7 @@ type DataSourceObservedState struct {
 }
 */
 
+/* unreachable type DatabaseTableSpecObservedState
 // +kcc:observedstate:proto=google.cloud.datacatalog.v1.DatabaseTableSpec
 type DatabaseTableSpecObservedState struct {
 	// Output only. Fields specific to a Dataplex table and present only in the
@@ -1244,6 +1251,7 @@ type DatabaseTableSpecObservedState struct {
 	// +kcc:proto:field=google.cloud.datacatalog.v1.DatabaseTableSpec.dataplex_table
 	DataplexTable *DataplexTableSpec `json:"dataplexTable,omitempty"`
 }
+*/
 
 /* found existing non-generated go type with proto tag "google.cloud.datacatalog.v1.Entry", skipping
 
@@ -1269,7 +1277,7 @@ type EntryObservedState struct {
 	// Output only. Specification that applies to a BigQuery table. Valid only
 	//  for entries with the `TABLE` type.
 	// +kcc:proto:field=google.cloud.datacatalog.v1.Entry.bigquery_table_spec
-	BigqueryTableSpec *BigQueryTableSpec `json:"bigqueryTableSpec,omitempty"`
+	BigqueryTableSpec *BigQueryTableSpecObservedState `json:"bigqueryTableSpec,omitempty"`
 
 	// Output only. Specification for a group of BigQuery tables with
 	//  the `[prefix]YYYYMMDD` name pattern.
@@ -1277,7 +1285,7 @@ type EntryObservedState struct {
 	//  For more information, see [Introduction to partitioned tables]
 	//  (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
 	// +kcc:proto:field=google.cloud.datacatalog.v1.Entry.bigquery_date_sharded_spec
-	BigqueryDateShardedSpec *BigQueryDateShardedSpec `json:"bigqueryDateShardedSpec,omitempty"`
+	BigqueryDateShardedSpec *BigQueryDateShardedSpecObservedState `json:"bigqueryDateShardedSpec,omitempty"`
 
 	// Specification that applies to a table resource. Valid only
 	//  for entries with the `TABLE` or `EXPLORE` type.
@@ -1288,13 +1296,22 @@ type EntryObservedState struct {
 	// +kcc:proto:field=google.cloud.datacatalog.v1.Entry.feature_online_store_spec
 	FeatureOnlineStoreSpec *FeatureOnlineStoreSpecObservedState `json:"featureOnlineStoreSpec,omitempty"`
 
+	// Timestamps from the underlying resource, not from the Data Catalog
+	//  entry.
+	//
+	//  Output only when the entry has a system listed in the `IntegratedSystem`
+	//  enum. For entries with `user_specified_system`, this field is optional
+	//  and defaults to an empty timestamp.
+	// +kcc:proto:field=google.cloud.datacatalog.v1.Entry.source_system_timestamps
+	SourceSystemTimestamps *SystemTimestampsObservedState `json:"sourceSystemTimestamps,omitempty"`
+
 	// Resource usage statistics.
 	// +kcc:proto:field=google.cloud.datacatalog.v1.Entry.usage_signal
 	UsageSignal *UsageSignalObservedState `json:"usageSignal,omitempty"`
 
 	// Output only. Physical location of the entry.
 	// +kcc:proto:field=google.cloud.datacatalog.v1.Entry.data_source
-	DataSource *DataSource `json:"dataSource,omitempty"`
+	DataSource *DataSourceObservedState `json:"dataSource,omitempty"`
 
 	// Output only. Additional information related to the entry. Private to the
 	//  current user.
@@ -1309,7 +1326,7 @@ type EntryObservedState struct {
 type EntryGroupObservedState struct {
 	// Output only. Timestamps of the entry group. Default value is empty.
 	// +kcc:proto:field=google.cloud.datacatalog.v1.EntryGroup.data_catalog_timestamps
-	DataCatalogTimestamps *SystemTimestamps `json:"dataCatalogTimestamps,omitempty"`
+	DataCatalogTimestamps *SystemTimestampsObservedState `json:"dataCatalogTimestamps,omitempty"`
 }
 */
 
@@ -1320,29 +1337,26 @@ type FeatureOnlineStoreSpecObservedState struct {
 	StorageType *string `json:"storageType,omitempty"`
 }
 
-/* unreachable type GCSFileSpecObservedState
 // +kcc:observedstate:proto=google.cloud.datacatalog.v1.GcsFileSpec
 type GCSFileSpecObservedState struct {
 	// Output only. Creation, modification, and expiration timestamps of a Cloud
 	//  Storage file.
 	// +kcc:proto:field=google.cloud.datacatalog.v1.GcsFileSpec.gcs_timestamps
-	GCSTimestamps *SystemTimestamps `json:"gcsTimestamps,omitempty"`
+	GCSTimestamps *SystemTimestampsObservedState `json:"gcsTimestamps,omitempty"`
 
 	// Output only. File size in bytes.
 	// +kcc:proto:field=google.cloud.datacatalog.v1.GcsFileSpec.size_bytes
 	SizeBytes *int64 `json:"sizeBytes,omitempty"`
 }
-*/
 
 // +kcc:observedstate:proto=google.cloud.datacatalog.v1.GcsFilesetSpec
 type GCSFilesetSpecObservedState struct {
 	// Output only. Sample files contained in this fileset, not all files
 	//  contained in this fileset are represented here.
 	// +kcc:proto:field=google.cloud.datacatalog.v1.GcsFilesetSpec.sample_gcs_file_specs
-	SampleGCSFileSpecs []GCSFileSpec `json:"sampleGCSFileSpecs,omitempty"`
+	SampleGCSFileSpecs []GCSFileSpecObservedState `json:"sampleGCSFileSpecs,omitempty"`
 }
 
-/* unreachable type SystemTimestampsObservedState
 // +kcc:observedstate:proto=google.cloud.datacatalog.v1.SystemTimestamps
 type SystemTimestampsObservedState struct {
 	// Output only. Expiration timestamp of the resource within the given system.
@@ -1351,7 +1365,6 @@ type SystemTimestampsObservedState struct {
 	// +kcc:proto:field=google.cloud.datacatalog.v1.SystemTimestamps.expire_time
 	ExpireTime *string `json:"expireTime,omitempty"`
 }
-*/
 
 // +kcc:observedstate:proto=google.cloud.datacatalog.v1.TableSpec
 type TableSpecObservedState struct {

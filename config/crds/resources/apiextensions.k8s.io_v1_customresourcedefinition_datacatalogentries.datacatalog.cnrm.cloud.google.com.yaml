@@ -820,96 +820,24 @@ spec:
                     description: Specification that applies to a table resource. Valid
                       only for entries with the `TABLE` or `EXPLORE` type.
                     properties:
-                      dataplexTable:
-                        description: Output only. Fields specific to a Dataplex table
-                          and present only in the Dataplex table entries.
+                      databaseViewSpec:
+                        description: Spec what applies to tables that are actually
+                          views. Not set for "real" tables.
                         properties:
-                          dataplexSpec:
-                            description: Common Dataplex fields.
-                            properties:
-                              asset:
-                                description: Fully qualified resource name of an asset
-                                  in Dataplex, to which the underlying data source
-                                  (Cloud Storage bucket or BigQuery dataset) of the
-                                  entity is attached.
-                                type: string
-                              compressionFormat:
-                                description: Compression format of the data, e.g.,
-                                  zip, gzip etc.
-                                type: string
-                              dataFormat:
-                                description: Format of the data.
-                                properties:
-                                  avro:
-                                    description: Schema in Avro JSON format.
-                                    properties:
-                                      text:
-                                        description: JSON source of the Avro schema.
-                                        type: string
-                                    type: object
-                                  csv:
-                                    description: Marks a CSV-encoded data source.
-                                    type: object
-                                  orc:
-                                    description: Marks an ORC-encoded data source.
-                                    type: object
-                                  parquet:
-                                    description: Marks a Parquet-encoded data source.
-                                    type: object
-                                  protobuf:
-                                    description: Schema in protocol buffer format.
-                                    properties:
-                                      text:
-                                        description: Protocol buffer source of the
-                                          schema.
-                                        type: string
-                                    type: object
-                                  thrift:
-                                    description: Schema in Thrift format.
-                                    properties:
-                                      text:
-                                        description: Thrift IDL source of the schema.
-                                        type: string
-                                    type: object
-                                type: object
-                              projectID:
-                                description: Project ID of the underlying Cloud Storage
-                                  or BigQuery data. Note that this may not be the
-                                  same project as the correspondingly Dataplex lake
-                                  / zone / asset.
-                                type: string
-                            type: object
-                          externalTables:
-                            description: |-
-                              List of external tables registered by Dataplex in other systems based on
-                               the same underlying data.
-
-                               External tables allow to query this data in those systems.
-                            items:
-                              properties:
-                                dataCatalogEntry:
-                                  description: Name of the Data Catalog entry representing
-                                    the external table.
-                                  type: string
-                                fullyQualifiedName:
-                                  description: Fully qualified name (FQN) of the external
-                                    table.
-                                  type: string
-                                googleCloudResource:
-                                  description: Google Cloud resource name of the external
-                                    table.
-                                  type: string
-                                system:
-                                  description: Service in which the external table
-                                    is registered.
-                                  type: string
-                              type: object
-                            type: array
-                          userManaged:
-                            description: Indicates if the table schema is managed
-                              by the user or not.
-                            type: boolean
+                          baseTable:
+                            description: Name of a singular table this view reflects
+                              one to one.
+                            type: string
+                          sqlQuery:
+                            description: SQL query used to generate this view.
+                            type: string
+                          viewType:
+                            description: Type of this view.
+                            type: string
                         type: object
+                      type:
+                        description: Type of this table.
+                        type: string
                     type: object
                   featureOnlineStoreSpec:
                     description: FeatureonlineStore spec for Vertex AI Feature Store.
@@ -929,9 +857,21 @@ spec:
                           here.
                         items:
                           properties:
-                            filePath:
-                              description: 'Required. Full file path. Example: `gs://bucket_name/a/b.txt`.'
-                              type: string
+                            gcsTimestamps:
+                              description: Output only. Creation, modification, and
+                                expiration timestamps of a Cloud Storage file.
+                              properties:
+                                expireTime:
+                                  description: |-
+                                    Output only. Expiration timestamp of the resource within the given system.
+
+                                     Currently only applicable to BigQuery resources.
+                                  type: string
+                              type: object
+                            sizeBytes:
+                              description: Output only. File size in bytes.
+                              format: int64
+                              type: integer
                           type: object
                         type: array
                     type: object

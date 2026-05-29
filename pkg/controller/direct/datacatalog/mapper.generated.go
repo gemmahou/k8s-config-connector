@@ -362,7 +362,7 @@ func DataCatalogEntryObservedState_v1alpha1_FromProto(mapCtx *direct.MapContext,
 	out.GCSFilesetSpec = GCSFilesetSpecObservedState_v1alpha1_FromProto(mapCtx, in.GetGcsFilesetSpec())
 	out.BigqueryTableSpec = BigQueryTableSpecObservedState_v1alpha1_FromProto(mapCtx, in.GetBigqueryTableSpec())
 	out.BigqueryDateShardedSpec = BigQueryDateShardedSpecObservedState_v1alpha1_FromProto(mapCtx, in.GetBigqueryDateShardedSpec())
-	out.DatabaseTableSpec = DatabaseTableSpecObservedState_v1alpha1_FromProto(mapCtx, in.GetDatabaseTableSpec())
+	out.DatabaseTableSpec = DatabaseTableSpec_v1alpha1_FromProto(mapCtx, in.GetDatabaseTableSpec())
 	out.FeatureOnlineStoreSpec = FeatureOnlineStoreSpecObservedState_v1alpha1_FromProto(mapCtx, in.GetFeatureOnlineStoreSpec())
 	out.UsageSignal = UsageSignalObservedState_v1alpha1_FromProto(mapCtx, in.GetUsageSignal())
 	out.DataSource = DataSourceObservedState_v1alpha1_FromProto(mapCtx, in.GetDataSource())
@@ -389,7 +389,7 @@ func DataCatalogEntryObservedState_v1alpha1_ToProto(mapCtx *direct.MapContext, i
 	if oneof := BigQueryDateShardedSpecObservedState_v1alpha1_ToProto(mapCtx, in.BigqueryDateShardedSpec); oneof != nil {
 		out.TypeSpec = &pb.Entry_BigqueryDateShardedSpec{BigqueryDateShardedSpec: oneof}
 	}
-	if oneof := DatabaseTableSpecObservedState_v1alpha1_ToProto(mapCtx, in.DatabaseTableSpec); oneof != nil {
+	if oneof := DatabaseTableSpec_v1alpha1_ToProto(mapCtx, in.DatabaseTableSpec); oneof != nil {
 		out.Spec = &pb.Entry_DatabaseTableSpec{DatabaseTableSpec: oneof}
 	}
 	if oneof := FeatureOnlineStoreSpecObservedState_v1alpha1_ToProto(mapCtx, in.FeatureOnlineStoreSpec); oneof != nil {
@@ -728,26 +728,6 @@ func DatabaseTableSpec_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdataca
 	out.DatabaseViewSpec = DatabaseTableSpec_DatabaseViewSpec_v1alpha1_ToProto(mapCtx, in.DatabaseViewSpec)
 	return out
 }
-func DatabaseTableSpecObservedState_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.DatabaseTableSpec) *krmdatacatalogv1alpha1.DatabaseTableSpecObservedState {
-	if in == nil {
-		return nil
-	}
-	out := &krmdatacatalogv1alpha1.DatabaseTableSpecObservedState{}
-	// MISSING: Type
-	out.DataplexTable = DataplexTableSpec_v1alpha1_FromProto(mapCtx, in.GetDataplexTable())
-	// MISSING: DatabaseViewSpec
-	return out
-}
-func DatabaseTableSpecObservedState_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdatacatalogv1alpha1.DatabaseTableSpecObservedState) *pb.DatabaseTableSpec {
-	if in == nil {
-		return nil
-	}
-	out := &pb.DatabaseTableSpec{}
-	// MISSING: Type
-	out.DataplexTable = DataplexTableSpec_v1alpha1_ToProto(mapCtx, in.DataplexTable)
-	// MISSING: DatabaseViewSpec
-	return out
-}
 func DatabaseTableSpec_DatabaseViewSpec_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.DatabaseTableSpec_DatabaseViewSpec) *krmdatacatalogv1alpha1.DatabaseTableSpec_DatabaseViewSpec {
 	if in == nil {
 		return nil
@@ -783,28 +763,6 @@ func DatabaseTableSpec_DatabaseViewSpec_SqlQuery_ToProto(mapCtx *direct.MapConte
 		return nil
 	}
 	return &pb.DatabaseTableSpec_DatabaseViewSpec_SqlQuery{SqlQuery: *in}
-}
-func DataplexExternalTable_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.DataplexExternalTable) *krmdatacatalogv1alpha1.DataplexExternalTable {
-	if in == nil {
-		return nil
-	}
-	out := &krmdatacatalogv1alpha1.DataplexExternalTable{}
-	out.System = direct.Enum_FromProto(mapCtx, in.GetSystem())
-	out.FullyQualifiedName = direct.LazyPtr(in.GetFullyQualifiedName())
-	out.GoogleCloudResource = direct.LazyPtr(in.GetGoogleCloudResource())
-	out.DataCatalogEntry = direct.LazyPtr(in.GetDataCatalogEntry())
-	return out
-}
-func DataplexExternalTable_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdatacatalogv1alpha1.DataplexExternalTable) *pb.DataplexExternalTable {
-	if in == nil {
-		return nil
-	}
-	out := &pb.DataplexExternalTable{}
-	out.System = direct.Enum_ToProto[pb.IntegratedSystem](mapCtx, in.System)
-	out.FullyQualifiedName = direct.ValueOf(in.FullyQualifiedName)
-	out.GoogleCloudResource = direct.ValueOf(in.GoogleCloudResource)
-	out.DataCatalogEntry = direct.ValueOf(in.DataCatalogEntry)
-	return out
 }
 func DataplexFilesetSpec_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.DataplexFilesetSpec) *krmdatacatalogv1alpha1.DataplexFilesetSpec {
 	if in == nil {
@@ -842,26 +800,6 @@ func DataplexSpec_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdatacatalog
 	out.DataFormat = PhysicalSchema_v1alpha1_ToProto(mapCtx, in.DataFormat)
 	out.CompressionFormat = direct.ValueOf(in.CompressionFormat)
 	out.ProjectId = direct.ValueOf(in.ProjectID)
-	return out
-}
-func DataplexTableSpec_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.DataplexTableSpec) *krmdatacatalogv1alpha1.DataplexTableSpec {
-	if in == nil {
-		return nil
-	}
-	out := &krmdatacatalogv1alpha1.DataplexTableSpec{}
-	out.ExternalTables = direct.Slice_FromProto(mapCtx, in.ExternalTables, DataplexExternalTable_v1alpha1_FromProto)
-	out.DataplexSpec = DataplexSpec_v1alpha1_FromProto(mapCtx, in.GetDataplexSpec())
-	out.UserManaged = direct.LazyPtr(in.GetUserManaged())
-	return out
-}
-func DataplexTableSpec_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdatacatalogv1alpha1.DataplexTableSpec) *pb.DataplexTableSpec {
-	if in == nil {
-		return nil
-	}
-	out := &pb.DataplexTableSpec{}
-	out.ExternalTables = direct.Slice_ToProto(mapCtx, in.ExternalTables, DataplexExternalTable_v1alpha1_ToProto)
-	out.DataplexSpec = DataplexSpec_v1alpha1_ToProto(mapCtx, in.DataplexSpec)
-	out.UserManaged = direct.ValueOf(in.UserManaged)
 	return out
 }
 func DatasetSpec_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.DatasetSpec) *krmdatacatalogv1alpha1.DatasetSpec {
@@ -1011,24 +949,24 @@ func FilesetSpec_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdatacatalogv
 	out.DataplexFileset = DataplexFilesetSpec_v1alpha1_ToProto(mapCtx, in.DataplexFileset)
 	return out
 }
-func GCSFileSpec_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.GcsFileSpec) *krmdatacatalogv1alpha1.GCSFileSpec {
+func GCSFileSpecObservedState_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.GcsFileSpec) *krmdatacatalogv1alpha1.GCSFileSpecObservedState {
 	if in == nil {
 		return nil
 	}
-	out := &krmdatacatalogv1alpha1.GCSFileSpec{}
-	out.FilePath = direct.LazyPtr(in.GetFilePath())
-	// MISSING: GCSTimestamps
-	// MISSING: SizeBytes
+	out := &krmdatacatalogv1alpha1.GCSFileSpecObservedState{}
+	// MISSING: FilePath
+	out.GCSTimestamps = SystemTimestampsObservedState_v1alpha1_FromProto(mapCtx, in.GetGcsTimestamps())
+	out.SizeBytes = direct.LazyPtr(in.GetSizeBytes())
 	return out
 }
-func GCSFileSpec_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdatacatalogv1alpha1.GCSFileSpec) *pb.GcsFileSpec {
+func GCSFileSpecObservedState_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdatacatalogv1alpha1.GCSFileSpecObservedState) *pb.GcsFileSpec {
 	if in == nil {
 		return nil
 	}
 	out := &pb.GcsFileSpec{}
-	out.FilePath = direct.ValueOf(in.FilePath)
-	// MISSING: GCSTimestamps
-	// MISSING: SizeBytes
+	// MISSING: FilePath
+	out.GcsTimestamps = SystemTimestampsObservedState_v1alpha1_ToProto(mapCtx, in.GCSTimestamps)
+	out.SizeBytes = direct.ValueOf(in.SizeBytes)
 	return out
 }
 func GCSFilesetSpec_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.GcsFilesetSpec) *krmdatacatalogv1alpha1.GCSFilesetSpec {
@@ -1055,7 +993,7 @@ func GCSFilesetSpecObservedState_v1alpha1_FromProto(mapCtx *direct.MapContext, i
 	}
 	out := &krmdatacatalogv1alpha1.GCSFilesetSpecObservedState{}
 	// MISSING: FilePatterns
-	out.SampleGCSFileSpecs = direct.Slice_FromProto(mapCtx, in.SampleGcsFileSpecs, GCSFileSpec_v1alpha1_FromProto)
+	out.SampleGCSFileSpecs = direct.Slice_FromProto(mapCtx, in.SampleGcsFileSpecs, GCSFileSpecObservedState_v1alpha1_FromProto)
 	return out
 }
 func GCSFilesetSpecObservedState_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdatacatalogv1alpha1.GCSFilesetSpecObservedState) *pb.GcsFilesetSpec {
@@ -1064,7 +1002,7 @@ func GCSFilesetSpecObservedState_v1alpha1_ToProto(mapCtx *direct.MapContext, in 
 	}
 	out := &pb.GcsFilesetSpec{}
 	// MISSING: FilePatterns
-	out.SampleGcsFileSpecs = direct.Slice_ToProto(mapCtx, in.SampleGCSFileSpecs, GCSFileSpec_v1alpha1_ToProto)
+	out.SampleGcsFileSpecs = direct.Slice_ToProto(mapCtx, in.SampleGCSFileSpecs, GCSFileSpecObservedState_v1alpha1_ToProto)
 	return out
 }
 func LookerSystemSpec_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.LookerSystemSpec) *krmdatacatalogv1alpha1.LookerSystemSpec {
@@ -1395,6 +1333,26 @@ func SystemTimestamps_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdatacat
 	out.CreateTime = direct.StringTimestamp_ToProto(mapCtx, in.CreateTime)
 	out.UpdateTime = direct.StringTimestamp_ToProto(mapCtx, in.UpdateTime)
 	// MISSING: ExpireTime
+	return out
+}
+func SystemTimestampsObservedState_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.SystemTimestamps) *krmdatacatalogv1alpha1.SystemTimestampsObservedState {
+	if in == nil {
+		return nil
+	}
+	out := &krmdatacatalogv1alpha1.SystemTimestampsObservedState{}
+	// MISSING: CreateTime
+	// MISSING: UpdateTime
+	out.ExpireTime = direct.StringTimestamp_FromProto(mapCtx, in.GetExpireTime())
+	return out
+}
+func SystemTimestampsObservedState_v1alpha1_ToProto(mapCtx *direct.MapContext, in *krmdatacatalogv1alpha1.SystemTimestampsObservedState) *pb.SystemTimestamps {
+	if in == nil {
+		return nil
+	}
+	out := &pb.SystemTimestamps{}
+	// MISSING: CreateTime
+	// MISSING: UpdateTime
+	out.ExpireTime = direct.StringTimestamp_ToProto(mapCtx, in.ExpireTime)
 	return out
 }
 func TableSpecObservedState_v1alpha1_FromProto(mapCtx *direct.MapContext, in *pb.TableSpec) *krmdatacatalogv1alpha1.TableSpecObservedState {
