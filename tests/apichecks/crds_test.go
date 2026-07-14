@@ -597,7 +597,10 @@ func findFieldsNotCoveredByTests(t *testing.T, shouldVisitCRD func(crd *apiexten
 		t.Fatalf("error loading CRDs: %v", err)
 	}
 
-	unstructs := loadUnstructs(t)
+	fixtures := resourcefixture.Load(t)
+	unstructs, depUnstructs := parseFixtures(t, fixtures)
+	allUnstructs := append([]*unstructured.Unstructured{}, unstructs...)
+
 	outputOnlySpecFields, err := loadOutputOnlySpecFields()
 	if err != nil {
 		t.Fatalf("error loading output-only spec fields from file: %v", err)
@@ -637,7 +640,9 @@ func findFieldsNotCoveredByTests(t *testing.T, shouldVisitCRD func(crd *apiexten
 					hasName := false
 
 					// Check for specific related fields
-					for _, obj := range unstructs {
+					// Also including "Ref" fields in test dependencies
+					allUnstructs = append(allUnstructs, depUnstructs...)
+					for _, obj := range allUnstructs {
 						if obj.GetKind() != kind {
 							continue
 						}
@@ -747,10 +752,9 @@ func loadOutputOnlySpecFields() (map[string]bool, error) {
 	return outputOnlySpecFields, nil
 }
 
-func loadUnstructs(t *testing.T) []*unstructured.Unstructured {
-	t.Helper()
+func parseFixtures(t *testing.T, fixtures []resourcefixture.ResourceFixture) ([]*unstructured.Unstructured, []*unstructured.Unstructured) {
 	unstructs := []*unstructured.Unstructured{}
-	fixtures := resourcefixture.Load(t)
+	depUnstructs := []*unstructured.Unstructured{}
 
 	for _, fixture := range fixtures {
 		fixture := fixture
@@ -758,9 +762,45 @@ func loadUnstructs(t *testing.T) []*unstructured.Unstructured {
 		updateResource := bytesToUnstructured(t, fixture.Update)
 
 		unstructs = append(unstructs, createResource, updateResource)
+
+		if len(fixture.Dependencies) > 0 {
+			docs := strings.Split(string(fixture.Dependencies), "---")
+			for _, doc := range docs {
+				doc = strings.TrimSpace(doc)
+				if doc == "" {
+					continue
+				}
+				depResource := safeBytesToUnstructured(t, []byte(doc))
+				if depResource != nil && depResource.Object != nil {
+					depUnstructs = append(depUnstructs, depResource)
+				}
+			}
+		}
 	}
 
-	return unstructs
+	return unstructs, depUnstructs
+}
+
+// safeBytesToUnstructured converts a raw byte slice to an unstructured object safely
+//
+// This is required because dependencies.yaml files often contain raw non-manifest blocks
+// separated by "---", which are used as test inputs.
+//
+// Examples of inputs skipped safely:
+//  1. PEM Certificate Blocks:
+//     -----BEGIN CERTIFICATE-----
+//     MIIDJTCCAg0CFHdD3ZGYMCmF3O4PvMwsP5i8d/V0MA0GCSqGSIb3DQEBCwUAME8x
+//     -----END CERTIFICATE-----
+func safeBytesToUnstructured(t *testing.T, bytes []byte) *unstructured.Unstructured {
+	updatedBytes := testcontroller.ReplaceTestVars(t, bytes, testID, testProject)
+	var obj map[string]interface{}
+	if err := yaml.Unmarshal(updatedBytes, &obj); err != nil {
+		return nil
+	}
+	if len(obj) == 0 {
+		return nil
+	}
+	return &unstructured.Unstructured{Object: obj}
 }
 
 var (
