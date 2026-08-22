@@ -971,19 +971,20 @@
     "controllerType": "DCL",
     "defaultController": "DCL",
     "supportedControllers": [
-      "DCL"
+      "DCL",
+      "Direct"
     ],
     "dependencies": [
       "PubSubTopic"
     ],
-    "state": "In Progress",
+    "state": "Completed",
     "steps": {
       "gen-types": true,
       "identity-reference": true,
-      "mapper-fuzzer": false,
-      "mocks": false,
-      "controller": false,
-      "tests": false
+      "mapper-fuzzer": true,
+      "mocks": true,
+      "controller": true,
+      "tests": true
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
@@ -1216,14 +1217,14 @@
     "state": "In Progress",
     "steps": {
       "gen-types": true,
-      "identity-reference": false,
+      "identity-reference": true,
       "mapper-fuzzer": false,
       "mocks": false,
       "controller": false,
       "tests": false
     },
     "mocksLastRefreshed": "Never",
-    "notes": "Missing _reference.go or _identity.go",
+    "notes": "",
     "sortOrder": 115,
     "downstreamCount": 0
   },
@@ -1506,10 +1507,10 @@
       "ComputeNetworkEndpointGroup",
       "ComputeSecurityPolicy"
     ],
-    "state": "Not Started",
+    "state": "In Progress",
     "steps": {
-      "gen-types": false,
-      "identity-reference": false,
+      "gen-types": true,
+      "identity-reference": true,
       "mapper-fuzzer": false,
       "mocks": false,
       "controller": false,
@@ -1575,7 +1576,7 @@
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
-    "sortOrder": 297,
+    "sortOrder": 296,
     "downstreamCount": 4
   },
   {
@@ -1603,7 +1604,7 @@
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
-    "sortOrder": 298,
+    "sortOrder": 297,
     "downstreamCount": 0
   },
   {
@@ -1899,7 +1900,7 @@
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
-    "sortOrder": 299,
+    "sortOrder": 298,
     "downstreamCount": 4
   },
   {
@@ -2145,8 +2146,8 @@
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
-    "sortOrder": 3,
-    "downstreamCount": 129
+    "sortOrder": 5,
+    "downstreamCount": 136
   },
   {
     "group": "compute",
@@ -2587,7 +2588,7 @@
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
-    "sortOrder": 300,
+    "sortOrder": 299,
     "downstreamCount": 0
   },
   {
@@ -2656,9 +2657,9 @@
     "dependencies": [
       "Project"
     ],
-    "state": "Not Started",
+    "state": "In Progress",
     "steps": {
-      "gen-types": false,
+      "gen-types": true,
       "identity-reference": false,
       "mapper-fuzzer": false,
       "mocks": false,
@@ -2666,7 +2667,7 @@
       "tests": false
     },
     "mocksLastRefreshed": "Never",
-    "notes": "",
+    "notes": "Missing _reference.go or _identity.go",
     "sortOrder": 150,
     "downstreamCount": 0
   },
@@ -2873,14 +2874,14 @@
     "state": "In Progress",
     "steps": {
       "gen-types": true,
-      "identity-reference": false,
+      "identity-reference": true,
       "mapper-fuzzer": false,
       "mocks": false,
       "controller": false,
       "tests": false
     },
     "mocksLastRefreshed": "Never",
-    "notes": "Missing _reference.go or _identity.go",
+    "notes": "",
     "sortOrder": 156,
     "downstreamCount": 0
   },
@@ -2946,9 +2947,9 @@
     "dependencies": [
       "Project"
     ],
-    "state": "Not Started",
+    "state": "In Progress",
     "steps": {
-      "gen-types": false,
+      "gen-types": true,
       "identity-reference": false,
       "mapper-fuzzer": false,
       "mocks": false,
@@ -2956,7 +2957,7 @@
       "tests": false
     },
     "mocksLastRefreshed": "Never",
-    "notes": "",
+    "notes": "Missing _reference.go or _identity.go",
     "sortOrder": 40,
     "downstreamCount": 2
   },
@@ -4803,7 +4804,7 @@
     "mocksLastRefreshed": "Never",
     "notes": "",
     "sortOrder": 1,
-    "downstreamCount": 409
+    "downstreamCount": 452
   },
   {
     "group": "gkehub",
@@ -5152,7 +5153,7 @@
     "mocksLastRefreshed": "Never",
     "notes": "",
     "sortOrder": 6,
-    "downstreamCount": 55
+    "downstreamCount": 61
   },
   {
     "group": "iam",
@@ -5308,7 +5309,7 @@
       "gcpAPIDeprecated": true,
       "notes": "IAP Brand APIs are deprecated. Context can be found at https://docs.cloud.google.com/iap/docs/deprecations and https://docs.cloud.google.com/iap/docs/deprecations/migrate-oauth-client."
     },
-    "sortOrder": 301,
+    "sortOrder": 300,
     "downstreamCount": 1
   },
   {
@@ -5591,8 +5592,8 @@
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
-    "sortOrder": 5,
-    "downstreamCount": 126
+    "sortOrder": 4,
+    "downstreamCount": 140
   },
   {
     "group": "kms",
@@ -5640,8 +5641,8 @@
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
-    "sortOrder": 4,
-    "downstreamCount": 128
+    "sortOrder": 3,
+    "downstreamCount": 142
   },
   {
     "group": "kms",
@@ -5867,17 +5868,18 @@
     "controllerType": "Terraform",
     "defaultController": "Terraform",
     "supportedControllers": [
+      "Direct",
       "Terraform"
     ],
     "dependencies": [],
-    "state": "In Progress",
+    "state": "Completed",
     "steps": {
       "gen-types": true,
       "identity-reference": true,
-      "mapper-fuzzer": false,
-      "mocks": false,
-      "controller": false,
-      "tests": false
+      "mapper-fuzzer": true,
+      "mocks": true,
+      "controller": true,
+      "tests": true
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
@@ -6360,20 +6362,21 @@
     "controllerType": "DCL",
     "defaultController": "DCL",
     "supportedControllers": [
-      "DCL"
+      "DCL",
+      "Direct"
     ],
     "dependencies": [
       "Project",
       "Service"
     ],
-    "state": "Not Started",
+    "state": "Completed",
     "steps": {
-      "gen-types": false,
-      "identity-reference": false,
-      "mapper-fuzzer": false,
-      "mocks": false,
-      "controller": false,
-      "tests": false
+      "gen-types": true,
+      "identity-reference": true,
+      "mapper-fuzzer": true,
+      "mocks": true,
+      "controller": true,
+      "tests": true
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
@@ -6604,10 +6607,10 @@
       "PrivateCACertificateTemplate",
       "Project"
     ],
-    "state": "Not Started",
+    "state": "In Progress",
     "steps": {
-      "gen-types": false,
-      "identity-reference": false,
+      "gen-types": true,
+      "identity-reference": true,
       "mapper-fuzzer": false,
       "mocks": false,
       "controller": false,
@@ -6625,7 +6628,8 @@
     "controllerType": "DCL",
     "defaultController": "DCL",
     "supportedControllers": [
-      "DCL"
+      "DCL",
+      "Direct"
     ],
     "dependencies": [
       "KMSCryptoKey",
@@ -6633,14 +6637,14 @@
       "Project",
       "StorageBucket"
     ],
-    "state": "In Progress",
+    "state": "Completed",
     "steps": {
       "gen-types": true,
       "identity-reference": true,
-      "mapper-fuzzer": false,
-      "mocks": false,
-      "controller": false,
-      "tests": false
+      "mapper-fuzzer": true,
+      "mocks": true,
+      "controller": true,
+      "tests": true
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
@@ -6698,7 +6702,7 @@
     "mocksLastRefreshed": "Never",
     "notes": "",
     "sortOrder": 2,
-    "downstreamCount": 404
+    "downstreamCount": 447
   },
   {
     "group": "pubsublite",
@@ -6727,7 +6731,7 @@
       "gcpAPIDeprecated": true,
       "notes": "Pub/Sub Lite is deprecated. Please find more details at https://docs.cloud.google.com/pubsub/lite/docs/release-notes#June_17_2024"
     },
-    "sortOrder": 302,
+    "sortOrder": 301,
     "downstreamCount": 0
   },
   {
@@ -6757,7 +6761,7 @@
       "gcpAPIDeprecated": true,
       "notes": "Pub/Sub Lite is deprecated. Please find more details at https://docs.cloud.google.com/pubsub/lite/docs/release-notes#June_17_2024"
     },
-    "sortOrder": 303,
+    "sortOrder": 302,
     "downstreamCount": 0
   },
   {
@@ -6787,7 +6791,7 @@
       "gcpAPIDeprecated": true,
       "notes": "Pub/Sub Lite is deprecated. Please find more details at https://docs.cloud.google.com/pubsub/lite/docs/release-notes#June_17_2024"
     },
-    "sortOrder": 304,
+    "sortOrder": 303,
     "downstreamCount": 0
   },
   {
@@ -7328,19 +7332,20 @@
     "controllerType": "Terraform",
     "defaultController": "Terraform",
     "supportedControllers": [
+      "Direct",
       "Terraform"
     ],
     "dependencies": [
       "Project"
     ],
-    "state": "In Progress",
+    "state": "Completed",
     "steps": {
       "gen-types": true,
       "identity-reference": true,
-      "mapper-fuzzer": false,
-      "mocks": false,
-      "controller": false,
-      "tests": false
+      "mapper-fuzzer": true,
+      "mocks": true,
+      "controller": true,
+      "tests": true
     },
     "mocksLastRefreshed": "Never",
     "notes": "",
@@ -7502,7 +7507,7 @@
     "mocksLastRefreshed": "Never",
     "notes": "",
     "sortOrder": 7,
-    "downstreamCount": 40
+    "downstreamCount": 42
   },
   {
     "group": "storage",
@@ -7970,32 +7975,6 @@
     "mocksLastRefreshed": "Never",
     "notes": "",
     "sortOrder": 295,
-    "downstreamCount": 0
-  },
-  {
-    "group": "vertexai",
-    "kind": "VertexAITensorboard",
-    "version": "v1beta1",
-    "controllerType": "Terraform",
-    "defaultController": "Terraform",
-    "supportedControllers": [
-      "Terraform"
-    ],
-    "dependencies": [
-      "Project"
-    ],
-    "state": "Not Started",
-    "steps": {
-      "gen-types": false,
-      "identity-reference": false,
-      "mapper-fuzzer": false,
-      "mocks": false,
-      "controller": false,
-      "tests": false
-    },
-    "mocksLastRefreshed": "Never",
-    "notes": "",
-    "sortOrder": 296,
     "downstreamCount": 0
   }
 ]
